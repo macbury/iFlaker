@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iFlaker' target in the 'iFlaker' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
