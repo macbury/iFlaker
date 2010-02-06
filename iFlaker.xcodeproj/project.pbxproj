@@ -11,6 +11,10 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E11BE7BA111E01D600C28968 /* FlakCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E11BE7B9111E01D600C28968 /* FlakCell.m */; };
+		E11BE821111E097E00C28968 /* avatarDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = E11BE820111E097E00C28968 /* avatarDefault.png */; };
+		E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */ = {isa = PBXBuildFile; fileRef = E11BE87B111E10E000C28968 /* refresh_rev.tif */; };
+		E11BE8A8111E158A00C28968 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */; };
 		E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB0F111D8DCF00F09BC5 /* controller.m */; };
 		E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB3A111D926A00F09BC5 /* Flak.m */; };
 		E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFBA1111D991700F09BC5 /* .gitignore */; };
@@ -36,6 +40,12 @@
 		32CA4F630368D1EE00C91783 /* iFlaker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFlaker_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iFlaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFlaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11BE7B8111E01D600C28968 /* FlakCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakCell.h; sourceTree = "<group>"; };
+		E11BE7B9111E01D600C28968 /* FlakCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakCell.m; sourceTree = "<group>"; };
+		E11BE820111E097E00C28968 /* avatarDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarDefault.png; sourceTree = "<group>"; };
+		E11BE87B111E10E000C28968 /* refresh_rev.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = refresh_rev.tif; sourceTree = "<group>"; };
+		E11BE8A6111E158A00C28968 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
+		E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		E1CBFB0E111D8DCF00F09BC5 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = controller.h; sourceTree = "<group>"; };
 		E1CBFB0F111D8DCF00F09BC5 /* controller.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = controller.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		E1CBFB39111D926A00F09BC5 /* Flak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flak.h; sourceTree = "<group>"; };
@@ -75,6 +85,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E11BE7B7111E01B200C28968 /* Views */,
 				E1CBFBA6111D99F600F09BC5 /* Lib */,
 				E1CBFB38111D925B00F09BC5 /* FlakerAPI */,
 				E1CBFB0E111D8DCF00F09BC5 /* controller.h */,
@@ -134,6 +145,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E11BE820111E097E00C28968 /* avatarDefault.png */,
+				E11BE87B111E10E000C28968 /* refresh_rev.tif */,
 				E1CBFD90111DADCF00F09BC5 /* flaker.icns */,
 				E1CBFD8E111DAC8800F09BC5 /* flaker.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -152,6 +165,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E11BE7B7111E01B200C28968 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E11BE7B8111E01D600C28968 /* FlakCell.h */,
+				E11BE7B9111E01D600C28968 /* FlakCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +188,8 @@
 		E1CBFBA6111D99F600F09BC5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E11BE8A6111E158A00C28968 /* NSBezierPathAdditions.h */,
+				E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */,
 				E1CBFBB0111D9A0400F09BC5 /* JSON */,
 			);
 			name = Lib;
@@ -239,6 +263,8 @@
 				E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */,
 				E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */,
 				E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */,
+				E11BE821111E097E00C28968 /* avatarDefault.png in Resources */,
+				E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +285,8 @@
 				E1CBFBC3111D9A0400F09BC5 /* SBJsonBase.m in Sources */,
 				E1CBFBC4111D9A0400F09BC5 /* SBJsonParser.m in Sources */,
 				E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */,
+				E11BE7BA111E01D600C28968 /* FlakCell.m in Sources */,
+				E11BE8A8111E158A00C28968 /* NSBezierPathAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

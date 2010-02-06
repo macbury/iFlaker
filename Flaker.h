@@ -12,7 +12,7 @@
 
 @protocol FlakerDelegate <NSObject>
 @optional
-- (void)startFetchingFromFlaker;
+- (void)startFetchingFromFlaker; // Jak przekazać tutaj jako parametr obiekt Flaker?
 - (void)completeFetchingFromFlaker;
 - (void)errorOnFetchFromFlaker:(NSError *)error;
 @end

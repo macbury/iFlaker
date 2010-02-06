@@ -10,20 +10,29 @@
 
 @implementation Controller
 
+@synthesize refreshRate;
+
 - (id) init {
 	self = [super init];
 	if (self != nil) {
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
+		[self setRefreshRate: [[NSNumber alloc] initWithInt:20]];
 		[flaker setDelegate: self];
 	}
 	return self;
 }
 
 - (void) awakeFromNib {
+	FlakCell * flakCell = [[FlakCell alloc] init];
+	[flakiTableColumn setDataCell:flakCell];
+	
+	[flaker refreshFriends];
 }
 
 - (void) dealloc {
+	[refreshRate release];
 	[flaker release];
+	[updateTimer release];
 	[super dealloc];
 }
 
@@ -33,29 +42,49 @@
 	return [[flaker flaki] count];
 }
 
-- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)row {
-	Flak * flak = [[flaker flaki] objectAtIndex:row];
-	
-	if ([[tableColumn identifier] isEqual: @"login"]) {
-		return [flak login];
-	}else{
-		return [flak body];
-	}
-	
+- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
+	return NO;
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+	return 60;
+}
+
+- (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {	
+	aCell = (FlakCell *)aCell;
+	[aCell setFlak: [[flaker flaki] objectAtIndex:rowIndex]];
 }
 
 // Flaker Api delegate 
 
 - (void)startFetchingFromFlaker {
-	[progressIndicator startAnimation: self];
+	[updateTimer release];
+	updateTimer = nil;
+	[refreshButton setEnabled: NO];
+	[typePopUpButton setEnabled: NO];
+	//[progressIndicator startAnimation: self];
 }
 
 - (void)completeFetchingFromFlaker {
-	[progressIndicator stopAnimation: self];
+	[refreshButton setEnabled: YES];
+	[typePopUpButton setEnabled: YES];
+	//[progressIndicator stopAnimation: self];
 	[flakiTableView reloadData];
+	
+	NSInteger numberOfRows = [flakiTableView numberOfRows];
+	
+	if (numberOfRows > 0) {
+		[flakiTableView scrollRowToVisible:numberOfRows - 1];
+	}
+	
+	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
+																								 target: self 
+																							 selector: @selector(refresh:) 
+																							 userInfo: nil 
+																								repeats: NO];
 }
 
-- (void)errorOnFetch:(NSError *)error {
+- (void)errorOnFetchFromFlaker:(NSError *)error {
 	// coś z panelem
 }
 
@@ -64,6 +93,10 @@
 - (IBAction) refresh:(id)sender {
 	[flaker refreshFriends];
 	
+}
+
+- (IBAction) typeChange:(id)sender {
+	NSLog(@"Wybrano opcje:");
 }
 
 @end

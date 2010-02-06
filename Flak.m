@@ -11,8 +11,7 @@
 
 @implementation Flak
 
-@synthesize login;
-@synthesize body;
+@synthesize login, body;
 
 - (id) initWithLogin:(NSString *)newLogin body:(NSString *)newBody {
 	self = [super init];
