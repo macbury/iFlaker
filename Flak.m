@@ -24,8 +24,7 @@
 }
 
 
-- (void) dealloc
-{
+- (void) dealloc {
 	[login release];
 	[body release];
 	[super dealloc];

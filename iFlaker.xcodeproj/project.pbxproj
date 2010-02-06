@@ -14,6 +14,15 @@
 		E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB0F111D8DCF00F09BC5 /* controller.m */; };
 		E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB3A111D926A00F09BC5 /* Flak.m */; };
 		E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFBA1111D991700F09BC5 /* .gitignore */; };
+		E1CBFBA5111D99D700F09BC5 /* Flaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBA4111D99D700F09BC5 /* Flaker.m */; };
+		E1CBFBC0111D9A0400F09BC5 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBB3111D9A0400F09BC5 /* NSObject+SBJSON.m */; };
+		E1CBFBC1111D9A0400F09BC5 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBB5111D9A0400F09BC5 /* NSString+SBJSON.m */; };
+		E1CBFBC2111D9A0400F09BC5 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBB7111D9A0400F09BC5 /* SBJSON.m */; };
+		E1CBFBC3111D9A0400F09BC5 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBB9111D9A0400F09BC5 /* SBJsonBase.m */; };
+		E1CBFBC4111D9A0400F09BC5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBBB111D9A0400F09BC5 /* SBJsonParser.m */; };
+		E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */; };
+		E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD8E111DAC8800F09BC5 /* flaker.png */; };
+		E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD90111DADCF00F09BC5 /* flaker.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,23 @@
 		E1CBFB39111D926A00F09BC5 /* Flak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flak.h; sourceTree = "<group>"; };
 		E1CBFB3A111D926A00F09BC5 /* Flak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flak.m; sourceTree = "<group>"; };
 		E1CBFBA1111D991700F09BC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E1CBFBA3111D99D700F09BC5 /* Flaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flaker.h; sourceTree = "<group>"; };
+		E1CBFBA4111D99D700F09BC5 /* Flaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flaker.m; sourceTree = "<group>"; };
+		E1CBFBB1111D9A0400F09BC5 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		E1CBFBB2111D9A0400F09BC5 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		E1CBFBB3111D9A0400F09BC5 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		E1CBFBB4111D9A0400F09BC5 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		E1CBFBB5111D9A0400F09BC5 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		E1CBFBB6111D9A0400F09BC5 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		E1CBFBB7111D9A0400F09BC5 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		E1CBFBB8111D9A0400F09BC5 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		E1CBFBB9111D9A0400F09BC5 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		E1CBFBBA111D9A0400F09BC5 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		E1CBFBBB111D9A0400F09BC5 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		E1CBFBBC111D9A0400F09BC5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E1CBFD8E111DAC8800F09BC5 /* flaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flaker.png; sourceTree = "<group>"; };
+		E1CBFD90111DADCF00F09BC5 /* flaker.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = flaker.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +75,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E1CBFB38111D925B00F09BC5 /* Model */,
+				E1CBFBA6111D99F600F09BC5 /* Lib */,
+				E1CBFB38111D925B00F09BC5 /* FlakerAPI */,
 				E1CBFB0E111D8DCF00F09BC5 /* controller.h */,
 				E1CBFB0F111D8DCF00F09BC5 /* controller.m */,
 			);
@@ -107,6 +134,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1CBFD90111DADCF00F09BC5 /* flaker.icns */,
+				E1CBFD8E111DAC8800F09BC5 /* flaker.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -123,13 +152,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E1CBFB38111D925B00F09BC5 /* Model */ = {
+		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
 			isa = PBXGroup;
 			children = (
+				E1CBFBA3111D99D700F09BC5 /* Flaker.h */,
+				E1CBFBA4111D99D700F09BC5 /* Flaker.m */,
 				E1CBFB39111D926A00F09BC5 /* Flak.h */,
 				E1CBFB3A111D926A00F09BC5 /* Flak.m */,
 			);
-			name = Model;
+			name = FlakerAPI;
+			sourceTree = "<group>";
+		};
+		E1CBFBA6111D99F600F09BC5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBFBB0111D9A0400F09BC5 /* JSON */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		E1CBFBB0111D9A0400F09BC5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBFBB1111D9A0400F09BC5 /* JSON.h */,
+				E1CBFBB2111D9A0400F09BC5 /* NSObject+SBJSON.h */,
+				E1CBFBB3111D9A0400F09BC5 /* NSObject+SBJSON.m */,
+				E1CBFBB4111D9A0400F09BC5 /* NSString+SBJSON.h */,
+				E1CBFBB5111D9A0400F09BC5 /* NSString+SBJSON.m */,
+				E1CBFBB6111D9A0400F09BC5 /* SBJSON.h */,
+				E1CBFBB7111D9A0400F09BC5 /* SBJSON.m */,
+				E1CBFBB8111D9A0400F09BC5 /* SBJsonBase.h */,
+				E1CBFBB9111D9A0400F09BC5 /* SBJsonBase.m */,
+				E1CBFBBA111D9A0400F09BC5 /* SBJsonParser.h */,
+				E1CBFBBB111D9A0400F09BC5 /* SBJsonParser.m */,
+				E1CBFBBC111D9A0400F09BC5 /* SBJsonWriter.h */,
+				E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +237,8 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */,
+				E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */,
+				E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +252,13 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */,
 				E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */,
+				E1CBFBA5111D99D700F09BC5 /* Flaker.m in Sources */,
+				E1CBFBC0111D9A0400F09BC5 /* NSObject+SBJSON.m in Sources */,
+				E1CBFBC1111D9A0400F09BC5 /* NSString+SBJSON.m in Sources */,
+				E1CBFBC2111D9A0400F09BC5 /* SBJSON.m in Sources */,
+				E1CBFBC3111D9A0400F09BC5 /* SBJsonBase.m in Sources */,
+				E1CBFBC4111D9A0400F09BC5 /* SBJsonParser.m in Sources */,
+				E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +332,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

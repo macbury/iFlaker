@@ -14,8 +14,8 @@
 	NSString * body;
 }
 
-@property (retain) NSString * login;
-@property (retain) NSString * body;
+@property (copy) NSString * login;
+@property (copy) NSString * body;
 
 - (id) initWithLogin:(NSString *)newLogin body:(NSString *)newBody;
 

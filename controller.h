@@ -7,13 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "flak.h"
+#import "flaker.h"
 
 @interface Controller : NSObject {
 	IBOutlet NSTableView * flakiTableView;
 	IBOutlet NSProgressIndicator * progressIndicator;
 	
-	NSMutableArray * flaki;
+	Flaker * flaker;
 }
 
 - (IBAction) refresh:(id)sender;
