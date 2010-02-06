@@ -14,6 +14,7 @@
 	self = [super init];
 	if (self != nil) {
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
+		[flaker setDelegate: self];
 	}
 	return self;
 }
@@ -25,6 +26,8 @@
 	[flaker release];
 	[super dealloc];
 }
+
+// Table Delegate
 
 - (int) numberOfRowsInTableView:(NSTableView *)tableView {
 	return [[flaker flaki] count];
@@ -41,9 +44,26 @@
 	
 }
 
+// Flaker Api delegate 
+
+- (void)startFetchingFromFlaker {
+	[progressIndicator startAnimation: self];
+}
+
+- (void)completeFetchingFromFlaker {
+	[progressIndicator stopAnimation: self];
+	[flakiTableView reloadData];
+}
+
+- (void)errorOnFetch:(NSError *)error {
+	// coś z panelem
+}
+
+// Actions
+
 - (IBAction) refresh:(id)sender {
 	[flaker refreshFriends];
-	[flakiTableView reloadData];
+	
 }
 
 @end

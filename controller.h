@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "flaker.h"
 
-@interface Controller : NSObject {
+@interface Controller : NSObject <FlakerDelegate> {
 	IBOutlet NSTableView * flakiTableView;
 	IBOutlet NSProgressIndicator * progressIndicator;
 	

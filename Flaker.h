@@ -1,23 +1,35 @@
 //
 //  Flaker.h
-//  Flaker
+//  iFlaker
 //
-//  Created by Jacek Bajor on 09-09-17.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Created by MacBury on 10-02-06.
+//  Copyright 2010 Buras Arkadiusz. All rights reserved.
 //
-
-// Kod rozwinięty przez MacBury(Buras Arkadiusz)
 
 #import <Foundation/Foundation.h>
 #import "flak.h"
 #import "JSON.h"
 
+@protocol FlakerDelegate <NSObject>
+@optional
+- (void)startFetchingFromFlaker;
+- (void)completeFetchingFromFlaker;
+- (void)errorOnFetchFromFlaker:(NSError *)error;
+@end
+
 @interface Flaker : NSObject {
 	NSMutableArray * flaki;
 	NSString * login;
 	NSNumber * limit;
+	
 	SBJSON * parser;
+	NSURLConnection * updateConnection;
+	NSMutableData * receivedData;
+	
+	id<FlakerDelegate> delegate;
 }
+
+@property (assign) id<FlakerDelegate> delegate;
 
 @property (copy) NSString * login;
 @property (retain) NSMutableArray * flaki;
@@ -26,6 +38,8 @@
 - (id) initWithLogin:(NSString *)login;
 - (void)refreshFriends;
 
+- (id)delegate;
+- (void)setDelegate:(id)new_delegate;
+
 - (void)fetchEntriesType: (NSString *) newType;
-- (NSString *)stringWithUrl:(NSURL *)url;
 @end
