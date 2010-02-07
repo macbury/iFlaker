@@ -22,7 +22,6 @@
 	return self;
 }
 
-
 - (void) dealloc {
 	[login release];
 	[body release];

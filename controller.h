@@ -10,7 +10,7 @@
 #import <Growl/Growl.h>
 #import "flaker.h"
 #import "FlakCell.h"
-#import "SubviewController.h"
+#import "FlakController.h"
 #import "SubviewTableViewController.h"
 
 @interface Controller : NSObject <FlakerDelegate, GrowlApplicationBridgeDelegate, SubviewTableViewControllerDataSourceProtocol> {
@@ -22,7 +22,6 @@
 	IBOutlet NSTableColumn * flakTableColumn;
 	
 	SubviewTableViewController *flakiTableViewController;
-    NSMutableArray *flakiSubViewsControllers;
 	
 	Flaker * flaker;
 	NSMutableArray * flakiArray;
@@ -36,7 +35,6 @@
 @property (retain) NSNumber * refreshRate;
 @property (retain) NSNumber * flakInListLimit;
 @property (retain) NSMutableArray * flakiArray;
-@property (retain) NSMutableArray * flakiSubViewsControllers;
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;

@@ -10,13 +10,12 @@
 
 @implementation Controller
 
-@synthesize refreshRate, flakiArray, flakInListLimit, flakiSubViewsControllers;
+@synthesize refreshRate, flakiArray, flakInListLimit;
 
 - (id) init {
 	self = [super init];
 	if (self != nil) {
 		flakiArray = [[NSMutableArray alloc] init];
-		flakiSubViewsControllers = [[NSMutableArray alloc] init]; 
 		
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
@@ -40,7 +39,6 @@
 
 - (void) dealloc {
 	[flakiTableViewController release];
-	[flakiSubViewsControllers release];
 	[otrzymaneFlakiSound release];
 	[flakiArray release];
 	[refreshRate release];
@@ -110,8 +108,8 @@
 	for(int i = 0; i < [flaki count]; i++) {
 		Flak * flak = [flaki objectAtIndex: i];
 		
-		[flakiArray insertObject:flak atIndex:i];
-		[[self flakiSubViewsControllers] addObject: [SubviewController controller]];
+		FlakController * fc = [[FlakController alloc] initWithFlak: flak];
+		[flakiArray insertObject:fc atIndex:i];
 		
 		if (i <= 5) { [self growlAboutFlak: flak]; }
 	}
@@ -153,17 +151,17 @@
 // NSTable Delegate Methods
 
 - (NSView *) tableView:(NSTableView *) tableView viewForRow:(int) row {
-	return [[[self flakiSubViewsControllers] objectAtIndex: row] view];
+	return [[flakiArray objectAtIndex: row] view];
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-	NSView * view = [[[self flakiSubViewsControllers] objectAtIndex: row] view];
+	NSView * view = [[flakiArray objectAtIndex: row] view];
 	
 	return [view frame].size.height;
 }
 
 - (int) numberOfRowsInTableView:(NSTableView *) tableView {
-	return [[self flakiSubViewsControllers] count];
+	return [flakiArray count];
 }
 
 - (id) tableView:(NSTableView *) tableView objectValueForTableColumn:(NSTableColumn *) tableColumn row:(int) row {
