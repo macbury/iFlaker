@@ -10,12 +10,13 @@
 
 @implementation Controller
 
-@synthesize refreshRate, flakiArray, flakInListLimit;
+@synthesize refreshRate, flakiArray, flakInListLimit, flakiSubViewsControllers;
 
 - (id) init {
 	self = [super init];
 	if (self != nil) {
 		flakiArray = [[NSMutableArray alloc] init];
+		flakiSubViewsControllers = [[NSMutableArray alloc] init]; 
 		
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
@@ -31,14 +32,15 @@
 }
 
 - (void) awakeFromNib {
-	NSSize size = NSMakeSize([mainWindow frame].size.width - 16, 80);
-	[flakiCollectionView setMinItemSize:size];
-	[flakiCollectionView setMaxItemSize:size];
+	flakiTableViewController = [[SubviewTableViewController controllerWithViewColumn: flakTableColumn] retain];
+	[flakiTableViewController setDelegate: self];
 	
 	[flaker refreshFriends];
 }
 
 - (void) dealloc {
+	[flakiTableViewController release];
+	[flakiSubViewsControllers release];
 	[otrzymaneFlakiSound release];
 	[flakiArray release];
 	[refreshRate release];
@@ -74,17 +76,6 @@
 														 clickContext:@"test"];
 }
 
-// NSWindow Delegate
-
-- (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)frameSize {
-	
-	NSSize size = NSMakeSize(frameSize.width - 16, 80);
-	[flakiCollectionView setMinItemSize:size];
-	[flakiCollectionView setMaxItemSize:size];
-	
-	return frameSize;
-}
-
 // Flaker Api delegate 
 
 - (void)startFetchingFromFlaker {
@@ -100,7 +91,7 @@
 - (void)afterCompleteFetch {
 	[refreshButton setEnabled: YES];
 	[typePopUpButton setEnabled: YES];
-	
+	[flakiTableView reloadData];
 	//[flakiCollectionView scrollPageUp: self];
 	
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
@@ -115,14 +106,17 @@
 	if ([flaki count] > 0) {
 		[otrzymaneFlakiSound play];
 	}
-	
+
 	for(int i = 0; i < [flaki count]; i++) {
 		Flak * flak = [flaki objectAtIndex: i];
 		
-		[flakiArrayController insertObject: flak atArrangedObjectIndex: 0];
+		[flakiArray insertObject:flak atIndex:i];
+		[[self flakiSubViewsControllers] addObject: [SubviewController controller]];
 		
 		if (i <= 5) { [self growlAboutFlak: flak]; }
 	}
+	
+	
 	
 	if ([flaki count] > 5) {
 	
@@ -135,7 +129,7 @@
 															 clickContext:@"test"];
 	}
 	
-	NSUInteger flakCount = [[flakiArrayController arrangedObjects] count];
+	NSUInteger flakCount = [flakiArray count];
 	
 	if (flakCount > [flakInListLimit integerValue]) {
 		NSLog(@"Jest ponad %@ flaków... Usuwam zbyteczne...", flakInListLimit);
@@ -146,7 +140,7 @@
 			[discardedItems addIndex:i];
 		}
 		
-		[flakiArrayController removeObjectsAtArrangedObjectIndexes: discardedItems];
+		[flakiArray removeObjectsAtIndexes: discardedItems];
 	}
 	
 	[self afterCompleteFetch];
@@ -154,6 +148,27 @@
 
 - (void)errorOnFetchFromFlaker:(NSError *)error {
 	[self afterCompleteFetch];
+}
+
+// NSTable Delegate Methods
+
+- (NSView *) tableView:(NSTableView *) tableView viewForRow:(int) row {
+	return [[[self flakiSubViewsControllers] objectAtIndex: row] view];
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+	NSView * view = [[[self flakiSubViewsControllers] objectAtIndex: row] view];
+	
+	return [view frame].size.height;
+}
+
+- (int) numberOfRowsInTableView:(NSTableView *) tableView {
+	return [[self flakiSubViewsControllers] count];
+}
+
+- (id) tableView:(NSTableView *) tableView objectValueForTableColumn:(NSTableColumn *) tableColumn row:(int) row {
+	//Flak * flak = [flakiArray objectAtIndex: row];
+	return nil;
 }
 
 // Actions
