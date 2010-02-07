@@ -32,7 +32,7 @@
 
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"friends"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"flakosfera"]; }
 }
 
 - (void)fetchEntriesType: (NSString *) newType {
@@ -46,8 +46,6 @@
 		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/comments:true/start:%@",
 								newType, self.login, self.limit, last_flak_id];
 	}
-	
-	
 	
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString:urlString]
 												cachePolicy: NSURLRequestReturnCacheDataElseLoad
@@ -81,7 +79,7 @@
 	for (int i = 0; i < [entries count]; i++) {
 		NSDictionary * entry = [entries objectAtIndex: i];
 		if (i == 0) {
-			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue]];
+			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue] + 1] ;
 		}
 		
 		Flak * flak = [[Flak alloc] initWithLogin: [[entry objectForKey:@"user"] objectForKey: @"login"]
@@ -89,6 +87,7 @@
 		[flaki addObject: flak];
 		[flak autorelease];
 	}
+
 	
 	[receivedData release];
 	[updateConnection release];

@@ -30,6 +30,7 @@
 		E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E23CBA111EDE68008347A5 /* flakCell.xib */; };
 		E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
 		E1E23EB4111F10A9008347A5 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
+		E1E23F65111F20BA008347A5 /* otrzymanoFlaki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,6 +87,7 @@
 		E1CBFD90111DADCF00F09BC5 /* flaker.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = flaker.icns; sourceTree = "<group>"; };
 		E1E23CBA111EDE68008347A5 /* flakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flakCell.xib; sourceTree = "<group>"; };
 		E1E23EAF111F1096008347A5 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = /Library/Frameworks/Growl.framework; sourceTree = "<absolute>"; };
+		E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = otrzymanoFlaki.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */,
 				E11BE820111E097E00C28968 /* avatarDefault.png */,
 				E11BE87B111E10E000C28968 /* refresh_rev.tif */,
 				E1CBFD90111DADCF00F09BC5 /* flaker.icns */,
@@ -288,6 +291,7 @@
 				E11BE821111E097E00C28968 /* avatarDefault.png in Resources */,
 				E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */,
 				E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */,
+				E1E23F65111F20BA008347A5 /* otrzymanoFlaki.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

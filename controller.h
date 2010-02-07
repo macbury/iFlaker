@@ -22,12 +22,15 @@
 	
 	Flaker * flaker;
 	NSMutableArray * flakiArray;
+	NSSound * otrzymaneFlakiSound;
 	
 	NSNumber * refreshRate;
+	NSNumber * flakInListLimit;
 	NSTimer * updateTimer;
 }
 
 @property (retain) NSNumber * refreshRate;
+@property (retain) NSNumber * flakInListLimit;
 @property (retain) NSMutableArray * flakiArray;
 
 - (IBAction) refresh:(id)sender;

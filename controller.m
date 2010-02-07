@@ -10,7 +10,7 @@
 
 @implementation Controller
 
-@synthesize refreshRate, flakiArray;
+@synthesize refreshRate, flakiArray, flakInListLimit;
 
 - (id) init {
 	self = [super init];
@@ -19,8 +19,13 @@
 		
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
+		[self setFlakInListLimit: [NSNumber numberWithInt: 20]];
+		
 		[flaker setDelegate: self];
 		[GrowlApplicationBridge setGrowlDelegate:self];
+		
+		NSString* soundFile = [[NSBundle mainBundle] pathForResource:@"otrzymanoFlaki" ofType:@"mp3"];
+		otrzymaneFlakiSound = [[NSSound alloc] initWithContentsOfFile:soundFile byReference:YES];
 	}
 	return self;
 }
@@ -34,6 +39,7 @@
 }
 
 - (void) dealloc {
+	[otrzymaneFlakiSound release];
 	[flakiArray release];
 	[refreshRate release];
 	[flaker release];
@@ -82,8 +88,10 @@
 // Flaker Api delegate 
 
 - (void)startFetchingFromFlaker {
-	[updateTimer release];
-	updateTimer = nil;
+	if (updateTimer != nil) {
+		[updateTimer release];
+		updateTimer = nil;
+	}
 	[refreshButton setEnabled: NO];
 	[typePopUpButton setEnabled: NO];
 
@@ -93,7 +101,7 @@
 	[refreshButton setEnabled: YES];
 	[typePopUpButton setEnabled: YES];
 	
-	[flakiCollectionView scrollPageUp: self];
+	//[flakiCollectionView scrollPageUp: self];
 	
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
 																								 target: self 
@@ -103,6 +111,10 @@
 }
 
 - (void)completeFetchingFromFlaker:(NSArray *) flaki {
+	
+	if ([flaki count] > 0) {
+		[otrzymaneFlakiSound play];
+	}
 	
 	for(int i = 0; i < [flaki count]; i++) {
 		Flak * flak = [flaki objectAtIndex: i];
@@ -121,6 +133,20 @@
 																	 priority:1
 																	 isSticky:NO
 															 clickContext:@"test"];
+	}
+	
+	NSUInteger flakCount = [[flakiArrayController arrangedObjects] count];
+	
+	if (flakCount > [flakInListLimit integerValue]) {
+		NSLog(@"Jest ponad %@ flaków... Usuwam zbyteczne...", flakInListLimit);
+		
+		NSMutableIndexSet *discardedItems = [NSMutableIndexSet indexSet];
+		
+		for (int i = [flakInListLimit intValue]; i < flakCount; i++) {
+			[discardedItems addIndex:i];
+		}
+		
+		[flakiArrayController removeObjectsAtArrangedObjectIndexes: discardedItems];
 	}
 	
 	[self afterCompleteFetch];
