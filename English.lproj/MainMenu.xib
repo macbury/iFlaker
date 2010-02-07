@@ -722,6 +722,7 @@
 									</object>
 									<string key="NSFrameSize">{244, 327}</string>
 									<reference key="NSSuperview" ref="452940456"/>
+									<reference key="NSNextKeyView" ref="923214045"/>
 									<reference key="NSDocView" ref="923214045"/>
 									<object class="NSColor" key="NSBGColor" id="15100135">
 										<int key="NSColorSpace">6</int>
@@ -737,7 +738,7 @@
 								<object class="NSScroller" id="21922606">
 									<reference key="NSNextResponder" ref="452940456"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{244, 0}, {15, 312}}</string>
+									<string key="NSFrame">{{244, 0}, {15, 327}}</string>
 									<reference key="NSSuperview" ref="452940456"/>
 									<reference key="NSTarget" ref="452940456"/>
 									<string key="NSAction">_doScroller:</string>
@@ -757,6 +758,7 @@
 							</object>
 							<string key="NSFrame">{{-1, 0}, {259, 327}}</string>
 							<reference key="NSSuperview" ref="468794805"/>
+							<reference key="NSNextKeyView" ref="714278471"/>
 							<int key="NSsFlags">16</int>
 							<reference key="NSVScroller" ref="21922606"/>
 							<reference key="NSHScroller" ref="468635212"/>
@@ -1415,6 +1417,22 @@
 						<reference key="destination" ref="834758757"/>
 					</object>
 					<int key="connectionID">727</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mainWindow</string>
+						<reference key="source" ref="1046856474"/>
+						<reference key="destination" ref="1044825160"/>
+					</object>
+					<int key="connectionID">728</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1044825160"/>
+						<reference key="destination" ref="1046856474"/>
+					</object>
+					<int key="connectionID">729</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2412,7 +2430,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">727</int>
+			<int key="maxID">729</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2439,6 +2457,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>flakiArrayController</string>
 							<string>flakiCollectionView</string>
+							<string>mainWindow</string>
 							<string>refreshButton</string>
 							<string>typePopUpButton</string>
 						</object>
@@ -2446,6 +2465,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSArrayController</string>
 							<string>NSCollectionView</string>
+							<string>NSWindow</string>
 							<string>NSButton</string>
 							<string>NSPopUpButton</string>
 						</object>
@@ -2463,11 +2483,13 @@
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>bodyTextField</string>
+							<string>contentBox</string>
 							<string>loginTextField</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
+							<string>NSBox</string>
 							<string>NSTextField</string>
 						</object>
 					</object>

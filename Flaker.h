@@ -20,6 +20,7 @@
 @interface Flaker : NSObject {
 	NSString * login;
 	NSNumber * limit;
+	NSNumber * last_flak_id;
 	
 	SBJSON * parser;
 	NSURLConnection * updateConnection;

@@ -18,7 +18,7 @@
 		parser = [[SBJSON alloc] init];
 		
 		[self setLogin:newLogin];
-		[self setLimit: [[NSNumber alloc] initWithInt:20]];
+		[self setLimit: [[NSNumber alloc] initWithInt:10]];
 	}
 	return self;
 }
@@ -36,8 +36,18 @@
 }
 
 - (void)fetchEntriesType: (NSString *) newType {
-	NSString * urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false",
-							newType, self.login, self.limit];
+	
+	NSString * urlString;
+	
+	if(last_flak_id == nil) {
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/comments:true/",
+								newType, self.login, self.limit];
+	}else{
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/comments:true/start:%@",
+								newType, self.login, self.limit, last_flak_id];
+	}
+	
+	
 	
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString:urlString]
 												cachePolicy: NSURLRequestReturnCacheDataElseLoad
@@ -66,8 +76,14 @@
 												   error:nil];
 	
 	NSMutableArray * flaki = [[NSMutableArray alloc] init];
+	NSArray * entries = [dictionary objectForKey:@"entries"];
 	
-	for (NSDictionary * entry in [dictionary objectForKey:@"entries"]) {
+	for (int i = 0; i < [entries count]; i++) {
+		NSDictionary * entry = [entries objectAtIndex: i];
+		if (i == 0) {
+			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue]];
+		}
+		
 		Flak * flak = [[Flak alloc] initWithLogin: [[entry objectForKey:@"user"] objectForKey: @"login"]
 											 body: [entry objectForKey:@"text"]];
 		[flaki addObject: flak];
