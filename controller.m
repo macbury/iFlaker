@@ -10,11 +10,13 @@
 
 @implementation Controller
 
-@synthesize refreshRate;
+@synthesize refreshRate, flakiArray;
 
 - (id) init {
 	self = [super init];
 	if (self != nil) {
+		flakiArray = [[NSMutableArray alloc] init];
+		
 		flaker = [[Flaker alloc] initWithLogin:@"bury"];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:20]];
 		[flaker setDelegate: self];
@@ -23,36 +25,19 @@
 }
 
 - (void) awakeFromNib {
-	FlakCell * flakCell = [[FlakCell alloc] init];
-	[flakiTableColumn setDataCell:flakCell];
+	NSSize size = NSMakeSize(250, 80);
+	[flakiCollectionView setMinItemSize:size];
+	[flakiCollectionView setMaxItemSize:size];
 	
 	[flaker refreshFriends];
 }
 
 - (void) dealloc {
+	[flakiArray release];
 	[refreshRate release];
 	[flaker release];
 	[updateTimer release];
 	[super dealloc];
-}
-
-// Table Delegate
-
-- (int) numberOfRowsInTableView:(NSTableView *)tableView {
-	return [[flaker flaki] count];
-}
-
-- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
-	return NO;
-}
-
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-	return 60;
-}
-
-- (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {	
-	aCell = (FlakCell *)aCell;
-	[aCell setFlak: [[flaker flaki] objectAtIndex:rowIndex]];
 }
 
 // Flaker Api delegate 
@@ -62,20 +47,22 @@
 	updateTimer = nil;
 	[refreshButton setEnabled: NO];
 	[typePopUpButton setEnabled: NO];
-	//[progressIndicator startAnimation: self];
+
 }
 
-- (void)completeFetchingFromFlaker {
+- (void)completeFetchingFromFlaker:(NSArray *) flaki {
 	[refreshButton setEnabled: YES];
 	[typePopUpButton setEnabled: YES];
-	//[progressIndicator stopAnimation: self];
-	[flakiTableView reloadData];
 	
-	NSInteger numberOfRows = [flakiTableView numberOfRows];
-	
-	if (numberOfRows > 0) {
-		[flakiTableView scrollRowToVisible:numberOfRows - 1];
+	for(Flak * flak in flaki) {
+		[flakiArrayController addObject: flak];
 	}
+	
+	//NSInteger numberOfRows = [flakiTableView numberOfRows];
+	
+	//if (numberOfRows > 0) {
+	//	[flakiTableView scrollRowToVisible:numberOfRows - 1];
+	//}
 	
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
 																								 target: self 

@@ -27,6 +27,7 @@
 		E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */; };
 		E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD8E111DAC8800F09BC5 /* flaker.png */; };
 		E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD90111DADCF00F09BC5 /* flaker.icns */; };
+		E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E23CBA111EDE68008347A5 /* flakCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		E1CBFD8E111DAC8800F09BC5 /* flaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flaker.png; sourceTree = "<group>"; };
 		E1CBFD90111DADCF00F09BC5 /* flaker.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = flaker.icns; sourceTree = "<group>"; };
+		E1E23CBA111EDE68008347A5 /* flakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flakCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +153,6 @@
 				E1CBFD8E111DAC8800F09BC5 /* flaker.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -170,6 +171,8 @@
 			children = (
 				E11BE7B8111E01D600C28968 /* FlakCell.h */,
 				E11BE7B9111E01D600C28968 /* FlakCell.m */,
+				E1E23CBA111EDE68008347A5 /* flakCell.xib */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */,
 				E11BE821111E097E00C28968 /* avatarDefault.png in Resources */,
 				E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */,
+				E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

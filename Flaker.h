@@ -13,12 +13,11 @@
 @protocol FlakerDelegate <NSObject>
 @optional
 - (void)startFetchingFromFlaker; // Jak przekazać tutaj jako parametr obiekt Flaker?
-- (void)completeFetchingFromFlaker;
+- (void)completeFetchingFromFlaker:(NSArray *) flaki;
 - (void)errorOnFetchFromFlaker:(NSError *)error;
 @end
 
 @interface Flaker : NSObject {
-	NSMutableArray * flaki;
 	NSString * login;
 	NSNumber * limit;
 	
@@ -32,7 +31,6 @@
 @property (assign) id<FlakerDelegate> delegate;
 
 @property (copy) NSString * login;
-@property (retain) NSMutableArray * flaki;
 @property (retain) NSNumber * limit;
 
 - (id) initWithLogin:(NSString *)login;

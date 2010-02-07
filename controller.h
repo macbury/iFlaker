@@ -11,19 +11,21 @@
 #import "FlakCell.h"
 
 @interface Controller : NSObject <FlakerDelegate> {
-	IBOutlet NSTableView * flakiTableView;
-	IBOutlet NSProgressIndicator * progressIndicator;
-	IBOutlet NSTableColumn * flakiTableColumn;
+	IBOutlet NSCollectionView * flakiCollectionView;
+	IBOutlet NSArrayController * flakiArrayController;
+	
 	IBOutlet NSButton * refreshButton;
 	IBOutlet NSPopUpButton * typePopUpButton;
 	
 	Flaker * flaker;
+	NSMutableArray * flakiArray;
 	
 	NSNumber * refreshRate;
 	NSTimer * updateTimer;
 }
 
 @property (retain) NSNumber * refreshRate;
+@property (retain) NSMutableArray * flakiArray;
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;

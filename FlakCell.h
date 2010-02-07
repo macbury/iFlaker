@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Flak.h"
-#import "NSBezierPathAdditions.h"
 
-@interface FlakCell : NSCell {
+@interface FlakCell : NSCollectionViewItem {
 	Flak * flak;
+	IBOutlet NSTextField * loginTextField;
+	IBOutlet NSTextField * bodyTextField;
+	IBOutlet NSBox * contentBox;
 }
 
 @property (retain) Flak * flak;
+- (id)copyWithZone:(NSZone *)zone;
 
 @end

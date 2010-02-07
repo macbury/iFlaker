@@ -10,7 +10,7 @@
 
 @implementation Flaker
 
-@synthesize login, limit, flaki;
+@synthesize login, limit;
 
 - (id) initWithLogin:(NSString *)newLogin {
 	self = [super init];
@@ -19,15 +19,11 @@
 		
 		[self setLogin:newLogin];
 		[self setLimit: [[NSNumber alloc] initWithInt:20]];
-		flaki = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
 
-- (void) dealloc
-{
-	[flaki removeAllObjects];
-	[flaki release];
+- (void) dealloc {
 	[limit release];
 	[parser release];
 	[updateConnection release];
@@ -69,7 +65,7 @@
 	NSDictionary * dictionary = [parser objectWithString:jsonString 
 												   error:nil];
 	
-	[flaki removeAllObjects];
+	NSMutableArray * flaki = [[NSMutableArray alloc] init];
 	
 	for (NSDictionary * entry in [dictionary objectForKey:@"entries"]) {
 		Flak * flak = [[Flak alloc] initWithLogin: [[entry objectForKey:@"user"] objectForKey: @"login"]
@@ -82,8 +78,8 @@
 	[updateConnection release];
 	updateConnection = nil;
 	
-	if ([delegate respondsToSelector:@selector(completeFetchingFromFlaker)]) {
-		[delegate completeFetchingFromFlaker];
+	if ([delegate respondsToSelector:@selector(completeFetchingFromFlaker:)]) {
+		[delegate completeFetchingFromFlaker:(NSArray*)flaki];
 	}   
 }
 
