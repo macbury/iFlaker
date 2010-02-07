@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -279,7 +281,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>3</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -315,14 +318,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>controller.m</string>
+								<string>FlakCell.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +331,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>controller.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>E1E23D0E111EF7A1008347A5</string>
+										<string>FlakCell.h</string>
 										<key>history</key>
 										<array>
 											<string>E1CBFB1A111D918100F09BC5</string>
@@ -354,9 +351,7 @@
 											<string>E1E23C9A111EDC2B008347A5</string>
 											<string>E1E23CDD111EF1C6008347A5</string>
 											<string>E1E23CEA111EF1FD008347A5</string>
-											<string>E1E23CFC111EF686008347A5</string>
 											<string>E1E23D07111EF744008347A5</string>
-											<string>E1E23D08111EF744008347A5</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -381,38 +376,6 @@
 											<string>E11BE7CA111E042600C28968</string>
 											<string>E11BE883111E119800C28968</string>
 											<string>E11BE939111E2D0000C28968</string>
-											<string>E1E23C9E111EDC2B008347A5</string>
-											<string>E1E23C9F111EDC2B008347A5</string>
-											<string>E1E23CA0111EDC2B008347A5</string>
-											<string>E1E23CA1111EDC2B008347A5</string>
-											<string>E1E23CA2111EDC2B008347A5</string>
-											<string>E1E23CA3111EDC2B008347A5</string>
-											<string>E1E23CA4111EDC2B008347A5</string>
-											<string>E1E23CAE111EDCD9008347A5</string>
-											<string>E1E23CB3111EDD89008347A5</string>
-											<string>E1E23CB4111EDD89008347A5</string>
-											<string>E1E23CB8111EDDD2008347A5</string>
-											<string>E1E23CBF111EE096008347A5</string>
-											<string>E1E23CC0111EE096008347A5</string>
-											<string>E1E23CC1111EE096008347A5</string>
-											<string>E1E23CC2111EE096008347A5</string>
-											<string>E1E23CC3111EE096008347A5</string>
-											<string>E1E23CC4111EE096008347A5</string>
-											<string>E1E23CC8111EE117008347A5</string>
-											<string>E1E23CCE111EE171008347A5</string>
-											<string>E1E23CD5111EE1B0008347A5</string>
-											<string>E1E23CD6111EE1B0008347A5</string>
-											<string>E1E23CE0111EF1C6008347A5</string>
-											<string>E1E23CE1111EF1C6008347A5</string>
-											<string>E1E23CE2111EF1C6008347A5</string>
-											<string>E1E23CE3111EF1C6008347A5</string>
-											<string>E1E23CEC111EF1FD008347A5</string>
-											<string>E1E23CF4111EF3D5008347A5</string>
-											<string>E1E23CF8111EF61B008347A5</string>
-											<string>E1E23CFE111EF686008347A5</string>
-											<string>E1E23CFF111EF686008347A5</string>
-											<string>E1E23D00111EF686008347A5</string>
-											<string>E1E23D09111EF744008347A5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -470,9 +433,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>E1E23C89111EDACC008347A5</string>
+				<string>E1E23D92111EFA3E008347A5</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>E1E23C8A111EDACC008347A5</string>
+				<string>E1E23D93111EFA3E008347A5</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -606,9 +569,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>E1CBFB2F111D918100F09BC5</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/MacBury/Źródła/iFlaker/iFlaker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -628,14 +588,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>controller.m</string>
+								<string>FlakCell.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -652,6 +610,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
