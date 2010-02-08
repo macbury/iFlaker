@@ -15,6 +15,7 @@
 	IBOutlet NSTextField * loginTextField;
 	IBOutlet NSTextField * bodyTextField;
 	IBOutlet FlakBubbleView * contentBox;
+	IBOutlet NSProgressIndicator * avatarDownloadIndicator;
 	
 	Flak * flak;
 }

@@ -58,6 +58,7 @@
 	[loginTextField setStringValue: flak.login];
 	[bodyTextField setStringValue: flak.body];
 	[self resizeToFitBody];
+	[avatarDownloadIndicator startAnimation: self];
 }
 
 - (void) dealloc

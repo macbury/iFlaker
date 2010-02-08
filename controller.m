@@ -89,7 +89,7 @@
 - (void)afterCompleteFetch {
 	[refreshButton setEnabled: YES];
 	[typePopUpButton setEnabled: YES];
-	[flakiTableView reloadData];
+	[flakiTableViewController reloadTableView];
 	//[flakiCollectionView scrollPageUp: self];
 	
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
@@ -104,18 +104,16 @@
 	if ([flaki count] > 0) {
 		[otrzymaneFlakiSound play];
 	}
-
+	
 	for(int i = 0; i < [flaki count]; i++) {
 		Flak * flak = [flaki objectAtIndex: i];
 		
-		FlakController * fc = [[FlakController alloc] initWithFlak: flak];
+		FlakController * fc = [[[FlakController alloc] initWithFlak: flak] autorelease];
 		[flakiArray insertObject:fc atIndex:i];
 		
 		if (i <= 5) { [self growlAboutFlak: flak]; }
 	}
-	
-	
-	
+
 	if ([flaki count] > 5) {
 	
 		[GrowlApplicationBridge notifyWithTitle: @"iFlaker"
@@ -127,18 +125,15 @@
 															 clickContext:@"test"];
 	}
 	
-	NSUInteger flakCount = [flakiArray count];
-	
-	if (flakCount > [flakInListLimit integerValue]) {
+
+	if ([flakiArray count] > [flakInListLimit integerValue]) {
 		NSLog(@"Jest ponad %@ flaków... Usuwam zbyteczne...", flakInListLimit);
 		
-		NSMutableIndexSet *discardedItems = [NSMutableIndexSet indexSet];
+		int flakToRemoveIndex = [flakiArray count] - [flakInListLimit intValue];
 		
-		for (int i = [flakInListLimit intValue]; i < flakCount; i++) {
-			[discardedItems addIndex:i];
+		for (int i=0; i < flakToRemoveIndex; i++) {
+			[flakiArray removeLastObject];
 		}
-		
-		[flakiArray removeObjectsAtIndexes: discardedItems];
 	}
 	
 	[self afterCompleteFetch];
@@ -151,7 +146,13 @@
 // NSTable Delegate Methods
 
 - (void) tableViewColumnDidResize {
-	[flakiTableView noteHeightOfRowsWithIndexesChanged:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [flakiTableView numberOfRows] - 1)]]; // Wie ktoś jak to zoptymalizować
+	NSMutableIndexSet * indexSet = [[[NSMutableIndexSet alloc] init] autorelease];
+	
+	for(int i=0; i < [flakiTableView numberOfRows]; i++) {
+		[indexSet addIndex: i];
+	}
+	
+	[flakiTableView noteHeightOfRowsWithIndexesChanged:indexSet]; // Wie ktoś jak to zoptymalizować?
 }
 
 - (NSView *) tableView:(NSTableView *) tableView viewForRow:(int) row {
