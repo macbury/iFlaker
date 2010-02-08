@@ -32,7 +32,7 @@
 
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"flakosfera"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"tags"]; }
 }
 
 - (void)fetchEntriesType: (NSString *) newType {

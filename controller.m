@@ -150,23 +150,23 @@
 
 // NSTable Delegate Methods
 
+- (void) tableViewColumnDidResize {
+	[flakiTableView noteHeightOfRowsWithIndexesChanged:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [flakiTableView numberOfRows] - 1)]]; // Wie ktoś jak to zoptymalizować
+}
+
 - (NSView *) tableView:(NSTableView *) tableView viewForRow:(int) row {
 	return [[flakiArray objectAtIndex: row] view];
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-	NSView * view = [[flakiArray objectAtIndex: row] view];
+	FlakController * flakController = [flakiArray objectAtIndex: row];
+	[flakController resizeToFitBody];
 	
-	return [view frame].size.height;
+	return [[flakController view] frame].size.height;
 }
 
 - (int) numberOfRowsInTableView:(NSTableView *) tableView {
 	return [flakiArray count];
-}
-
-- (id) tableView:(NSTableView *) tableView objectValueForTableColumn:(NSTableColumn *) tableColumn row:(int) row {
-	//Flak * flak = [flakiArray objectAtIndex: row];
-	return nil;
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {

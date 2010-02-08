@@ -23,5 +23,5 @@
 
 - (id) initWithFlak:(Flak*)flak;
 - (NSView *) view;
-
+-(void) resizeToFitBody;
 @end

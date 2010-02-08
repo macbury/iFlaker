@@ -268,6 +268,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>E145B931111F61DB00BE4E01</string>
 								<string>E11BE7B7111E01B200C28968</string>
 								<string>E1CBFB38111D925B00F09BC5</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -278,14 +279,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>3</integer>
+									<integer>19</integer>
+									<integer>17</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {225, 548}}</string>
+							<string>{{0, 31}, {225, 548}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -322,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FlakBubbleView.m</string>
+								<string>Flaker.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FlakBubbleView.m</string>
+										<string>Flaker.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E1C828D21120743000BC22DE</string>
+										<string>E1C82947112083ED00BC22DE</string>
 										<key>history</key>
 										<array>
 											<string>E1CBFB1A111D918100F09BC5</string>
@@ -353,22 +354,22 @@
 											<string>E1E23E5D111F0CBB008347A5</string>
 											<string>E1E23EE2111F129E008347A5</string>
 											<string>E145B9EA111F70A400BE4E01</string>
-											<string>E145BA17111F75A600BE4E01</string>
 											<string>E145BA18111F75A600BE4E01</string>
 											<string>E145BA19111F75A600BE4E01</string>
 											<string>E145BA1C111F75A600BE4E01</string>
 											<string>E145BA1D111F75A600BE4E01</string>
 											<string>E145BA7C111F780B00BE4E01</string>
 											<string>E145BA7D111F780B00BE4E01</string>
-											<string>E145BA7E111F780B00BE4E01</string>
 											<string>E145BA7F111F780B00BE4E01</string>
-											<string>E145BA80111F780B00BE4E01</string>
-											<string>E145BABF111F792D00BE4E01</string>
-											<string>E1C828A21120709500BC22DE</string>
-											<string>E1C828A31120709500BC22DE</string>
 											<string>E1C828C9112073E000BC22DE</string>
-											<string>E1C828CA112073E000BC22DE</string>
-											<string>E1C828CB112073E000BC22DE</string>
+											<string>E1C828DA112077B600BC22DE</string>
+											<string>E1C828DB112077B600BC22DE</string>
+											<string>E1C829301120822E00BC22DE</string>
+											<string>E1C829311120822E00BC22DE</string>
+											<string>E1C829321120822E00BC22DE</string>
+											<string>E1C829331120822E00BC22DE</string>
+											<string>E1C82944112083ED00BC22DE</string>
+											<string>E1C82945112083ED00BC22DE</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -432,6 +433,31 @@
 											<string>E1C828CD112073E000BC22DE</string>
 											<string>E1C828CE112073E000BC22DE</string>
 											<string>E1C828CF112073E000BC22DE</string>
+											<string>E1C828DF112077B600BC22DE</string>
+											<string>E1C828E0112077B600BC22DE</string>
+											<string>E1C828E1112077B600BC22DE</string>
+											<string>E1C828E2112077B600BC22DE</string>
+											<string>E1C828E3112077B600BC22DE</string>
+											<string>E1C828E71120790B00BC22DE</string>
+											<string>E1C828EF11207C1600BC22DE</string>
+											<string>E1C828F011207C1600BC22DE</string>
+											<string>E1C8291F11207E9300BC22DE</string>
+											<string>E1C8292011207E9300BC22DE</string>
+											<string>E1C8292B112080E900BC22DE</string>
+											<string>E1C8292C112080E900BC22DE</string>
+											<string>E1C8292D112080E900BC22DE</string>
+											<string>E1C8292E112080E900BC22DE</string>
+											<string>E1C829351120822E00BC22DE</string>
+											<string>E1C829361120822E00BC22DE</string>
+											<string>E1C829371120822E00BC22DE</string>
+											<string>E1C829381120822E00BC22DE</string>
+											<string>E1C829391120822E00BC22DE</string>
+											<string>E1C8293A1120822E00BC22DE</string>
+											<string>E1C8293B1120822E00BC22DE</string>
+											<string>E1C8293C1120822E00BC22DE</string>
+											<string>E1C8293D1120822E00BC22DE</string>
+											<string>E1C8293E1120822E00BC22DE</string>
+											<string>E1C82946112083ED00BC22DE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -625,9 +651,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>E1C8291311207CE300BC22DE</string>
+		<string>E1C8291411207CE300BC22DE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>E1CBFB2F111D918100F09BC5</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>E1CBFB2F111D918100F09BC5</string>
 		<string>/Users/MacBury/Źródła/iFlaker/iFlaker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1002,7 +1030,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
