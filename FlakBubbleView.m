@@ -8,17 +8,16 @@
 
 #import "FlakBubbleView.h"
 
-
 @implementation FlakBubbleView
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-		flakBubbleImage = [NSImage imageNamed: @"flakBubble"];
+		flakBubbleImage = [NSImage imageNamed: @"flakEntryBubble"];
         // Initialization code here.
 		
-		leftWidth = 21; 
-		topHeight = 12;
+		leftWidth = 24; 
+		topHeight = 101;
 		
 		rightWidth = [flakBubbleImage size].width - (leftWidth + 1);
 		bottomHeight = [flakBubbleImage size].height - (topHeight + 1);

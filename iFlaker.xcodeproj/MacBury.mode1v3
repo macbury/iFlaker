@@ -304,7 +304,7 @@
 							<real>225</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>5 123 1008 607 0 0 1024 746 </string>
+						<string>6 128 1008 607 0 0 1024 746 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E1C828C01120709500BC22DE</string>
+										<string>E1C828D21120743000BC22DE</string>
 										<key>history</key>
 										<array>
 											<string>E1CBFB1A111D918100F09BC5</string>
@@ -366,8 +366,9 @@
 											<string>E145BABF111F792D00BE4E01</string>
 											<string>E1C828A21120709500BC22DE</string>
 											<string>E1C828A31120709500BC22DE</string>
-											<string>E1C828A41120709500BC22DE</string>
-											<string>E1C828A51120709500BC22DE</string>
+											<string>E1C828C9112073E000BC22DE</string>
+											<string>E1C828CA112073E000BC22DE</string>
+											<string>E1C828CB112073E000BC22DE</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -427,6 +428,10 @@
 											<string>E1C828BD1120709500BC22DE</string>
 											<string>E1C828BE1120709500BC22DE</string>
 											<string>E1C828BF1120709500BC22DE</string>
+											<string>E1C828CC112073E000BC22DE</string>
+											<string>E1C828CD112073E000BC22DE</string>
+											<string>E1C828CE112073E000BC22DE</string>
+											<string>E1C828CF112073E000BC22DE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -440,7 +445,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {761, 561}}</string>
 								<key>RubberWindowFrame</key>
-								<string>5 123 1008 607 0 0 1024 746 </string>
+								<string>6 128 1008 607 0 0 1024 746 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -460,7 +465,7 @@
 								<key>Frame</key>
 								<string>{{0, 566}, {761, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>5 123 1008 607 0 0 1024 746 </string>
+								<string>6 128 1008 607 0 0 1024 746 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -621,12 +626,12 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>E1CBFB2F111D918100F09BC5</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/MacBury/Źródła/iFlaker/iFlaker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>5 123 1008 607 0 0 1024 746 </string>
+	<string>6 128 1008 607 0 0 1024 746 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -642,8 +647,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -666,6 +669,8 @@
 							<string>216pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -997,7 +1002,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

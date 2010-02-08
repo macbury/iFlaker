@@ -19,7 +19,7 @@
 		E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */; };
 		E145BA16111F758B00BE4E01 /* FlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145BA15111F758B00BE4E01 /* FlakController.m */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
-		E1C8288E112069BD00BC22DE /* flakBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C8288D112069BD00BC22DE /* flakBubble.png */; };
+		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
 		E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB0F111D8DCF00F09BC5 /* controller.m */; };
 		E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB3A111D926A00F09BC5 /* Flak.m */; };
 		E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFBA1111D991700F09BC5 /* .gitignore */; };
@@ -76,7 +76,7 @@
 		E145BA15111F758B00BE4E01 /* FlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakController.m; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
-		E1C8288D112069BD00BC22DE /* flakBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakBubble.png; sourceTree = "<group>"; };
+		E1C828C6112073D200BC22DE /* flakEntryBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakEntryBubble.png; sourceTree = "<group>"; };
 		E1CBFB0E111D8DCF00F09BC5 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = controller.h; sourceTree = "<group>"; };
 		E1CBFB0F111D8DCF00F09BC5 /* controller.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = controller.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		E1CBFB39111D926A00F09BC5 /* Flak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flak.h; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E1C8288D112069BD00BC22DE /* flakBubble.png */,
+				E1C828C6112073D200BC22DE /* flakEntryBubble.png */,
 				E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */,
 				E11BE820111E097E00C28968 /* avatarDefault.png */,
 				E11BE87B111E10E000C28968 /* refresh_rev.tif */,
@@ -323,7 +323,7 @@
 				E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */,
 				E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */,
 				E1E23F65111F20BA008347A5 /* otrzymanoFlaki.mp3 in Resources */,
-				E1C8288E112069BD00BC22DE /* flakBubble.png in Resources */,
+				E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -169,6 +169,10 @@
 	return nil;
 }
 
+- (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
+	return NO;
+}
+
 // Actions
 
 - (IBAction) refresh:(id)sender {
