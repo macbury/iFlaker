@@ -14,99 +14,119 @@
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+		flakBubbleImage = [NSImage imageNamed: @"flakBubble"];
         // Initialization code here.
+		
+		leftWidth = 21; 
+		topHeight = 12;
+		
+		rightWidth = [flakBubbleImage size].width - (leftWidth + 1);
+		bottomHeight = [flakBubbleImage size].height - (topHeight + 1);
+		
+		// Create rectangles in the current image's coordinate system using the measurements in preparation for NSDrawNinePartImage
+		topLeftRect = NSMakeRect(0, [flakBubbleImage size].height - topHeight, leftWidth, topHeight);
+		topEdgeRect = NSMakeRect(leftWidth, [flakBubbleImage size].height - topHeight, 1, topHeight);
+		topRightRect = NSMakeRect([flakBubbleImage size].width - rightWidth, [flakBubbleImage size].height - topHeight, rightWidth, topHeight);
+		leftEdgeRect = NSMakeRect(0, bottomHeight, leftWidth, 1);
+		centerRect = NSMakeRect(leftWidth, bottomHeight, 1, 1);
+		rightEdgeRect = NSMakeRect([flakBubbleImage size].width - rightWidth, bottomHeight, rightWidth, 1);
+		bottomLeftRect = NSMakeRect(0, 0, leftWidth, bottomHeight);
+		bottomEdgeRect = NSMakeRect(leftWidth, 0, 1, bottomHeight);
+		bottomRightRect = NSMakeRect([flakBubbleImage size].width - rightWidth, 0, rightWidth, bottomHeight);
+		
+		// Create rects for the 9 cropped images
+		topLeftTileRect = NSMakeRect(0, 0, topLeftRect.size.width, topLeftRect.size.height);
+		topEdgeTileRect = NSMakeRect(0, 0, topEdgeRect.size.width, topEdgeRect.size.height);
+		topRightTileRect = NSMakeRect(0, 0, topRightRect.size.width, topRightRect.size.height);
+		leftEdgeTileRect = NSMakeRect(0, 0, leftEdgeRect.size.width, leftEdgeRect.size.height);
+		centerTileRect = NSMakeRect(0, 0, centerRect.size.width, centerRect.size.height);
+		rightEdgeTileRect = NSMakeRect(0, 0, rightEdgeRect.size.width, rightEdgeRect.size.height);
+		bottomLeftTileRect = NSMakeRect(0, 0, bottomLeftRect.size.width, bottomLeftRect.size.height);
+		bottomEdgeTileRect = NSMakeRect(0, 0, bottomEdgeRect.size.width, bottomEdgeRect.size.height);
+		bottomRightTileRect = NSMakeRect(0, 0, bottomRightRect.size.width, bottomRightRect.size.height);
+		
+		// Create 9 NSImages
+		topLeftCorner = [[NSImage alloc] initWithSize:topLeftTileRect.size];
+		topEdge = [[NSImage alloc] initWithSize:topEdgeTileRect.size];
+		topRightCorner = [[NSImage alloc] initWithSize:topRightTileRect.size];
+		leftEdge = [[NSImage alloc] initWithSize:leftEdgeTileRect.size];
+		center = [[NSImage alloc] initWithSize:centerTileRect.size];
+		rightEdge = [[NSImage alloc] initWithSize:rightEdgeTileRect.size];
+		bottomLeftCorner = [[NSImage alloc] initWithSize:bottomLeftTileRect.size];
+		bottomEdge = [[NSImage alloc] initWithSize:bottomEdgeTileRect.size];
+		bottomRightCorner = [[NSImage alloc] initWithSize:bottomRightTileRect.size];
+		
     }
     return self;
 }
 
-- (void)drawImage:(NSImage*)image inRect:(NSRect)rect leftCapWidth:(NSInteger)leftWidth topCapHeight:(NSInteger)topHeight
+- (void) dealloc
 {
-	// Calculate the right cap width and the bottom cap height based on the calculation in the iPhone docs
-	NSInteger rightWidth = [image size].width - (leftWidth + 1);
-	NSInteger bottomHeight = [image size].height - (topHeight + 1);
+	[topLeftCorner release];
+	[topEdge release];
+	[topRightCorner release];
+	[leftEdge release];
+	[center release];
+	[rightEdge release];
+	[bottomLeftCorner release];
+	[bottomEdge release];
+	[bottomRightCorner release];
+	[super dealloc];
+}
+
+- (void)drawRect:(NSRect)fuckThisRect {
+	NSRect rect = [self bounds];
 	
-	// Create rectangles in the current image's coordinate system using the measurements in preparation for NSDrawNinePartImage
-	NSRect topLeftRect = NSMakeRect(0, [image size].height - topHeight, leftWidth, topHeight);
-	NSRect topEdgeRect = NSMakeRect(leftWidth, [image size].height - topHeight, 1, topHeight);
-	NSRect topRightRect = NSMakeRect([image size].width - rightWidth, [image size].height - topHeight, rightWidth, topHeight);
-	NSRect leftEdgeRect = NSMakeRect(0, bottomHeight, leftWidth, 1);
-	NSRect centerRect = NSMakeRect(leftWidth, bottomHeight, 1, 1);
-	NSRect rightEdgeRect = NSMakeRect([image size].width - rightWidth, bottomHeight, rightWidth, 1);
-	NSRect bottomLeftRect = NSMakeRect(0, 0, leftWidth, bottomHeight);
-	NSRect bottomEdgeRect = NSMakeRect(leftWidth, 0, 1, bottomHeight);
-	NSRect bottomRightRect = NSMakeRect([image size].width - rightWidth, 0, rightWidth, bottomHeight);
-	
-	// Create rects for the 9 cropped images
-	NSRect topLeftTileRect = NSMakeRect(0, 0, topLeftRect.size.width, topLeftRect.size.height);
-	NSRect topEdgeTileRect = NSMakeRect(0, 0, topEdgeRect.size.width, topEdgeRect.size.height);
-	NSRect topRightTileRect = NSMakeRect(0, 0, topRightRect.size.width, topRightRect.size.height);
-	NSRect leftEdgeTileRect = NSMakeRect(0, 0, leftEdgeRect.size.width, leftEdgeRect.size.height);
-	NSRect centerTileRect = NSMakeRect(0, 0, centerRect.size.width, centerRect.size.height);
-	NSRect rightEdgeTileRect = NSMakeRect(0, 0, rightEdgeRect.size.width, rightEdgeRect.size.height);
-	NSRect bottomLeftTileRect = NSMakeRect(0, 0, bottomLeftRect.size.width, bottomLeftRect.size.height);
-	NSRect bottomEdgeTileRect = NSMakeRect(0, 0, bottomEdgeRect.size.width, bottomEdgeRect.size.height);
-	NSRect bottomRightTileRect = NSMakeRect(0, 0, bottomRightRect.size.width, bottomRightRect.size.height);
-	
-	// Create 9 NSImages and draw them into the tile rects
-	NSImage *topLeftCorner = [[NSImage alloc] initWithSize:topLeftTileRect.size];
 	[topLeftCorner lockFocus];
-	[image drawInRect:topLeftTileRect
+	[flakBubbleImage drawInRect:topLeftTileRect
 			 fromRect:topLeftRect
 			operation:NSCompositeCopy fraction:1.0];
 	[topLeftCorner unlockFocus];
-	
-	NSImage *topEdge = [[NSImage alloc] initWithSize:topEdgeTileRect.size];
+
 	[topEdge lockFocus];
-	[image drawInRect:topEdgeTileRect
+	[flakBubbleImage drawInRect:topEdgeTileRect
 			 fromRect:topEdgeRect
 			operation:NSCompositeCopy fraction:1.0];
 	[topEdge unlockFocus];
 	
-	NSImage *topRightCorner = [[NSImage alloc] initWithSize:topRightTileRect.size];
 	[topRightCorner lockFocus];
-	[image drawInRect:topRightTileRect
+	[flakBubbleImage drawInRect:topRightTileRect
 			 fromRect:topRightRect
 			operation:NSCompositeCopy fraction:1.0];
 	[topRightCorner unlockFocus];
 	
-	NSImage *leftEdge = [[NSImage alloc] initWithSize:leftEdgeTileRect.size];
 	[leftEdge lockFocus];
-	[image drawInRect:leftEdgeTileRect
+	[flakBubbleImage drawInRect:leftEdgeTileRect
 			 fromRect:leftEdgeRect
 			operation:NSCompositeCopy fraction:1.0];
 	[leftEdge unlockFocus];
 	
-	NSImage *center = [[NSImage alloc] initWithSize:centerTileRect.size];
 	[center lockFocus];
-	[image drawInRect:centerTileRect
+	[flakBubbleImage drawInRect:centerTileRect
 			 fromRect:centerRect
 			operation:NSCompositeCopy fraction:1.0];
 	[center unlockFocus];
 	
-	NSImage *rightEdge = [[NSImage alloc] initWithSize:rightEdgeTileRect.size];
 	[rightEdge lockFocus];
-	[image drawInRect:rightEdgeTileRect
+	[flakBubbleImage drawInRect:rightEdgeTileRect
 			 fromRect:rightEdgeRect
 			operation:NSCompositeCopy fraction:1.0];
 	[rightEdge unlockFocus];
-	
-	NSImage *bottomLeftCorner = [[NSImage alloc] initWithSize:bottomLeftTileRect.size];
+
 	[bottomLeftCorner lockFocus];
-	[image drawInRect:bottomLeftTileRect
+	[flakBubbleImage drawInRect:bottomLeftTileRect
 			 fromRect:bottomLeftRect
 			operation:NSCompositeCopy fraction:1.0];
 	[bottomLeftCorner unlockFocus];
-	
-	NSImage *bottomEdge = [[NSImage alloc] initWithSize:bottomEdgeTileRect.size];
+
 	[bottomEdge lockFocus];
-	[image drawInRect:bottomEdgeTileRect
+	[flakBubbleImage drawInRect:bottomEdgeTileRect
 			 fromRect:bottomEdgeRect
 			operation:NSCompositeCopy fraction:1.0];
 	[bottomEdge unlockFocus];
-	
-	NSImage *bottomRightCorner = [[NSImage alloc] initWithSize:bottomRightTileRect.size];
+
 	[bottomRightCorner lockFocus];
-	[image drawInRect:bottomRightTileRect
+	[flakBubbleImage drawInRect:bottomRightTileRect
 			 fromRect:bottomRightRect
 			operation:NSCompositeCopy fraction:1.0];
 	[bottomRightCorner unlockFocus];
@@ -117,28 +137,7 @@
 						leftEdge, center, rightEdge,
 						bottomLeftCorner, bottomEdge, bottomRightCorner,
 						NSCompositeSourceOver, 1.0, NO);
-	
-	[topLeftCorner release];
-	[topEdge release];
-	[topRightCorner release];
-	[leftEdge release];
-	[center release];
-	[rightEdge release];
-	[bottomLeftCorner release];
-	[bottomEdge release];
-	[bottomRightCorner release];
-}
 
-- (NSImage *) flakBubbleImage {
-	if (flakBubbleImage == nil) {
-		flakBubbleImage = [NSImage imageNamed: @"flakBubble"];
-	}
-	
-	return flakBubbleImage;
-} 
-
-- (void)drawRect:(NSRect)rect {
-    [self drawImage: [self flakBubbleImage] inRect: [self bounds] leftCapWidth:21 topCapHeight:12];
 }
 
 @end
