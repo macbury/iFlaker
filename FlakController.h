@@ -8,12 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Flak.h"
+#import "FlakBubbleView.h"
 
 @interface FlakController : NSObject {
 	IBOutlet NSView *subview;
 	IBOutlet NSTextField * loginTextField;
 	IBOutlet NSTextField * bodyTextField;
-	IBOutlet NSBox * contentBox;
+	IBOutlet FlakBubbleView * contentBox;
 	
 	Flak * flak;
 }

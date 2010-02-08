@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E145BB17111F7A2400BE4E01</string>
+										<string>E1C828741120666C00BC22DE</string>
 										<key>history</key>
 										<array>
 											<string>E1CBFB1A111D918100F09BC5</string>
@@ -365,7 +365,7 @@
 											<string>E145BA80111F780B00BE4E01</string>
 											<string>E145BABF111F792D00BE4E01</string>
 											<string>E145BACF111F79A000BE4E01</string>
-											<string>E145BAD0111F79A000BE4E01</string>
+											<string>E145BB17111F7A2400BE4E01</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -393,141 +393,12 @@
 											<string>E1E23E45111F0ACE008347A5</string>
 											<string>E1E23E62111F0CBB008347A5</string>
 											<string>E1E23ECA111F1138008347A5</string>
-											<string>E145B95F111F691400BE4E01</string>
-											<string>E145B960111F691400BE4E01</string>
-											<string>E145B961111F691400BE4E01</string>
-											<string>E145B962111F691400BE4E01</string>
-											<string>E145B963111F691400BE4E01</string>
-											<string>E145B964111F691400BE4E01</string>
-											<string>E145B965111F691400BE4E01</string>
-											<string>E145B966111F691400BE4E01</string>
-											<string>E145B967111F691400BE4E01</string>
-											<string>E145B968111F691400BE4E01</string>
-											<string>E145B969111F691400BE4E01</string>
 											<string>E145B96A111F691400BE4E01</string>
-											<string>E145B96B111F691400BE4E01</string>
 											<string>E145B96C111F691400BE4E01</string>
-											<string>E145B96D111F691400BE4E01</string>
-											<string>E145B96E111F691400BE4E01</string>
-											<string>E145B96F111F691400BE4E01</string>
-											<string>E145B970111F691400BE4E01</string>
 											<string>E145B971111F691400BE4E01</string>
-											<string>E145B972111F691400BE4E01</string>
-											<string>E145B973111F691400BE4E01</string>
-											<string>E145B976111F691400BE4E01</string>
-											<string>E145B97D111F691400BE4E01</string>
 											<string>E145B97E111F691400BE4E01</string>
-											<string>E145B97F111F691400BE4E01</string>
-											<string>E145B980111F691400BE4E01</string>
-											<string>E145B981111F691400BE4E01</string>
-											<string>E145B98E111F69A300BE4E01</string>
-											<string>E145B98F111F69A300BE4E01</string>
-											<string>E145B9B4111F6B2700BE4E01</string>
-											<string>E145B9B9111F6B2700BE4E01</string>
-											<string>E145B9BA111F6B2700BE4E01</string>
-											<string>E145B9CD111F6BC200BE4E01</string>
-											<string>E145B9CE111F6BC200BE4E01</string>
-											<string>E145B9EC111F70A400BE4E01</string>
-											<string>E145B9ED111F70A400BE4E01</string>
-											<string>E145B9EF111F70A400BE4E01</string>
-											<string>E145B9F0111F70A400BE4E01</string>
-											<string>E145B9F1111F70A400BE4E01</string>
-											<string>E145B9F2111F70A400BE4E01</string>
-											<string>E145B9F3111F70A400BE4E01</string>
-											<string>E145B9F4111F70A400BE4E01</string>
-											<string>E145B9F5111F70A400BE4E01</string>
-											<string>E145B9F6111F70A400BE4E01</string>
-											<string>E145B9F7111F70A400BE4E01</string>
-											<string>E145BA22111F75A600BE4E01</string>
-											<string>E145BA23111F75A600BE4E01</string>
-											<string>E145BA24111F75A600BE4E01</string>
-											<string>E145BA25111F75A600BE4E01</string>
-											<string>E145BA26111F75A600BE4E01</string>
-											<string>E145BA27111F75A600BE4E01</string>
-											<string>E145BA28111F75A600BE4E01</string>
-											<string>E145BA29111F75A600BE4E01</string>
-											<string>E145BA2A111F75A600BE4E01</string>
-											<string>E145BA2B111F75A600BE4E01</string>
-											<string>E145BA2C111F75A600BE4E01</string>
-											<string>E145BA2D111F75A600BE4E01</string>
-											<string>E145BA2E111F75A600BE4E01</string>
-											<string>E145BA2F111F75A600BE4E01</string>
-											<string>E145BA30111F75A600BE4E01</string>
-											<string>E145BA31111F75A600BE4E01</string>
-											<string>E145BA32111F75A600BE4E01</string>
-											<string>E145BA33111F75A600BE4E01</string>
-											<string>E145BA34111F75A600BE4E01</string>
-											<string>E145BA35111F75A600BE4E01</string>
-											<string>E145BA36111F75A600BE4E01</string>
-											<string>E145BA37111F75A600BE4E01</string>
-											<string>E145BA38111F75A600BE4E01</string>
-											<string>E145BA39111F75A600BE4E01</string>
-											<string>E145BA3A111F75A600BE4E01</string>
-											<string>E145BA3B111F75A600BE4E01</string>
-											<string>E145BA3C111F75A600BE4E01</string>
-											<string>E145BA3D111F75A600BE4E01</string>
-											<string>E145BA3E111F75A600BE4E01</string>
-											<string>E145BA3F111F75A600BE4E01</string>
-											<string>E145BA40111F75A600BE4E01</string>
-											<string>E145BA41111F75A600BE4E01</string>
-											<string>E145BA42111F75A600BE4E01</string>
-											<string>E145BA43111F75A600BE4E01</string>
-											<string>E145BA44111F75A600BE4E01</string>
-											<string>E145BA45111F75A600BE4E01</string>
-											<string>E145BA46111F75A600BE4E01</string>
-											<string>E145BA47111F75A600BE4E01</string>
-											<string>E145BA48111F75A600BE4E01</string>
-											<string>E145BA49111F75A600BE4E01</string>
 											<string>E145BA4A111F75A600BE4E01</string>
 											<string>E145BA60111F764000BE4E01</string>
-											<string>E145BA61111F764000BE4E01</string>
-											<string>E145BA62111F764000BE4E01</string>
-											<string>E145BA63111F764000BE4E01</string>
-											<string>E145BA64111F764000BE4E01</string>
-											<string>E145BA65111F764000BE4E01</string>
-											<string>E145BA66111F764000BE4E01</string>
-											<string>E145BA84111F780B00BE4E01</string>
-											<string>E145BA85111F780B00BE4E01</string>
-											<string>E145BA86111F780B00BE4E01</string>
-											<string>E145BA87111F780B00BE4E01</string>
-											<string>E145BA88111F780B00BE4E01</string>
-											<string>E145BA89111F780B00BE4E01</string>
-											<string>E145BA8A111F780B00BE4E01</string>
-											<string>E145BA8B111F780B00BE4E01</string>
-											<string>E145BA8C111F780B00BE4E01</string>
-											<string>E145BA8D111F780B00BE4E01</string>
-											<string>E145BA8E111F780B00BE4E01</string>
-											<string>E145BA8F111F780B00BE4E01</string>
-											<string>E145BA90111F780B00BE4E01</string>
-											<string>E145BA91111F780B00BE4E01</string>
-											<string>E145BA92111F780B00BE4E01</string>
-											<string>E145BA93111F780B00BE4E01</string>
-											<string>E145BA94111F780B00BE4E01</string>
-											<string>E145BA95111F780B00BE4E01</string>
-											<string>E145BA96111F780B00BE4E01</string>
-											<string>E145BA97111F780B00BE4E01</string>
-											<string>E145BA98111F780B00BE4E01</string>
-											<string>E145BA99111F780B00BE4E01</string>
-											<string>E145BA9A111F780B00BE4E01</string>
-											<string>E145BA9B111F780B00BE4E01</string>
-											<string>E145BA9C111F780B00BE4E01</string>
-											<string>E145BA9D111F780B00BE4E01</string>
-											<string>E145BA9E111F780B00BE4E01</string>
-											<string>E145BA9F111F780B00BE4E01</string>
-											<string>E145BAA0111F780B00BE4E01</string>
-											<string>E145BAA1111F780B00BE4E01</string>
-											<string>E145BAA2111F780B00BE4E01</string>
-											<string>E145BAA3111F780B00BE4E01</string>
-											<string>E145BAB0111F784200BE4E01</string>
-											<string>E145BAC2111F792D00BE4E01</string>
-											<string>E145BAC3111F792D00BE4E01</string>
-											<string>E145BAC4111F792D00BE4E01</string>
-											<string>E145BAC5111F792D00BE4E01</string>
-											<string>E145BAC6111F792D00BE4E01</string>
-											<string>E145BACB111F796C00BE4E01</string>
-											<string>E145BACC111F796C00BE4E01</string>
-											<string>E145BAD1111F79A000BE4E01</string>
-											<string>E145BAD2111F79A000BE4E01</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -585,9 +456,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>E145B92E111F608F00BE4E01</string>
+				<string>E1C828751120666C00BC22DE</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>E145B92F111F608F00BE4E01</string>
+				<string>E1C828761120666C00BC22DE</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -721,12 +592,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E145B9BD111F6B2700BE4E01</string>
-		<string>E145B9BE111F6B2700BE4E01</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>E1CBFB2F111D918100F09BC5</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/MacBury/Źródła/iFlaker/iFlaker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
