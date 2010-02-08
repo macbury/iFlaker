@@ -27,6 +27,8 @@
 	NSURLConnection * updateConnection;
 	NSMutableData * receivedData;
 	
+	NSMutableDictionary * usersDictionary;
+	
 	id<FlakerDelegate> delegate;
 }
 

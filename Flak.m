@@ -11,7 +11,7 @@
 
 @implementation Flak
 
-@synthesize body, user, permalink;
+@synthesize body, user, permalink, createdAt;
 
 - (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent; {
 	self = [super init];
@@ -19,11 +19,30 @@
 		[self setUser: flakUser];
 		[self setBody: [flakContent objectForKey: @"text"]];
 		[self setPermalink: [flakContent objectForKey: @"permalink"]];
+		[self setCreatedAt: [NSDate dateWithString: [[flakContent objectForKey:@"datetime"] stringByAppendingString: @" +0000"]]];
 	}
 	return self;
 }
 
+// Prawie jak rails...
+- (NSString *) distanceOfTimeInWords {
+	double seconds = [createdAt timeIntervalSinceNow] * -1;
+
+	if (seconds < 30) 
+		return @"pół minuty temu";
+	if (seconds < 60) 
+		return @"około minuty temu";
+	if (seconds < 120)
+		return @"minute temu";
+	
+	return [createdAt descriptionWithCalendarFormat: @"%H:%M:%S"
+										   timeZone: nil 
+											 locale: nil];
+
+}
+
 - (void) dealloc {
+	[createdAt release];
 	[permalink release];
 	[body release];
 	[user release];

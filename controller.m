@@ -68,8 +68,7 @@
 	NSData * avatarImage;
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
-		avatarImage = [[NSData alloc] initWithContentsOfFile: [FileStore pathForAvatar: [flak.user avatarName]]];
-		[avatarImage autorelease];
+		avatarImage = [flak.user.avatarImage TIFFRepresentation];
 	} else {
 		avatarImage = nil;
 	}
@@ -109,6 +108,10 @@
 }
 
 - (void)completeFetchingFromFlaker:(NSArray *) flaki {
+	
+	for (FlakController * fc in flakiArray){
+		[fc updateDate];
+	}
 	
 	if ([flaki count] > 0) {
 		[otrzymaneFlakiSound play];

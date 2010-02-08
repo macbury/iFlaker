@@ -54,17 +54,24 @@
 	[subview setFrameSize: viewBoxSize];
 }
 
+- (void) updateDate {
+	[timeTextField setStringValue: [flak distanceOfTimeInWords]];
+}
+
 - (void) awakeFromNib {
 	[loginTextField setStringValue: flak.user.login];
 	[bodyTextField setStringValue: flak.body];
+	[self updateDate];
 	[self resizeToFitBody];
 	[avatarDownloadIndicator startAnimation: self];
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
-		NSImage * avatarImage = [[NSImage alloc] initWithContentsOfFile: [FileStore pathForAvatar: [flak.user avatarName]]];
+		if (flak.user.avatarImage == nil) {
+			flak.user.avatarImage = [[NSImage alloc] initWithContentsOfFile: [FileStore pathForAvatar: [flak.user avatarName]]];
+		}
+		
 		[avatarDownloadIndicator stopAnimation: self];
-		[avatarView setImage: avatarImage];
-		[avatarImage autorelease];
+		[avatarView setImage: flak.user.avatarImage];
 		[avatarDownloadIndicator setHidden: YES];
 	}else{
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: flak.user.avatar]
@@ -85,9 +92,8 @@
 	[avatarDownloadIndicator stopAnimation: self];
 	[avatarDownloadIndicator setHidden: YES];
 	
-	NSImage * avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
-	[avatarView setImage: avatarImage];
-	[avatarImage autorelease];
+	flak.user.avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
+	[avatarView setImage: flak.user.avatarImage];
 	
 	[recivedAvatarData writeToFile: [FileStore pathForAvatar: [flak.user avatarName] ] atomically: YES];
 	

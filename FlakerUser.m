@@ -11,7 +11,7 @@
 
 @implementation FlakerUser
 
-@synthesize avatar, login, url;
+@synthesize avatar, login, url, avatarImage;
 
 - (id) initWithContent:(NSDictionary *) userContent
 {
@@ -33,6 +33,7 @@
 }
 
 - (void) dealloc {
+	[avatarImage release];
 	[login release];
 	[avatar release];
 	[url release];

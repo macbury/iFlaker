@@ -12,6 +12,7 @@
 @interface Flak : NSObject {
 	NSString * permalink;
 	NSString * body;
+	NSDate * createdAt;
 	
 	FlakerUser * user;
 }
@@ -19,7 +20,9 @@
 @property (copy) NSString * body;
 @property (copy) NSString * permalink;
 @property (retain) FlakerUser * user;
+@property (retain) NSDate * createdAt;
 
 - (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent;
+- (NSString *) distanceOfTimeInWords;
 
 @end

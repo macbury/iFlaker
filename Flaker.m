@@ -16,6 +16,7 @@
 	self = [super init];
 	if (self != nil) {
 		parser = [[SBJSON alloc] init];
+		usersDictionary = [[NSMutableDictionary alloc] init];
 		
 		[self setLogin:newLogin];
 		[self setLimit: [[NSNumber alloc] initWithInt:10]];
@@ -24,6 +25,7 @@
 }
 
 - (void) dealloc {
+	[usersDictionary release];
 	[limit release];
 	[parser release];
 	[updateConnection release];
@@ -79,10 +81,17 @@
 	for (int i = 0; i < [entries count]; i++) {
 		NSDictionary * entry = [entries objectAtIndex: i];
 		if (i == 0) {
-			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue] + 1] ;
+			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue]];
 		}
 		
-		FlakerUser * user = [[[FlakerUser alloc] initWithContent: [entry objectForKey:@"user"]] autorelease];
+		NSDictionary * userTempDict = [entry objectForKey:@"user"];
+		
+		FlakerUser * user = [usersDictionary objectForKey: [userTempDict objectForKey: @"login"]];
+		
+		if (user == nil) {
+			user = [[[FlakerUser alloc] initWithContent: userTempDict] autorelease];
+			[usersDictionary setObject: user forKey: user.login];
+		}
 		
 		Flak * flak = [[Flak alloc]  initWithUser: user flakContent: entry];
 		

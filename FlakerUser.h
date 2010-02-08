@@ -13,11 +13,14 @@
 	NSString * login;
 	NSString * avatar;
 	NSString * url;
+	
+	NSImage * avatarImage;
 }
 
 @property (copy) NSString * login;
 @property (copy) NSString * avatar;
 @property (copy) NSString * url;
+@property (retain) NSImage * avatarImage;
 
 - (id) initWithContent:(NSDictionary *) userContent;
 - (NSString *) avatarName;

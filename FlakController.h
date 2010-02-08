@@ -16,6 +16,7 @@
 	IBOutlet NSView *subview;
 	IBOutlet NSTextField * loginTextField;
 	IBOutlet NSTextField * bodyTextField;
+	IBOutlet NSTextField * timeTextField;
 	IBOutlet FlakBubbleView * contentBox;
 	IBOutlet NSProgressIndicator * avatarDownloadIndicator;
 	IBOutlet NSImageView * avatarView;
@@ -30,5 +31,8 @@
 
 - (id) initWithFlak:(Flak*)flak;
 - (NSView *) view;
--(void) resizeToFitBody;
+
+- (void) resizeToFitBody;
+- (void) updateDate;
+
 @end
