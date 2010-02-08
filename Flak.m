@@ -11,20 +11,22 @@
 
 @implementation Flak
 
-@synthesize login, body;
+@synthesize body, user, permalink;
 
-- (id) initWithLogin:(NSString *)newLogin body:(NSString *)newBody {
+- (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent; {
 	self = [super init];
 	if (self != nil) {
-		[self setLogin: newLogin];
-		[self setBody: newBody];
+		[self setUser: flakUser];
+		[self setBody: [flakContent objectForKey: @"text"]];
+		[self setPermalink: [flakContent objectForKey: @"permalink"]];
 	}
 	return self;
 }
 
 - (void) dealloc {
-	[login release];
+	[permalink release];
 	[body release];
+	[user release];
 	[super dealloc];
 }
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "flak.h"
 #import "JSON.h"
+#import "FlakerUser.h"
 
 @protocol FlakerDelegate <NSObject>
 @optional

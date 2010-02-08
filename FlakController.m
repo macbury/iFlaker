@@ -55,14 +55,53 @@
 }
 
 - (void) awakeFromNib {
-	[loginTextField setStringValue: flak.login];
+	[loginTextField setStringValue: flak.user.login];
 	[bodyTextField setStringValue: flak.body];
 	[self resizeToFitBody];
 	[avatarDownloadIndicator startAnimation: self];
+	
+	if ([FileStore avatarExist: [flak.user avatarName]]){
+		[avatarDownloadIndicator stopAnimation: self];
+	}else{
+		NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: flak.user.avatar]
+													cachePolicy: NSURLRequestReturnCacheDataElseLoad
+												timeoutInterval: 30];
+		NSLog(@"Avatar GET: %@", flak.user.avatar);
+		
+		recivedAvatarData = [[NSMutableData alloc] init];
+		avatarDownloadConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+	}
 }
 
-- (void) dealloc
-{
+- (void)connection:(NSURLConnection *)con didReceiveData:(NSData *)data {
+	[recivedAvatarData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)con {
+	[avatarDownloadIndicator stopAnimation: self];
+	[avatarDownloadIndicator setHidden: YES];
+	
+	NSImage * avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
+	[avatarView setImage: avatarImage];
+	[avatarImage autorelease];
+	
+	[recivedAvatarData release];
+	[avatarDownloadConnection release];
+}
+
+- (void)connection:(NSURLConnection *)con didFailWithError:(NSError *)error {
+	[recivedAvatarData release];
+	[avatarDownloadConnection release];
+	
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSErrorFailingURLStringKey]);
+}
+
+
+- (void) dealloc {
+	[avatarDownloadConnection release];
+	[recivedAvatarData release];
     [subview release];
     [flak release];
     [super dealloc];

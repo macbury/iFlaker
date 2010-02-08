@@ -7,15 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FlakerUser.h"
 
 @interface Flak : NSObject {
-	NSString * login;
+	NSString * permalink;
 	NSString * body;
+	
+	FlakerUser * user;
 }
 
-@property (copy) NSString * login;
 @property (copy) NSString * body;
+@property (copy) NSString * permalink;
+@property (retain) FlakerUser * user;
 
-- (id) initWithLogin:(NSString *)newLogin body:(NSString *)newBody;
+- (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent;
 
 @end

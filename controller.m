@@ -65,7 +65,7 @@
 }
 
 - (void)growlAboutFlak:(Flak *)flak {
-	[GrowlApplicationBridge notifyWithTitle: flak.login
+	[GrowlApplicationBridge notifyWithTitle: flak.user.login
 															description: flak.body
 												 notificationName:@"NoweFlaki"
 																 iconData: nil //[NSBundle bundleWithIdentifier: "avatarDefault"]

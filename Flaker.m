@@ -40,10 +40,10 @@
 	NSString * urlString;
 	
 	if(last_flak_id == nil) {
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/comments:true/",
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:true/",
 								newType, self.login, self.limit];
 	}else{
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/comments:true/start:%@",
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:true/start:%@",
 								newType, self.login, self.limit, last_flak_id];
 	}
 	
@@ -82,8 +82,10 @@
 			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue] + 1] ;
 		}
 		
-		Flak * flak = [[Flak alloc] initWithLogin: [[entry objectForKey:@"user"] objectForKey: @"login"]
-											 body: [entry objectForKey:@"text"]];
+		FlakerUser * user = [[[FlakerUser alloc] initWithContent: [entry objectForKey:@"user"]] autorelease];
+		
+		Flak * flak = [[Flak alloc]  initWithUser: user flakContent: entry];
+		
 		[flaki addObject: flak];
 		[flak autorelease];
 	}

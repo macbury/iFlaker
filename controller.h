@@ -9,9 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import <Growl/Growl.h>
 #import "flaker.h"
-#import "FlakCell.h"
+
 #import "FlakController.h"
 #import "SubviewTableViewController.h"
+#import "FileStore.h"
 
 @interface Controller : NSObject <FlakerDelegate, GrowlApplicationBridgeDelegate, SubviewTableViewControllerDataSourceProtocol> {
 	IBOutlet NSWindow * mainWindow;

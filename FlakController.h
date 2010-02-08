@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Flak.h"
+#import "FlakerUser.h"
 #import "FlakBubbleView.h"
+#import "FileStore.h"
 
 @interface FlakController : NSObject {
 	IBOutlet NSView *subview;
@@ -16,8 +18,12 @@
 	IBOutlet NSTextField * bodyTextField;
 	IBOutlet FlakBubbleView * contentBox;
 	IBOutlet NSProgressIndicator * avatarDownloadIndicator;
+	IBOutlet NSImageView * avatarView;
 	
 	Flak * flak;
+	
+	NSURLConnection * avatarDownloadConnection;
+	NSMutableData * recivedAvatarData;
 }
 
 @property (retain) Flak * flak;
