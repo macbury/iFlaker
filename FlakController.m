@@ -61,7 +61,11 @@
 	[avatarDownloadIndicator startAnimation: self];
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
+		NSImage * avatarImage = [[NSImage alloc] initWithContentsOfFile: [FileStore pathForAvatar: [flak.user avatarName]]];
 		[avatarDownloadIndicator stopAnimation: self];
+		[avatarView setImage: avatarImage];
+		[avatarImage autorelease];
+		[avatarDownloadIndicator setHidden: YES];
 	}else{
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: flak.user.avatar]
 													cachePolicy: NSURLRequestReturnCacheDataElseLoad
@@ -84,6 +88,8 @@
 	NSImage * avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
 	[avatarView setImage: avatarImage];
 	[avatarImage autorelease];
+	
+	[recivedAvatarData writeToFile: [FileStore pathForAvatar: [flak.user avatarName] ] atomically: YES];
 	
 	[recivedAvatarData release];
 	[avatarDownloadConnection release];

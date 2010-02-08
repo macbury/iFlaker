@@ -65,10 +65,19 @@
 }
 
 - (void)growlAboutFlak:(Flak *)flak {
+	NSData * avatarImage;
+	
+	if ([FileStore avatarExist: [flak.user avatarName]]){
+		avatarImage = [[NSData alloc] initWithContentsOfFile: [FileStore pathForAvatar: [flak.user avatarName]]];
+		[avatarImage autorelease];
+	} else {
+		avatarImage = nil;
+	}
+	
 	[GrowlApplicationBridge notifyWithTitle: flak.user.login
 															description: flak.body
 												 notificationName:@"NoweFlaki"
-																 iconData: nil //[NSBundle bundleWithIdentifier: "avatarDefault"]
+																 iconData: avatarImage 
 																 priority:1
 																 isSticky:NO
 														 clickContext:@"test"];
