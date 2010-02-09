@@ -31,6 +31,7 @@
 	NSLog(@"Fetching access token...");
 	NSURL *url = [NSURL URLWithString: @"http://flaker.pl/oauth/access_token"];
 	
+	[flaker.requestToken setVerifier: oauth_verifier];
 	
 	OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL:url
                                                                    consumer:flaker.consumer
@@ -38,12 +39,10 @@
                                                                       realm:nil   
                                                           signatureProvider:nil]; 
 	
-    OARequestParameter *verifierParam = [[OARequestParameter alloc] initWithName: @"oauth_verifier"
-																		   value: oauth_verifier];
-	OARequestParameter *tokenParam = [[OARequestParameter alloc] initWithName: @"oauth_token"
-																		value: flaker.requestToken.key];
-	
-    [request setParameters:[NSArray arrayWithObjects:verifierParam, tokenParam, nil]];
+   // OARequestParameter *verifierParam = [[OARequestParameter alloc] initWithName: @"oauth_verifier"
+	//																	   value: oauth_verifier];
+   // [request setParameters:[NSArray arrayWithObjects:verifierParam, nil]];
+
     [request setHTTPMethod:@"GET"];
 	
 	OADataFetcher *fetcher = [[OADataFetcher alloc] init];

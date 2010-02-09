@@ -14,8 +14,6 @@
 		E145B939111F61E500BE4E01 /* SubviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B935111F61E500BE4E01 /* SubviewTableViewController.m */; };
 		E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */; };
 		E145BA16111F758B00BE4E01 /* FlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145BA15111F758B00BE4E01 /* FlakController.m */; };
-		E14F2DAC1121AF2A0073E704 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
-		E14F2DBF1121AF2E0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
 		E14F2E461121BDF90073E704 /* heart_off.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E451121BDF90073E704 /* heart_off.gif */; };
 		E14F2E4F1121BE810073E704 /* comment.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4C1121BE810073E704 /* comment.gif */; };
 		E14F2E501121BE810073E704 /* newspaper_add.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4D1121BE810073E704 /* newspaper_add.gif */; };
@@ -23,6 +21,8 @@
 		E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2EB51121CBBF0073E704 /* AuthController.m */; };
 		E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14F2EB71121CBE60073E704 /* AuthController.xib */; };
 		E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */; };
+		E14F31CC112208520073E704 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F31CB112208520073E704 /* OAuthConsumer.framework */; };
+		E14F31DF1122085C0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E14F31CB112208520073E704 /* OAuthConsumer.framework */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
 		E1C829A211208DBB00BC22DE /* avatarDefault.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */; };
@@ -52,7 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E14F2DBF1121AF2E0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */,
+				E14F31DF1122085C0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */,
 				E1E23EB4111F10A9008347A5 /* Growl.framework in Copy Frameworks (1) */,
 			);
 			name = "Copy Frameworks (1)";
@@ -77,7 +77,6 @@
 		E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewTableViewCell.m; sourceTree = "<group>"; };
 		E145BA14111F758B00BE4E01 /* FlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakController.h; sourceTree = "<group>"; };
 		E145BA15111F758B00BE4E01 /* FlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakController.m; sourceTree = "<group>"; };
-		E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
 		E14F2E451121BDF90073E704 /* heart_off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart_off.gif; sourceTree = "<group>"; };
 		E14F2E4C1121BE810073E704 /* comment.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = comment.gif; sourceTree = "<group>"; };
 		E14F2E4D1121BE810073E704 /* newspaper_add.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newspaper_add.gif; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		E14F2EB71121CBE60073E704 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
 		E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakerOAuthPinVerificator.h; sourceTree = "<group>"; };
 		E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerOAuthPinVerificator.m; sourceTree = "<group>"; };
+		E14F31CB112208520073E704 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
 		E1C828C6112073D200BC22DE /* flakEntryBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakEntryBubble.png; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */,
-				E14F2DAC1121AF2A0073E704 /* OAuthConsumer.framework in Frameworks */,
+				E14F31CC112208520073E704 /* OAuthConsumer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */,
+				E14F31CB112208520073E704 /* OAuthConsumer.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";

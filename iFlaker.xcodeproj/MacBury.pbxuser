@@ -641,6 +641,35 @@
 			E14F31191121F8890073E704 /* PBXTextBookmark */ = E14F31191121F8890073E704 /* PBXTextBookmark */;
 			E14F311A1121F8890073E704 /* PBXTextBookmark */ = E14F311A1121F8890073E704 /* PBXTextBookmark */;
 			E14F311B1121F8890073E704 /* PBXTextBookmark */ = E14F311B1121F8890073E704 /* PBXTextBookmark */;
+			E14F311C1121F9350073E704 /* PBXTextBookmark */ = E14F311C1121F9350073E704 /* PBXTextBookmark */;
+			E14F311E1121F9DE0073E704 /* PBXTextBookmark */ = E14F311E1121F9DE0073E704 /* PBXTextBookmark */;
+			E14F31561121FDF60073E704 /* PBXTextBookmark */ = E14F31561121FDF60073E704 /* PBXTextBookmark */;
+			E14F31571121FDF60073E704 /* PBXTextBookmark */ = E14F31571121FDF60073E704 /* PBXTextBookmark */;
+			E14F31581121FDF60073E704 /* PBXTextBookmark */ = E14F31581121FDF60073E704 /* PBXTextBookmark */;
+			E14F31591121FDF60073E704 /* PBXTextBookmark */ = E14F31591121FDF60073E704 /* PBXTextBookmark */;
+			E14F315A1121FDF60073E704 /* PBXTextBookmark */ = E14F315A1121FDF60073E704 /* PBXTextBookmark */;
+			E14F3187112202150073E704 /* PBXTextBookmark */ = E14F3187112202150073E704 /* PBXTextBookmark */;
+			E14F3188112202170073E704 /* PBXTextBookmark */ = E14F3188112202170073E704 /* PBXTextBookmark */;
+			E14F318A112202950073E704 /* PBXTextBookmark */ = E14F318A112202950073E704 /* PBXTextBookmark */;
+			E14F318B112202950073E704 /* PBXTextBookmark */ = E14F318B112202950073E704 /* PBXTextBookmark */;
+			E14F318C112202950073E704 /* PBXTextBookmark */ = E14F318C112202950073E704 /* PBXTextBookmark */;
+			E14F318D112202950073E704 /* PBXTextBookmark */ = E14F318D112202950073E704 /* PBXTextBookmark */;
+			E14F318E112202950073E704 /* PBXTextBookmark */ = E14F318E112202950073E704 /* PBXTextBookmark */;
+			E14F318F112202950073E704 /* PBXTextBookmark */ = E14F318F112202950073E704 /* PBXTextBookmark */;
+			E14F3190112202950073E704 /* PBXTextBookmark */ = E14F3190112202950073E704 /* PBXTextBookmark */;
+			E14F3192112202FA0073E704 /* PBXTextBookmark */ = E14F3192112202FA0073E704 /* PBXTextBookmark */;
+			E14F3193112203470073E704 /* PBXTextBookmark */ = E14F3193112203470073E704 /* PBXTextBookmark */;
+			E14F31941122034C0073E704 /* PBXTextBookmark */ = E14F31941122034C0073E704 /* PBXTextBookmark */;
+			E14F319D1122048B0073E704 /* PBXTextBookmark */ = E14F319D1122048B0073E704 /* PBXTextBookmark */;
+			E14F319E1122048B0073E704 /* PBXTextBookmark */ = E14F319E1122048B0073E704 /* PBXTextBookmark */;
+			E14F319F1122048B0073E704 /* PBXTextBookmark */ = E14F319F1122048B0073E704 /* PBXTextBookmark */;
+			E14F31A01122048B0073E704 /* PBXTextBookmark */ = E14F31A01122048B0073E704 /* PBXTextBookmark */;
+			E14F31A11122048B0073E704 /* PBXTextBookmark */ = E14F31A11122048B0073E704 /* PBXTextBookmark */;
+			E14F31AC112205680073E704 /* PBXTextBookmark */ = E14F31AC112205680073E704 /* PBXTextBookmark */;
+			E14F31AD1122057B0073E704 /* PBXTextBookmark */ = E14F31AD1122057B0073E704 /* PBXTextBookmark */;
+			E14F31AE1122057E0073E704 /* PBXTextBookmark */ = E14F31AE1122057E0073E704 /* PBXTextBookmark */;
+			E14F31E1112208CD0073E704 /* PBXTextBookmark */ = E14F31E1112208CD0073E704 /* PBXTextBookmark */;
+			E14F31E2112208D00073E704 /* PBXTextBookmark */ = E14F31E2112208D00073E704 /* PBXTextBookmark */;
 			E1C828A61120709500BC22DE = E1C828A61120709500BC22DE /* PBXTextBookmark */;
 			E1C828A71120709500BC22DE = E1C828A71120709500BC22DE /* PBXTextBookmark */;
 			E1C828A81120709500BC22DE = E1C828A81120709500BC22DE /* PBXTextBookmark */;
@@ -2756,9 +2785,15 @@
 	};
 	E14F2EA61121C8680073E704 /* OAToken.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = OAToken.h;
 		path = "/Users/MacBury/Źródła/iFlaker/OAuthConsumer.framework/Headers/OAToken.h";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {700, 720}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{459, 1326}";
+		};
 	};
 	E14F2EA71121C8680073E704 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -4174,16 +4209,16 @@
 	};
 	E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {700, 529}}";
+			sepNavIntBoundsRect = "{{0, 0}, {700, 496}}";
 			sepNavSelRange = "{244, 33}";
-			sepNavVisRange = "{0, 739}";
+			sepNavVisRange = "{47, 571}";
 		};
 	};
 	E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {740, 1344}}";
-			sepNavSelRange = "{1498, 0}";
-			sepNavVisRange = "{463, 1653}";
+			sepNavIntBoundsRect = "{{0, 0}, {719, 1344}}";
+			sepNavSelRange = "{464, 0}";
+			sepNavVisRange = "{405, 1002}";
 		};
 	};
 	E14F2F781121E8F20073E704 /* PBXTextBookmark */ = {
@@ -4211,7 +4246,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2725;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 1271;
@@ -4471,7 +4506,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 62";
 		rLen = 0;
-		rLoc = 2832;
+		rLoc = 2735;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 1160;
@@ -4551,7 +4586,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 34";
 		rLen = 0;
-		rLoc = 814;
+		rLoc = 866;
 		rType = 0;
 		vrLen = 1316;
 		vrLoc = 296;
@@ -4621,7 +4656,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 34";
 		rLen = 0;
-		rLoc = 814;
+		rLoc = 866;
 		rType = 0;
 		vrLen = 1316;
 		vrLoc = 296;
@@ -4641,7 +4676,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 34";
 		rLen = 0;
-		rLoc = 814;
+		rLoc = 866;
 		rType = 0;
 		vrLen = 1523;
 		vrLoc = 690;
@@ -4661,7 +4696,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2725;
 		rType = 0;
 		vrLen = 1315;
 		vrLoc = 1271;
@@ -4811,7 +4846,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2725;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 2056;
@@ -4831,7 +4866,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2725;
 		rType = 0;
 		vrLen = 584;
 		vrLoc = 1615;
@@ -4951,7 +4986,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 58";
 		rLen = 0;
-		rLoc = 2158;
+		rLoc = 2061;
 		rType = 0;
 		vrLen = 624;
 		vrLoc = 1615;
@@ -4971,7 +5006,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 58";
 		rLen = 0;
-		rLoc = 2133;
+		rLoc = 2036;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 1615;
@@ -5001,7 +5036,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 58";
 		rLen = 0;
-		rLoc = 2158;
+		rLoc = 2061;
 		rType = 0;
 		vrLen = 624;
 		vrLoc = 1615;
@@ -5247,7 +5282,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 58";
 		rLen = 0;
-		rLoc = 2158;
+		rLoc = 2061;
 		rType = 0;
 		vrLen = 1278;
 		vrLoc = 964;
@@ -5267,7 +5302,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 56";
 		rLen = 0;
-		rLoc = 2045;
+		rLoc = 1948;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 964;
@@ -5764,7 +5799,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2535;
+		rLoc = 2438;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 1570;
@@ -5801,7 +5836,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 73";
 		rLen = 0;
-		rLoc = 2535;
+		rLoc = 2438;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 1570;
@@ -5871,7 +5906,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 405;
@@ -5901,7 +5936,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 43";
 		rLen = 0;
-		rLoc = 1319;
+		rLoc = 1290;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 405;
@@ -5921,7 +5956,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 43";
 		rLen = 0;
-		rLoc = 1324;
+		rLoc = 1290;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 405;
@@ -5941,7 +5976,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 405;
@@ -6159,7 +6194,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 405;
@@ -6179,7 +6214,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1709;
 		vrLoc = 536;
@@ -6189,7 +6224,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1696;
 		vrLoc = 464;
@@ -6199,7 +6234,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1656;
 		vrLoc = 464;
@@ -6209,7 +6244,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1696;
 		vrLoc = 464;
@@ -6219,7 +6254,7 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 46";
 		rLen = 0;
-		rLoc = 1457;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1696;
 		vrLoc = 464;
@@ -6826,10 +6861,300 @@
 		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
 		name = "FlakerOAuthPinVerificator.m: 47";
 		rLen = 0;
-		rLoc = 1498;
+		rLoc = 1401;
 		rType = 0;
 		vrLen = 1653;
 		vrLoc = 463;
+	};
+	E14F311C1121F9350073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 43";
+		rLen = 0;
+		rLoc = 1359;
+		rType = 0;
+		vrLen = 1688;
+		vrLoc = 465;
+	};
+	E14F311E1121F9DE0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 672;
+		rType = 0;
+		vrLen = 1572;
+		vrLoc = 461;
+	};
+	E14F31561121FDF60073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EA61121C8680073E704 /* OAToken.h */;
+		name = "OAToken.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1507;
+		vrLoc = 218;
+	};
+	E14F31571121FDF60073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 461;
+	};
+	E14F31581121FDF60073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 461;
+	};
+	E14F31591121FDF60073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EA61121C8680073E704 /* OAToken.h */;
+		name = "OAToken.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1507;
+		vrLoc = 218;
+	};
+	E14F315A1121FDF60073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 334;
+	};
+	E14F3187112202150073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 100";
+		rLen = 0;
+		rLoc = 2717;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 2247;
+	};
+	E14F3188112202170073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 334;
+	};
+	E14F318A112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */;
+		name = "FlakerOAuthPinVerificator.h: 14";
+		rLen = 33;
+		rLoc = 244;
+		rType = 0;
+		vrLen = 571;
+		vrLoc = 47;
+	};
+	E14F318B112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFBA3111D99D700F09BC5 /* Flaker.h */;
+		name = "Flaker.h: 42";
+		rLen = 7;
+		rLoc = 891;
+		rType = 0;
+		vrLen = 791;
+		vrLoc = 709;
+	};
+	E14F318C112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 35";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1331;
+		vrLoc = 354;
+	};
+	E14F318D112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 35";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1103;
+		vrLoc = 461;
+	};
+	E14F318E112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */;
+		name = "FlakerOAuthPinVerificator.h: 14";
+		rLen = 33;
+		rLoc = 244;
+		rType = 0;
+		vrLen = 571;
+		vrLoc = 47;
+	};
+	E14F318F112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFBA3111D99D700F09BC5 /* Flaker.h */;
+		name = "Flaker.h: 42";
+		rLen = 7;
+		rLoc = 891;
+		rType = 0;
+		vrLen = 791;
+		vrLoc = 709;
+	};
+	E14F3190112202950073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 34";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1328;
+		vrLoc = 354;
+	};
+	E14F3192112202FA0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 33";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1356;
+		vrLoc = 354;
+	};
+	E14F3193112203470073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 100";
+		rLen = 0;
+		rLoc = 2717;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 2247;
+	};
+	E14F31941122034C0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 33";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1356;
+		vrLoc = 354;
+	};
+	E14F319D1122048B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EA61121C8680073E704 /* OAToken.h */;
+		name = "OAToken.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1326;
+		vrLoc = 459;
+	};
+	E14F319E1122048B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1483;
+		vrLoc = 405;
+	};
+	E14F319F1122048B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1162;
+		vrLoc = 464;
+	};
+	E14F31A01122048B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EA61121C8680073E704 /* OAToken.h */;
+		name = "OAToken.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1326;
+		vrLoc = 459;
+	};
+	E14F31A11122048B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1441;
+		vrLoc = 405;
+	};
+	E14F31AC112205680073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1232;
+		vrLoc = 1505;
+	};
+	E14F31AD1122057B0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 100";
+		rLen = 0;
+		rLoc = 2717;
+		rType = 0;
+		vrLen = 292;
+		vrLoc = 2247;
+	};
+	E14F31AE1122057E0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1237;
+		vrLoc = 1505;
+	};
+	E14F31E1112208CD0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 100";
+		rLen = 0;
+		rLoc = 2717;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 2247;
+	};
+	E14F31E2112208D00073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 29";
+		rLen = 0;
+		rLoc = 464;
+		rType = 0;
+		vrLen = 1002;
+		vrLoc = 405;
 	};
 	E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {
 		uiCtxt = {
@@ -10365,8 +10690,8 @@
 	E1CBFBA3111D99D700F09BC5 /* Flaker.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {705, 1056}}";
-			sepNavSelRange = "{1153, 0}";
-			sepNavVisRange = "{865, 397}";
+			sepNavSelRange = "{891, 7}";
+			sepNavVisRange = "{709, 791}";
 			sepNavWindowFrame = "{{15, 183}, {750, 558}}";
 		};
 	};
