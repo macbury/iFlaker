@@ -16,6 +16,8 @@
 		E145B939111F61E500BE4E01 /* SubviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B935111F61E500BE4E01 /* SubviewTableViewController.m */; };
 		E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */; };
 		E145BA16111F758B00BE4E01 /* FlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145BA15111F758B00BE4E01 /* FlakController.m */; };
+		E14F2DAC1121AF2A0073E704 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
+		E14F2DBF1121AF2E0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
 		E1C829A211208DBB00BC22DE /* avatarDefault.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */; };
@@ -35,19 +37,21 @@
 		E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD90111DADCF00F09BC5 /* flaker.icns */; };
 		E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E23CBA111EDE68008347A5 /* flakCell.xib */; };
 		E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
-		E1E23EB4111F10A9008347A5 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
+		E1E23EB4111F10A9008347A5 /* Growl.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
 		E1E23F65111F20BA008347A5 /* otrzymanoFlaki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E1E23EBC111F10B1008347A5 /* CopyFiles */ = {
+		E1E23EBC111F10B1008347A5 /* Copy Frameworks (1) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
-				E1E23EB4111F10A9008347A5 /* Growl.framework in CopyFiles */,
+				E14F2DBF1121AF2E0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */,
+				E1E23EB4111F10A9008347A5 /* Growl.framework in Copy Frameworks (1) */,
 			);
+			name = "Copy Frameworks (1)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -72,6 +76,7 @@
 		E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewTableViewCell.m; sourceTree = "<group>"; };
 		E145BA14111F758B00BE4E01 /* FlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakController.h; sourceTree = "<group>"; };
 		E145BA15111F758B00BE4E01 /* FlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakController.m; sourceTree = "<group>"; };
+		E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
 		E1C828C6112073D200BC22DE /* flakEntryBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakEntryBubble.png; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */,
+				E14F2DAC1121AF2A0073E704 /* OAuthConsumer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +144,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -285,7 +292,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				E1E23EBC111F10B1008347A5 /* CopyFiles */,
+				E1E23EBC111F10B1008347A5 /* Copy Frameworks (1) */,
 			);
 			buildRules = (
 			);
@@ -389,6 +396,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"/Volumes/BackUp/Download/Growl-1.2.1-Framework\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -410,6 +418,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"/Volumes/BackUp/Download/Growl-1.2.1-Framework\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
