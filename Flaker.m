@@ -10,7 +10,7 @@
 
 @implementation Flaker
 
-@synthesize login, limit, requestToken;
+@synthesize login, limit, requestToken, accessToken, consumer;
 
 - (id) initWithLogin:(NSString *)newLogin {
 	self = [super init];
@@ -28,6 +28,7 @@
 }
 
 - (void) dealloc {
+	[accessToken release];
 	[consumer release];
 	[requestToken release];
 	[usersDictionary release];
@@ -40,13 +41,13 @@
 // oAuth
 
 - (void) authorizeUsingOAuth:(NSString *) appName serviveProviderName:(NSString *) serviceProvider {
-	requestToken = [[OAToken alloc] initWithKeychainUsingAppName: appName
-											  serviceProviderName: serviceProvider];	
-	if (requestToken == nil) {
+	//requestToken = [[OAToken alloc] initWithKeychainUsingAppName: appName
+//											  serviceProviderName: serviceProvider];	
+//	if (requestToken == nil) {
 		[self requestOAuthToken];
-	} else {
+//	} else {
 		
-	}
+//	}
 }
 
 - (void) requestOAuthToken {

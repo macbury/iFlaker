@@ -450,7 +450,7 @@
 				<int key="NSWindowStyleMask">4111</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{196, 136}, {302, 374}}</string>
-				<int key="NSWTFlags">603979776</int>
+				<int key="NSWTFlags">603981824</int>
 				<string key="NSWindowTitle">iFlaker</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="1067242164">
@@ -1920,8 +1920,8 @@
 					<string>{{23, 794}, {245, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{344, 218}, {302, 374}}</string>
-					<string>{{344, 218}, {302, 374}}</string>
+					<string>{{364, 139}, {302, 374}}</string>
+					<string>{{364, 139}, {302, 374}}</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{120, 512}, {616, 0}}</string>

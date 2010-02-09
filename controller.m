@@ -33,11 +33,14 @@
 - (void) awakeFromNib {
 	flakiTableViewController = [[SubviewTableViewController controllerWithViewColumn: flakTableColumn] retain];
 	[flakiTableViewController setDelegate: self];
-	
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[flaker authorizeUsingOAuth: @"iFlaker" serviveProviderName: @"flaker.pl"];
 }
 
 - (void) dealloc {
+	[authContoller release];
 	[flakiTableViewController release];
 	[otrzymaneFlakiSound release];
 	[flakiArray release];
@@ -85,13 +88,18 @@
 // Flaker Api delegate 
 
 - (void) haveOAuthTokenFromFlaker:(OAToken *)requestToken {
-	AuthController * authContoller = [[[AuthController alloc] init] autorelease];
-	[authContoller setFlaker: flaker];
+	authContoller = [[AuthController alloc] initWithFlaker: flaker];
 	
-	[NSApp runModalForWindow: authContoller.view];
+	[NSApp beginSheet: [authContoller view]
+		 modalForWindow: mainWindow
+			modalDelegate: self
+		 didEndSelector: @selector(didAuthorizeFlaker:returnCode:contextInfo:)
+				contextInfo: nil];
+}
 
-	//[requestToken storeInDefaultKeychainWithAppName:@"iFlaker" serviceProviderName:@"flaker.pl"];
-	
+- (void)didAuthorizeFlaker:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+	[sheet orderOut:self];
+	[authContoller release];
 }
 
 - (void) cannotFetchOAuthTokenFromFlaker {
@@ -166,6 +174,7 @@
 }
 
 - (void)errorOnFetchFromFlaker:(NSError *)error {
+	[NSAlert alertWithError: error];
 	[self afterCompleteFetch];
 }
 
@@ -211,8 +220,5 @@
 	NSLog(@"Wybrano opcje:");
 }
 
-- (IBAction) authorizeButtonClick:(id)sender {
-	
-}
 
 @end

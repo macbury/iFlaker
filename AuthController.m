@@ -10,11 +10,13 @@
 
 @implementation AuthController
 
-@synthesize view, flaker;
+@synthesize view;
 
-- (id) init {
+- (id) initWithFlaker:(Flaker *) flaker {
 	self = [super init];
 	if (self != nil) {
+		pinVerificator = [[FlakerOAuthPinVerificator alloc] initWithAuthFlaker: flaker];
+		[pinVerificator setDelegate: self];
 		if (![NSBundle loadNibNamed: @"AuthController" owner: self]) {
             [self release];
             self = nil;
@@ -37,18 +39,46 @@
 }
 
 - (IBAction) openFlakerPage:(id)sender {
-	NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://flaker.pl/oauth/authorize?oauth_token=%@", flaker.requestToken.key]];
+	NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://flaker.pl/oauth/authorize?oauth_token=%@", pinVerificator.flaker.requestToken.key]];
 	
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (IBAction) validatePin:(id)sender {
-	[self setControllState: NO];
+	if ([pinTextField stringValue] != @"") {
+		[self setControllState: NO];
+		[pinVerificator authorizeFlakerTokenWithVerifier: [pinTextField stringValue]];
+	}
+
 }
 
-- (void) dealloc
-{
-	[flaker release];
+- (IBAction) closeSheet:(id)sender {
+	[NSApp endSheet:[self view]];
+	exit(0);
+}
+
+- (void) oAuthPinVerificationSuccessful:(OAToken *)accessToken {
+	[accessToken storeInDefaultKeychainWithAppName:@"iFlaker"
+                               serviceProviderName:@"flaker.pl"];
+	[NSApp endSheet:[self view]];
+	[pinVerificator.flaker refreshFriends];
+}
+
+- (void) oAuthPinVerificationFail {
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	[alert addButtonWithTitle:@"OK"];
+	[alert setMessageText:@"iFlaker"];
+	[alert setInformativeText:@"Kod pin jest nieprawidłowy!"];
+	[alert setAlertStyle:NSWarningAlertStyle];
+	
+	[alert runModal];
+	
+	[self setControllState: YES];
+}
+
+
+- (void) dealloc {
+	[pinVerificator release];
 	[super dealloc];
 }
 

@@ -39,6 +39,7 @@
 	
 	OAConsumer * consumer;
 	OAToken * requestToken;
+	OAToken * accessToken;
 	
 	id<FlakerDelegate> delegate;
 }
@@ -48,6 +49,8 @@
 @property (copy) NSString * login;
 @property (retain) NSNumber * limit;
 @property (retain) OAToken * requestToken;
+@property (retain) OAToken * accessToken;
+@property (retain) OAConsumer * consumer;
 
 - (id) initWithLogin:(NSString *)login;
 - (void)refreshFriends;

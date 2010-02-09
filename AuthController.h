@@ -8,22 +8,25 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Flaker.h"
+#import "FlakerOAuthPinVerificator.h"
 
-@interface AuthController : NSObject {
+@interface AuthController : NSObject <FlakerOAuthPinVerificatorDelegate> {
 	IBOutlet NSWindow * view;
 	IBOutlet NSButton * openFlakerPageButton;
 	IBOutlet NSButton * validatePinButton;
 	IBOutlet NSTextField * pinTextField;
 	IBOutlet NSProgressIndicator * progressIndicator;
 	
-	Flaker * flaker;
+	FlakerOAuthPinVerificator * pinVerificator;
 }
 
 @property (retain) NSWindow * view;
-@property (retain) Flaker * flaker;
+
+- (id) initWithFlaker:(Flaker *) flaker;
 
 - (IBAction) openFlakerPage:(id)sender;
 - (IBAction) validatePin:(id)sender;
+- (IBAction) closeSheet:(id)sender;
 
 - (void) setControllState:(BOOL)enabled;
 

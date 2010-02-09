@@ -32,6 +32,8 @@
 	NSNumber * refreshRate;
 	NSNumber * flakInListLimit;
 	NSTimer * updateTimer;
+	
+	AuthController * authContoller;
 }
 
 @property (retain) NSNumber * refreshRate;
@@ -40,7 +42,6 @@
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;
-- (IBAction) authorizeButtonClick:(id)sender;
 
 - (void) afterCompleteFetch;
 - (void)growlAboutFlak:(Flak *)flak;

@@ -22,6 +22,7 @@
 		E14F2E511121BE810073E704 /* link_to_entry.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4E1121BE810073E704 /* link_to_entry.gif */; };
 		E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2EB51121CBBF0073E704 /* AuthController.m */; };
 		E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14F2EB71121CBE60073E704 /* AuthController.xib */; };
+		E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
 		E1C829A211208DBB00BC22DE /* avatarDefault.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */; };
@@ -84,6 +85,8 @@
 		E14F2EB41121CBBF0073E704 /* AuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthController.h; sourceTree = "<group>"; };
 		E14F2EB51121CBBF0073E704 /* AuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthController.m; sourceTree = "<group>"; };
 		E14F2EB71121CBE60073E704 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
+		E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakerOAuthPinVerificator.h; sourceTree = "<group>"; };
+		E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerOAuthPinVerificator.m; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
 		E1C828C6112073D200BC22DE /* flakEntryBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakEntryBubble.png; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				E1CBFB3A111D926A00F09BC5 /* Flak.m */,
 				E1C82A2611209BAE00BC22DE /* FlakerUser.h */,
 				E1C82A2711209BAE00BC22DE /* FlakerUser.m */,
+				E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */,
+				E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */,
 			);
 			name = FlakerAPI;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				E1C82A2811209BAE00BC22DE /* FlakerUser.m in Sources */,
 				E1C82AA111209FDD00BC22DE /* FileStore.m in Sources */,
 				E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */,
+				E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
