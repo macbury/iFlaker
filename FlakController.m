@@ -47,10 +47,9 @@
 	bubbleHeight = MAX(bubbleHeight, 80.0);
 	
 	// View Height
-	float viewVerticalPadding = 10.0;
 	NSSize viewBoxSize = [subview frame].size;
 	
-	viewBoxSize.height = bubbleHeight + (viewVerticalPadding * 2);
+	viewBoxSize.height = bubbleHeight + 36.0;
 	[subview setFrameSize: viewBoxSize];
 }
 

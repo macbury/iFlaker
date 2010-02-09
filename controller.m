@@ -6,7 +6,7 @@
 //  Copyright 2010 Buras Arkadiusz. All rights reserved.
 //
 
-#import "controller.h"
+#import "Controller.h"
 
 @implementation Controller
 
@@ -34,7 +34,7 @@
 	flakiTableViewController = [[SubviewTableViewController controllerWithViewColumn: flakTableColumn] retain];
 	[flakiTableViewController setDelegate: self];
 	
-	[flaker refreshFriends];
+	[flaker authorizeUsingOAuth: @"iFlaker" serviveProviderName: @"flaker.pl"];
 }
 
 - (void) dealloc {
@@ -83,6 +83,20 @@
 }
 
 // Flaker Api delegate 
+
+- (void) haveOAuthTokenFromFlaker:(OAToken *)requestToken {
+	AuthController * authContoller = [[[AuthController alloc] init] autorelease];
+	[authContoller setFlaker: flaker];
+	
+	[NSApp runModalForWindow: authContoller.view];
+
+	//[requestToken storeInDefaultKeychainWithAppName:@"iFlaker" serviceProviderName:@"flaker.pl"];
+	
+}
+
+- (void) cannotFetchOAuthTokenFromFlaker {
+
+}
 
 - (void)startFetchingFromFlaker {
 	if (updateTimer != nil) {
@@ -195,6 +209,10 @@
 
 - (IBAction) typeChange:(id)sender {
 	NSLog(@"Wybrano opcje:");
+}
+
+- (IBAction) authorizeButtonClick:(id)sender {
+	
 }
 
 @end

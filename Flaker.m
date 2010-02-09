@@ -10,13 +10,16 @@
 
 @implementation Flaker
 
-@synthesize login, limit;
+@synthesize login, limit, requestToken;
 
 - (id) initWithLogin:(NSString *)newLogin {
 	self = [super init];
 	if (self != nil) {
 		parser = [[SBJSON alloc] init];
 		usersDictionary = [[NSMutableDictionary alloc] init];
+		
+		consumer = [[OAConsumer alloc] initWithKey: @"a8a3c249ac2151321e544c592258174b04b7174e5"
+											secret: @"89468e4a05f5c8a13186611edb9c433c"];
 		
 		[self setLogin:newLogin];
 		[self setLimit: [[NSNumber alloc] initWithInt:10]];
@@ -25,6 +28,8 @@
 }
 
 - (void) dealloc {
+	[consumer release];
+	[requestToken release];
 	[usersDictionary release];
 	[limit release];
 	[parser release];
@@ -32,6 +37,63 @@
 	[super dealloc];
 }
 
+// oAuth
+
+- (void) authorizeUsingOAuth:(NSString *) appName serviveProviderName:(NSString *) serviceProvider {
+	requestToken = [[OAToken alloc] initWithKeychainUsingAppName: appName
+											  serviceProviderName: serviceProvider];	
+	if (requestToken == nil) {
+		[self requestOAuthToken];
+	} else {
+		
+	}
+}
+
+- (void) requestOAuthToken {
+	NSURL *url = [NSURL URLWithString: @"http://flaker.pl/oauth/request_token"];
+	
+    OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL:url
+                                                                   consumer:consumer
+                                                                      token:nil   
+                                                                      realm:nil   
+                                                          signatureProvider:nil]; 
+	
+    [request setHTTPMethod:@"POST"];
+	
+    OADataFetcher * fetcher = [[OADataFetcher alloc] init];
+	
+    [fetcher fetchDataWithRequest:request
+                         delegate:self
+                didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
+                  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
+}
+
+- (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+	if (ticket.didSucceed) {
+		NSString *responseBody = [[NSString alloc] initWithData:data
+													   encoding:NSUTF8StringEncoding];
+		requestToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+		
+		if ([delegate respondsToSelector:@selector(haveOAuthTokenFromFlaker:)]) {
+			[delegate haveOAuthTokenFromFlaker: requestToken];
+		}  
+	} else {
+		if ([delegate respondsToSelector:@selector(cannotFetchOAuthTokenFromFlaker)]) {
+			[delegate cannotFetchOAuthTokenFromFlaker];
+		}  
+	}
+}
+
+- (void)requestTokenTicket:(OAServiceTicket *)ticket didFailWithError: (NSError *)error {
+	NSLog(@"Cannot fetch oAuth Token!!! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSErrorFailingURLStringKey]);
+	if ([delegate respondsToSelector:@selector(cannotFetchOAuthTokenFromFlaker)]) {
+		[delegate cannotFetchOAuthTokenFromFlaker];
+	}  
+}
+
+// List flakow
 
 - (void)refreshFriends {
 	if (updateConnection == nil) { [self fetchEntriesType: @"flakosfera"]; }

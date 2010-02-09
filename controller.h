@@ -13,6 +13,7 @@
 #import "FlakController.h"
 #import "SubviewTableViewController.h"
 #import "FileStore.h"
+#import "AuthController.h"
 
 @interface Controller : NSObject <FlakerDelegate, GrowlApplicationBridgeDelegate, SubviewTableViewControllerDataSourceProtocol> {
 	IBOutlet NSWindow * mainWindow;
@@ -39,6 +40,8 @@
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;
+- (IBAction) authorizeButtonClick:(id)sender;
+
 - (void) afterCompleteFetch;
 - (void)growlAboutFlak:(Flak *)flak;
 

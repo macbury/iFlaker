@@ -11,19 +11,23 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */ = {isa = PBXBuildFile; fileRef = E11BE87B111E10E000C28968 /* refresh_rev.tif */; };
-		E11BE8A8111E158A00C28968 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */; };
 		E145B939111F61E500BE4E01 /* SubviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B935111F61E500BE4E01 /* SubviewTableViewController.m */; };
 		E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */; };
 		E145BA16111F758B00BE4E01 /* FlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145BA15111F758B00BE4E01 /* FlakController.m */; };
 		E14F2DAC1121AF2A0073E704 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
 		E14F2DBF1121AF2E0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */; };
+		E14F2E461121BDF90073E704 /* heart_off.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E451121BDF90073E704 /* heart_off.gif */; };
+		E14F2E4F1121BE810073E704 /* comment.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4C1121BE810073E704 /* comment.gif */; };
+		E14F2E501121BE810073E704 /* newspaper_add.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4D1121BE810073E704 /* newspaper_add.gif */; };
+		E14F2E511121BE810073E704 /* link_to_entry.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4E1121BE810073E704 /* link_to_entry.gif */; };
+		E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2EB51121CBBF0073E704 /* AuthController.m */; };
+		E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14F2EB71121CBE60073E704 /* AuthController.xib */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
 		E1C829A211208DBB00BC22DE /* avatarDefault.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */; };
 		E1C82A2811209BAE00BC22DE /* FlakerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C82A2711209BAE00BC22DE /* FlakerUser.m */; };
 		E1C82AA111209FDD00BC22DE /* FileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C82AA011209FDD00BC22DE /* FileStore.m */; };
-		E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB0F111D8DCF00F09BC5 /* controller.m */; };
+		E1CBFB10111D8DCF00F09BC5 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */; };
 		E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFB3A111D926A00F09BC5 /* Flak.m */; };
 		E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFBA1111D991700F09BC5 /* .gitignore */; };
 		E1CBFBA5111D99D700F09BC5 /* Flaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBA4111D99D700F09BC5 /* Flaker.m */; };
@@ -33,7 +37,6 @@
 		E1CBFBC3111D9A0400F09BC5 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBB9111D9A0400F09BC5 /* SBJsonBase.m */; };
 		E1CBFBC4111D9A0400F09BC5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBBB111D9A0400F09BC5 /* SBJsonParser.m */; };
 		E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */; };
-		E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD8E111DAC8800F09BC5 /* flaker.png */; };
 		E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */ = {isa = PBXBuildFile; fileRef = E1CBFD90111DADCF00F09BC5 /* flaker.icns */; };
 		E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E23CBA111EDE68008347A5 /* flakCell.xib */; };
 		E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E23EAF111F1096008347A5 /* Growl.framework */; };
@@ -67,9 +70,6 @@
 		32CA4F630368D1EE00C91783 /* iFlaker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFlaker_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iFlaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFlaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E11BE87B111E10E000C28968 /* refresh_rev.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = refresh_rev.tif; sourceTree = "<group>"; };
-		E11BE8A6111E158A00C28968 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
-		E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		E145B934111F61E500BE4E01 /* SubviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubviewTableViewController.h; sourceTree = "<group>"; };
 		E145B935111F61E500BE4E01 /* SubviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewTableViewController.m; sourceTree = "<group>"; };
 		E145B936111F61E500BE4E01 /* SubviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubviewTableViewCell.h; sourceTree = "<group>"; };
@@ -77,6 +77,13 @@
 		E145BA14111F758B00BE4E01 /* FlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakController.h; sourceTree = "<group>"; };
 		E145BA15111F758B00BE4E01 /* FlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakController.m; sourceTree = "<group>"; };
 		E14F2DAB1121AF2A0073E704 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
+		E14F2E451121BDF90073E704 /* heart_off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart_off.gif; sourceTree = "<group>"; };
+		E14F2E4C1121BE810073E704 /* comment.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = comment.gif; sourceTree = "<group>"; };
+		E14F2E4D1121BE810073E704 /* newspaper_add.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newspaper_add.gif; sourceTree = "<group>"; };
+		E14F2E4E1121BE810073E704 /* link_to_entry.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = link_to_entry.gif; sourceTree = "<group>"; };
+		E14F2EB41121CBBF0073E704 /* AuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthController.h; sourceTree = "<group>"; };
+		E14F2EB51121CBBF0073E704 /* AuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthController.m; sourceTree = "<group>"; };
+		E14F2EB71121CBE60073E704 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
 		E1C828C6112073D200BC22DE /* flakEntryBubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flakEntryBubble.png; sourceTree = "<group>"; };
@@ -85,8 +92,8 @@
 		E1C82A2711209BAE00BC22DE /* FlakerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerUser.m; sourceTree = "<group>"; };
 		E1C82A9F11209FDD00BC22DE /* FileStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStore.h; sourceTree = "<group>"; };
 		E1C82AA011209FDD00BC22DE /* FileStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStore.m; sourceTree = "<group>"; };
-		E1CBFB0E111D8DCF00F09BC5 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = controller.h; sourceTree = "<group>"; };
-		E1CBFB0F111D8DCF00F09BC5 /* controller.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = controller.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
+		E1CBFB0E111D8DCF00F09BC5 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		E1CBFB0F111D8DCF00F09BC5 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		E1CBFB39111D926A00F09BC5 /* Flak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flak.h; sourceTree = "<group>"; };
 		E1CBFB3A111D926A00F09BC5 /* Flak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flak.m; sourceTree = "<group>"; };
 		E1CBFBA1111D991700F09BC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -105,7 +112,6 @@
 		E1CBFBBB111D9A0400F09BC5 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		E1CBFBBC111D9A0400F09BC5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		E1CBFBBD111D9A0400F09BC5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		E1CBFD8E111DAC8800F09BC5 /* flaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flaker.png; sourceTree = "<group>"; };
 		E1CBFD90111DADCF00F09BC5 /* flaker.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = flaker.icns; sourceTree = "<group>"; };
 		E1E23CBA111EDE68008347A5 /* flakCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flakCell.xib; sourceTree = "<group>"; };
 		E1E23EAF111F1096008347A5 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = /Library/Frameworks/Growl.framework; sourceTree = "<absolute>"; };
@@ -129,14 +135,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E14F2DC21121AFBE0073E704 /* Controllers */,
 				E145B931111F61DB00BE4E01 /* Table */,
 				E11BE7B7111E01B200C28968 /* Views */,
 				E1CBFBA6111D99F600F09BC5 /* Lib */,
 				E1CBFB38111D925B00F09BC5 /* FlakerAPI */,
-				E1CBFB0E111D8DCF00F09BC5 /* controller.h */,
-				E1CBFB0F111D8DCF00F09BC5 /* controller.m */,
-				E1C82A9F11209FDD00BC22DE /* FileStore.h */,
-				E1C82AA011209FDD00BC22DE /* FileStore.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -193,12 +196,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */,
-				E1C828C6112073D200BC22DE /* flakEntryBubble.png */,
+				E14F2E471121BE450073E704 /* Flak */,
 				E1E23F64111F20BA008347A5 /* otrzymanoFlaki.mp3 */,
-				E11BE87B111E10E000C28968 /* refresh_rev.tif */,
 				E1CBFD90111DADCF00F09BC5 /* flaker.icns */,
-				E1CBFD8E111DAC8800F09BC5 /* flaker.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -219,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				E1E23CBA111EDE68008347A5 /* flakCell.xib */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				E145BA14111F758B00BE4E01 /* FlakController.h */,
 				E145BA15111F758B00BE4E01 /* FlakController.m */,
 				E1C8288A1120694C00BC22DE /* FlakBubbleView.h */,
@@ -239,6 +238,32 @@
 			name = Table;
 			sourceTree = "<group>";
 		};
+		E14F2DC21121AFBE0073E704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBFB0E111D8DCF00F09BC5 /* Controller.h */,
+				E1CBFB0F111D8DCF00F09BC5 /* Controller.m */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				E14F2EB41121CBBF0073E704 /* AuthController.h */,
+				E14F2EB51121CBBF0073E704 /* AuthController.m */,
+				E14F2EB71121CBE60073E704 /* AuthController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E14F2E471121BE450073E704 /* Flak */ = {
+			isa = PBXGroup;
+			children = (
+				E14F2E4C1121BE810073E704 /* comment.gif */,
+				E14F2E4D1121BE810073E704 /* newspaper_add.gif */,
+				E14F2E4E1121BE810073E704 /* link_to_entry.gif */,
+				E1C828C6112073D200BC22DE /* flakEntryBubble.png */,
+				E1C829A111208DBB00BC22DE /* avatarDefault.jpeg */,
+				E14F2E451121BDF90073E704 /* heart_off.gif */,
+			);
+			name = Flak;
+			sourceTree = "<group>";
+		};
 		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +280,8 @@
 		E1CBFBA6111D99F600F09BC5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				E11BE8A6111E158A00C28968 /* NSBezierPathAdditions.h */,
-				E11BE8A7111E158A00C28968 /* NSBezierPathAdditions.m */,
+				E1C82A9F11209FDD00BC22DE /* FileStore.h */,
+				E1C82AA011209FDD00BC22DE /* FileStore.m */,
 				E1CBFBB0111D9A0400F09BC5 /* JSON */,
 			);
 			name = Lib;
@@ -329,13 +354,16 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				E1CBFBA2111D991700F09BC5 /* .gitignore in Resources */,
-				E1CBFD8F111DAC8800F09BC5 /* flaker.png in Resources */,
 				E1CBFD91111DADCF00F09BC5 /* flaker.icns in Resources */,
-				E11BE87C111E10E000C28968 /* refresh_rev.tif in Resources */,
 				E1E23CBB111EDE68008347A5 /* flakCell.xib in Resources */,
 				E1E23F65111F20BA008347A5 /* otrzymanoFlaki.mp3 in Resources */,
 				E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */,
 				E1C829A211208DBB00BC22DE /* avatarDefault.jpeg in Resources */,
+				E14F2E461121BDF90073E704 /* heart_off.gif in Resources */,
+				E14F2E4F1121BE810073E704 /* comment.gif in Resources */,
+				E14F2E501121BE810073E704 /* newspaper_add.gif in Resources */,
+				E14F2E511121BE810073E704 /* link_to_entry.gif in Resources */,
+				E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				E1CBFB10111D8DCF00F09BC5 /* controller.m in Sources */,
+				E1CBFB10111D8DCF00F09BC5 /* Controller.m in Sources */,
 				E1CBFB3B111D926A00F09BC5 /* Flak.m in Sources */,
 				E1CBFBA5111D99D700F09BC5 /* Flaker.m in Sources */,
 				E1CBFBC0111D9A0400F09BC5 /* NSObject+SBJSON.m in Sources */,
@@ -356,13 +384,13 @@
 				E1CBFBC3111D9A0400F09BC5 /* SBJsonBase.m in Sources */,
 				E1CBFBC4111D9A0400F09BC5 /* SBJsonParser.m in Sources */,
 				E1CBFBC5111D9A0400F09BC5 /* SBJsonWriter.m in Sources */,
-				E11BE8A8111E158A00C28968 /* NSBezierPathAdditions.m in Sources */,
 				E145B939111F61E500BE4E01 /* SubviewTableViewController.m in Sources */,
 				E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */,
 				E145BA16111F758B00BE4E01 /* FlakController.m in Sources */,
 				E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */,
 				E1C82A2811209BAE00BC22DE /* FlakerUser.m in Sources */,
 				E1C82AA111209FDD00BC22DE /* FileStore.m in Sources */,
+				E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
