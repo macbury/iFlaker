@@ -670,6 +670,22 @@
 			E14F31AE1122057E0073E704 /* PBXTextBookmark */ = E14F31AE1122057E0073E704 /* PBXTextBookmark */;
 			E14F31E1112208CD0073E704 /* PBXTextBookmark */ = E14F31E1112208CD0073E704 /* PBXTextBookmark */;
 			E14F31E2112208D00073E704 /* PBXTextBookmark */ = E14F31E2112208D00073E704 /* PBXTextBookmark */;
+			E14F31F311220A1A0073E704 /* PBXTextBookmark */ = E14F31F311220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F411220A1A0073E704 /* PBXTextBookmark */ = E14F31F411220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F511220A1A0073E704 /* PBXTextBookmark */ = E14F31F511220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F611220A1A0073E704 /* PBXTextBookmark */ = E14F31F611220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F711220A1A0073E704 /* PBXTextBookmark */ = E14F31F711220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F811220A1A0073E704 /* PBXTextBookmark */ = E14F31F811220A1A0073E704 /* PBXTextBookmark */;
+			E14F31F911220A1A0073E704 /* PBXTextBookmark */ = E14F31F911220A1A0073E704 /* PBXTextBookmark */;
+			E14F31FF11220A910073E704 /* PBXTextBookmark */ = E14F31FF11220A910073E704 /* PBXTextBookmark */;
+			E14F320011220A910073E704 /* PBXTextBookmark */ = E14F320011220A910073E704 /* PBXTextBookmark */;
+			E14F320111220A910073E704 /* PBXTextBookmark */ = E14F320111220A910073E704 /* PBXTextBookmark */;
+			E14F320211220A920073E704 /* PBXTextBookmark */ = E14F320211220A920073E704 /* PBXTextBookmark */;
+			E14F320311220A920073E704 /* PBXTextBookmark */ = E14F320311220A920073E704 /* PBXTextBookmark */;
+			E14F320411220A920073E704 /* PBXTextBookmark */ = E14F320411220A920073E704 /* PBXTextBookmark */;
+			E14F320511220A920073E704 /* PBXTextBookmark */ = E14F320511220A920073E704 /* PBXTextBookmark */;
+			E14F320611220A920073E704 /* PBXTextBookmark */ = E14F320611220A920073E704 /* PBXTextBookmark */;
+			E14F320711220A920073E704 /* PBXTextBookmark */ = E14F320711220A920073E704 /* PBXTextBookmark */;
 			E1C828A61120709500BC22DE = E1C828A61120709500BC22DE /* PBXTextBookmark */;
 			E1C828A71120709500BC22DE = E1C828A71120709500BC22DE /* PBXTextBookmark */;
 			E1C828A81120709500BC22DE = E1C828A81120709500BC22DE /* PBXTextBookmark */;
@@ -1540,7 +1556,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 201";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 5930;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 4621;
@@ -2898,9 +2914,9 @@
 	};
 	E14F2EB51121CBBF0073E704 /* AuthController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 1400}}";
-			sepNavSelRange = "{1653, 0}";
-			sepNavVisRange = "{1108, 836}";
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 1416}}";
+			sepNavSelRange = "{1455, 0}";
+			sepNavVisRange = "{1301, 683}";
 		};
 	};
 	E14F2EBA1121CFAF0073E704 /* PBXTextBookmark */ = {
@@ -3014,7 +3030,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3244,7 +3260,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3384,7 +3400,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3404,7 +3420,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3542,7 +3558,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3582,7 +3598,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 39";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 607;
 		vrLoc = 166;
@@ -3992,7 +4008,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 98";
 		rLen = 0;
-		rLoc = 2855;
+		rLoc = 2881;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 2245;
@@ -4152,7 +4168,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 98";
 		rLen = 0;
-		rLoc = 2855;
+		rLoc = 2881;
 		rType = 0;
 		vrLen = 745;
 		vrLoc = 2205;
@@ -4172,7 +4188,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 98";
 		rLen = 0;
-		rLoc = 2855;
+		rLoc = 2881;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 2245;
@@ -4192,7 +4208,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 101";
 		rLen = 0;
-		rLoc = 2899;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 769;
 		vrLoc = 2245;
@@ -4217,8 +4233,8 @@
 	E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {719, 1344}}";
-			sepNavSelRange = "{464, 0}";
-			sepNavVisRange = "{405, 1002}";
+			sepNavSelRange = "{2022, 0}";
+			sepNavVisRange = "{1463, 1272}";
 		};
 	};
 	E14F2F781121E8F20073E704 /* PBXTextBookmark */ = {
@@ -4296,7 +4312,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 101";
 		rLen = 0;
-		rLoc = 2899;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 814;
 		vrLoc = 2245;
@@ -4746,7 +4762,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 52";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 671;
 		vrLoc = 473;
@@ -4766,7 +4782,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 53";
 		rLen = 0;
-		rLoc = 2024;
+		rLoc = 1983;
 		rType = 0;
 		vrLen = 757;
 		vrLoc = 0;
@@ -4836,7 +4852,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 52";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 1000;
@@ -4856,7 +4872,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 52";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 311;
 		vrLoc = 1000;
@@ -4886,7 +4902,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 94";
 		rLen = 0;
-		rLoc = 2899;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 346;
 		vrLoc = 2243;
@@ -4936,7 +4952,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 94";
 		rLen = 0;
-		rLoc = 2899;
+		rLoc = 2925;
 		rType = 0;
 		vrLen = 346;
 		vrLoc = 2243;
@@ -4996,7 +5012,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 52";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 309;
 		vrLoc = 1000;
@@ -5046,7 +5062,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 52";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 309;
 		vrLoc = 1000;
@@ -5066,7 +5082,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 57";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 812;
@@ -5086,7 +5102,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 57";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 809;
@@ -5096,7 +5112,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 57";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 812;
@@ -5116,7 +5132,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 57";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 809;
@@ -5126,7 +5142,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 165";
 		rLen = 0;
-		rLoc = 4825;
+		rLoc = 4851;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 3952;
@@ -5171,7 +5187,7 @@
 		isa = PBXTextBookmark;
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 54";
-		rLen = 138;
+		rLen = 97;
 		rLoc = 1513;
 		rType = 0;
 		vrLen = 386;
@@ -5182,7 +5198,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 156";
 		rLen = 0;
-		rLoc = 4676;
+		rLoc = 4702;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 3952;
@@ -5242,7 +5258,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 156";
 		rLen = 0;
-		rLoc = 4676;
+		rLoc = 4702;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 3952;
@@ -5262,7 +5278,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 61";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 698;
@@ -5362,7 +5378,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 61";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 0;
@@ -5531,7 +5547,7 @@
 		isa = PBXTextBookmark;
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 54";
-		rLen = 138;
+		rLen = 97;
 		rLoc = 1513;
 		rType = 0;
 		vrLen = 386;
@@ -5808,7 +5824,7 @@
 		isa = PBXTextBookmark;
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		rLen = 0;
-		rLoc = 67;
+		rLoc = 66;
 		rType = 1;
 	};
 	E14F30641121EDC90073E704 /* PBXTextBookmark */ = {
@@ -5846,7 +5862,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 61";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 1108;
@@ -5856,7 +5872,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 61";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 747;
 		vrLoc = 898;
@@ -5865,7 +5881,7 @@
 		isa = PBXTextBookmark;
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 57";
-		rLen = 138;
+		rLen = 97;
 		rLoc = 1513;
 		rType = 0;
 		vrLen = 389;
@@ -5876,7 +5892,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 61";
 		rLen = 0;
-		rLoc = 1943;
+		rLoc = 1902;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 659;
@@ -5886,7 +5902,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 64";
 		rLen = 0;
-		rLoc = 1873;
+		rLoc = 1832;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 1057;
@@ -5896,7 +5912,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 69";
 		rLen = 0;
-		rLoc = 1931;
+		rLoc = 1890;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 1057;
@@ -5926,7 +5942,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 69";
 		rLen = 0;
-		rLoc = 1931;
+		rLoc = 1890;
 		rType = 0;
 		vrLen = 895;
 		vrLoc = 1057;
@@ -6006,7 +6022,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 156";
 		rLen = 0;
-		rLoc = 4676;
+		rLoc = 4702;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 3952;
@@ -6076,7 +6092,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 58";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 1109;
@@ -6094,7 +6110,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 58";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 1109;
@@ -6154,7 +6170,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 68";
 		rLen = 0;
-		rLoc = 1939;
+		rLoc = 1898;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 1109;
@@ -6174,7 +6190,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 68";
 		rLen = 0;
-		rLoc = 1939;
+		rLoc = 1898;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 898;
@@ -6184,7 +6200,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 68";
 		rLen = 0;
-		rLoc = 1939;
+		rLoc = 1898;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 898;
@@ -6204,7 +6220,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 68";
 		rLen = 0;
-		rLoc = 1939;
+		rLoc = 1898;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 898;
@@ -6264,7 +6280,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 68";
 		rLen = 0;
-		rLoc = 1939;
+		rLoc = 1898;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 857;
@@ -6541,7 +6557,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 222";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 5930;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 5215;
@@ -6551,7 +6567,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 222";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 5930;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 5215;
@@ -6561,7 +6577,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 222";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 5930;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 5215;
@@ -6621,7 +6637,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 222";
 		rLen = 0;
-		rLoc = 5904;
+		rLoc = 5930;
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 5215;
@@ -6641,7 +6657,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "Controller.m: 221";
 		rLen = 0;
-		rLoc = 5901;
+		rLoc = 5927;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 5217;
@@ -6821,7 +6837,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 64";
 		rLen = 0;
-		rLoc = 1650;
+		rLoc = 1609;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 1108;
@@ -6831,7 +6847,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 66";
 		rLen = 0;
-		rLoc = 1653;
+		rLoc = 1612;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 1108;
@@ -6851,7 +6867,7 @@
 		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
 		name = "AuthController.m: 66";
 		rLen = 0;
-		rLoc = 1653;
+		rLoc = 1612;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 1108;
@@ -7155,6 +7171,166 @@
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 405;
+	};
+	E14F31F311220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 29";
+		rLen = 0;
+		rLoc = 464;
+		rType = 0;
+		vrLen = 1274;
+		vrLoc = 1463;
+	};
+	E14F31F411220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
+		name = "AuthController.m: 66";
+		rLen = 0;
+		rLoc = 1612;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 1305;
+	};
+	E14F31F511220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 94";
+		rLen = 0;
+		rLoc = 2540;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 1917;
+	};
+	E14F31F611220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 29";
+		rLen = 0;
+		rLoc = 464;
+		rType = 0;
+		vrLen = 1274;
+		vrLoc = 1463;
+	};
+	E14F31F711220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 94";
+		rLen = 0;
+		rLoc = 2540;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 1917;
+	};
+	E14F31F811220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
+		name = "AuthController.m: 66";
+		rLen = 0;
+		rLoc = 1612;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 1305;
+	};
+	E14F31F911220A1A0073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 94";
+		rLen = 0;
+		rLoc = 2540;
+		rType = 0;
+		vrLen = 807;
+		vrLoc = 2275;
+	};
+	E14F31FF11220A910073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 61";
+		rLen = 0;
+		rLoc = 2022;
+		rType = 0;
+		vrLen = 1272;
+		vrLoc = 1463;
+	};
+	E14F320011220A910073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
+		name = "AuthController.m: 61";
+		rLen = 0;
+		rLoc = 1455;
+		rType = 0;
+		vrLen = 703;
+		vrLoc = 1301;
+	};
+	E14F320111220A910073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 101";
+		rLen = 0;
+		rLoc = 2803;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 2275;
+	};
+	E14F320211220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 94";
+		rLen = 0;
+		rLoc = 2540;
+		rType = 0;
+		vrLen = 807;
+		vrLoc = 2275;
+	};
+	E14F320311220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */;
+		name = "FlakerOAuthPinVerificator.m: 61";
+		rLen = 0;
+		rLoc = 2022;
+		rType = 0;
+		vrLen = 1272;
+		vrLoc = 1463;
+	};
+	E14F320411220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
+		name = "AuthController.m: 61";
+		rLen = 0;
+		rLoc = 1454;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 1304;
+	};
+	E14F320511220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 101";
+		rLen = 0;
+		rLoc = 2803;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 2275;
+	};
+	E14F320611220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E14F2EB51121CBBF0073E704 /* AuthController.m */;
+		name = "AuthController.m: 61";
+		rLen = 0;
+		rLoc = 1455;
+		rType = 0;
+		vrLen = 703;
+		vrLoc = 1301;
+	};
+	E14F320711220A920073E704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
+		name = "Controller.m: 103";
+		rLen = 0;
+		rLoc = 2878;
+		rType = 0;
+		vrLen = 860;
+		vrLoc = 2247;
 	};
 	E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {
 		uiCtxt = {
@@ -7483,7 +7659,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 173";
 		rLen = 0;
-		rLoc = 5757;
+		rLoc = 5783;
 		rType = 0;
 		vrLen = 979;
 		vrLoc = 1076;
@@ -7603,7 +7779,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 154";
 		rLen = 0;
-		rLoc = 5328;
+		rLoc = 5354;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 3954;
@@ -7623,7 +7799,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 166";
 		rLen = 0;
-		rLoc = 5662;
+		rLoc = 5688;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 3954;
@@ -7703,7 +7879,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 155";
 		rLen = 0;
-		rLoc = 5214;
+		rLoc = 5240;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 3954;
@@ -7751,7 +7927,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 92";
 		rLen = 0;
-		rLoc = 3183;
+		rLoc = 3209;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 1833;
@@ -7771,7 +7947,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 126";
 		rLen = 0;
-		rLoc = 3889;
+		rLoc = 3915;
 		rType = 0;
 		vrLen = 1135;
 		vrLoc = 2813;
@@ -7821,7 +7997,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 119";
 		rLen = 0;
-		rLoc = 3718;
+		rLoc = 3744;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 2813;
@@ -7861,7 +8037,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 116";
 		rLen = 0;
-		rLoc = 3718;
+		rLoc = 3744;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 2813;
@@ -7911,7 +8087,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 157";
 		rLen = 0;
-		rLoc = 5109;
+		rLoc = 5135;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 3942;
@@ -7951,7 +8127,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 135";
 		rLen = 0;
-		rLoc = 4723;
+		rLoc = 4749;
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 2812;
@@ -8081,7 +8257,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 92";
 		rLen = 0;
-		rLoc = 3226;
+		rLoc = 3252;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 2054;
@@ -8141,7 +8317,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 92";
 		rLen = 0;
-		rLoc = 3226;
+		rLoc = 3252;
 		rType = 0;
 		vrLen = 766;
 		vrLoc = 2054;
@@ -8161,7 +8337,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 92";
 		rLen = 0;
-		rLoc = 3199;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 2054;
@@ -9983,7 +10159,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 115";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3680;
 		rType = 0;
 		vrLen = 935;
 		vrLoc = 2918;
@@ -10033,7 +10209,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 115";
 		rLen = 0;
-		rLoc = 3654;
+		rLoc = 3680;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 2879;
@@ -10183,7 +10359,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 136";
 		rLen = 0;
-		rLoc = 4233;
+		rLoc = 4259;
 		rType = 0;
 		vrLen = 1038;
 		vrLoc = 3251;
@@ -10203,7 +10379,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 136";
 		rLen = 0;
-		rLoc = 4233;
+		rLoc = 4259;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 4625;
@@ -10233,7 +10409,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 190";
 		rLen = 0;
-		rLoc = 5759;
+		rLoc = 5785;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 2979;
@@ -10263,7 +10439,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 179";
 		rLen = 4;
-		rLoc = 5499;
+		rLoc = 5525;
 		rType = 0;
 		vrLen = 894;
 		vrLoc = 4287;
@@ -10483,7 +10659,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 100";
 		rLen = 9;
-		rLoc = 3211;
+		rLoc = 3237;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 1218;
@@ -10503,7 +10679,7 @@
 		fRef = E1CBFB0F111D8DCF00F09BC5 /* Controller.m */;
 		name = "controller.m: 100";
 		rLen = 9;
-		rLoc = 3211;
+		rLoc = 3237;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 1218;
@@ -10525,7 +10701,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -10566,9 +10742,9 @@
 	};
 	E1CBFB0F111D8DCF00F09BC5 /* Controller.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {530, 3728}}";
-			sepNavSelRange = "{2717, 0}";
-			sepNavVisRange = "{2247, 322}";
+			sepNavIntBoundsRect = "{{0, 0}, {789, 3648}}";
+			sepNavSelRange = "{2878, 0}";
+			sepNavVisRange = "{2247, 860}";
 		};
 	};
 	E1CBFB1A111D918100F09BC5 /* PBXTextBookmark */ = {

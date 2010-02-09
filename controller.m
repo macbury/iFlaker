@@ -100,6 +100,7 @@
 - (void)didAuthorizeFlaker:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
 	[sheet orderOut:self];
 	[authContoller release];
+	[flaker refreshFriends];
 }
 
 - (void) cannotFetchOAuthTokenFromFlaker {

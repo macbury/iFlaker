@@ -61,7 +61,6 @@
 	[accessToken storeInDefaultKeychainWithAppName:@"iFlaker"
                                serviceProviderName:@"flaker.pl"];
 	[NSApp endSheet:[self view]];
-	[pinVerificator.flaker refreshFriends];
 }
 
 - (void) oAuthPinVerificationFail {
