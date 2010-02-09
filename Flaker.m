@@ -41,13 +41,13 @@
 // oAuth
 
 - (void) authorizeUsingOAuth:(NSString *) appName serviveProviderName:(NSString *) serviceProvider {
-	//requestToken = [[OAToken alloc] initWithKeychainUsingAppName: appName
-//											  serviceProviderName: serviceProvider];	
-//	if (requestToken == nil) {
+	accessToken = [[OAToken alloc] initWithKeychainUsingAppName: appName
+											serviceProviderName: serviceProvider];	
+	if (accessToken == nil) {
 		[self requestOAuthToken];
-//	} else {
-		
-//	}
+	} else {
+		[self refreshFriends];
+	}
 }
 
 - (void) requestOAuthToken {

@@ -49,7 +49,7 @@
 	// View Height
 	NSSize viewBoxSize = [subview frame].size;
 	
-	viewBoxSize.height = bubbleHeight + 36.0;
+	viewBoxSize.height = bubbleHeight + 20.0;
 	[subview setFrameSize: viewBoxSize];
 }
 
