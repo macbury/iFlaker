@@ -185,7 +185,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E1CBFBA1111D991700F09BC5 /* .gitignore */,
-				E1C36E7911230DE100619619 /* NewFlak.xib */,
 			);
 			name = iFlaker;
 			sourceTree = "<group>";
@@ -224,6 +223,7 @@
 		E11BE7B7111E01B200C28968 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E1C36E7911230DE100619619 /* NewFlak.xib */,
 				E1E23CBA111EDE68008347A5 /* flakCell.xib */,
 				E145BA14111F758B00BE4E01 /* FlakController.h */,
 				E145BA15111F758B00BE4E01 /* FlakController.m */,

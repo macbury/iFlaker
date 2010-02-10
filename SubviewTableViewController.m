@@ -63,9 +63,8 @@
 
 - (void) reloadTableView
 {
-    while ([[subviewTableView subviews] count] > 0)
-    {
-	[[[subviewTableView subviews] lastObject] removeFromSuperviewWithoutNeedingDisplay];
+    while ([[subviewTableView subviews] count] > 0) {
+		[[[subviewTableView subviews] lastObject] removeFromSuperviewWithoutNeedingDisplay];
     }
     
     [subviewTableView reloadData];

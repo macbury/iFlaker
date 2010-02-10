@@ -47,7 +47,7 @@
 							<object class="NSTextField" id="321977346">
 								<reference key="NSNextResponder" ref="1025817248"/>
 								<int key="NSvFlags">270</int>
-								<string key="NSFrame">{{22, 59}, {131, 14}}</string>
+								<string key="NSFrame">{{17, 59}, {136, 14}}</string>
 								<reference key="NSSuperview" ref="1025817248"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSTextFieldCell" key="NSCell" id="1050517166">
@@ -78,7 +78,7 @@
 							<object class="NSTextField" id="888737212">
 								<reference key="NSNextResponder" ref="1025817248"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{25, 11}, {206, 41}}</string>
+								<string key="NSFrame">{{20, 11}, {215, 41}}</string>
 								<reference key="NSSuperview" ref="1025817248"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSTextFieldCell" key="NSCell" id="289855451">
@@ -357,7 +357,7 @@
 							<object class="NSTextField" id="488046977">
 								<reference key="NSNextResponder" ref="1025817248"/>
 								<int key="NSvFlags">265</int>
-								<string key="NSFrame">{{150, 60}, {84, 11}}</string>
+								<string key="NSFrame">{{154, 60}, {84, 11}}</string>
 								<reference key="NSSuperview" ref="1025817248"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSTextFieldCell" key="NSCell" id="214079650">
@@ -374,7 +374,7 @@
 								</object>
 							</object>
 						</object>
-						<string key="NSFrame">{{64, 11}, {245, 80}}</string>
+						<string key="NSFrame">{{60, 11}, {249, 80}}</string>
 						<reference key="NSSuperview" ref="115080919"/>
 						<string key="NSClassName">FlakBubbleView</string>
 					</object>
@@ -393,7 +393,7 @@
 								<string>NeXT TIFF v4.0 pasteboard type</string>
 							</object>
 						</object>
-						<string key="NSFrame">{{6, 41}, {50, 50}}</string>
+						<string key="NSFrame">{{6, 36}, {50, 50}}</string>
 						<reference key="NSSuperview" ref="115080919"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="1034475171">
@@ -404,9 +404,9 @@
 								<string key="NSResourceName">avatarDefault</string>
 							</object>
 							<int key="NSAlign">0</int>
-							<int key="NSScale">0</int>
+							<int key="NSScale">1</int>
 							<int key="NSStyle">0</int>
-							<bool key="NSAnimates">YES</bool>
+							<bool key="NSAnimates">NO</bool>
 						</object>
 						<bool key="NSEditable">YES</bool>
 					</object>
@@ -414,7 +414,7 @@
 						<reference key="NSNextResponder" ref="115080919"/>
 						<int key="NSvFlags">1292</int>
 						<object class="NSPSMatrix" key="NSDrawMatrix"/>
-						<string key="NSFrame">{{15, 50}, {32, 32}}</string>
+						<string key="NSFrame">{{15, 45}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="115080919"/>
 						<int key="NSpiFlags">20490</int>
 						<double key="NSMinValue">1.600000e+01</double>

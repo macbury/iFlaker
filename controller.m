@@ -17,7 +17,7 @@
 	if (self != nil) {
 		flakiArray = [[NSMutableArray alloc] init];
 		
-		flaker = [[Flaker alloc] initWithLogin:@"bury"];
+		flaker = [[Flaker alloc] init];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
 		[self setFlakInListLimit: [NSNumber numberWithInt: 20]];
 		
@@ -135,6 +135,10 @@
 	[typePopUpButton setEnabled: YES];
 }
 
+NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *context) {
+	return [fc2.flak.createdAt compare:fc1.flak.createdAt];
+}
+
 - (void)completeFetchingFromFlaker:(NSArray *) flaki {
 	
 	for (FlakController * fc in flakiArray){
@@ -149,11 +153,13 @@
 		Flak * flak = [flaki objectAtIndex: i];
 		
 		FlakController * fc = [[[FlakController alloc] initWithFlak: flak] autorelease];
-		[flakiArray insertObject:fc atIndex:i];
-		
+		[flakiArray addObject: fc];
+
 		if (i <= 5) { [self growlAboutFlak: flak]; }
 	}
-
+	
+	[flakiArray sortUsingFunction: flakSort context: nil];
+	
 	if ([flaki count] > 5) {
 	
 		[GrowlApplicationBridge notifyWithTitle: @"iFlaker"
@@ -186,7 +192,7 @@
 
 // NSTable Delegate Methods
 
-- (void) tableViewColumnDidResize {
+- (void) tableViewColumnDidResize:(NSNotification *) notification {
 	NSMutableIndexSet * indexSet = [[[NSMutableIndexSet alloc] init] autorelease];
 	
 	for(int i=0; i < [flakiTableView numberOfRows]; i++) {
@@ -201,10 +207,8 @@
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-	FlakController * flakController = [flakiArray objectAtIndex: row];
-	[flakController resizeToFitBody];
 	
-	return [[flakController view] frame].size.height;
+	return [[flakiArray objectAtIndex: row] frame].size.height;
 }
 
 - (int) numberOfRowsInTableView:(NSTableView *) tableView {

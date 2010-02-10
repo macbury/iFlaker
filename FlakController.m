@@ -53,6 +53,12 @@
 	[subview setFrameSize: viewBoxSize];
 }
 
+- (NSRect) frame {
+	[self resizeToFitBody];
+	
+	return [subview frame];
+}
+
 - (void) updateDate {
 	[timeTextField setStringValue: [flak distanceOfTimeInWords]];
 }
@@ -60,8 +66,6 @@
 - (void) awakeFromNib {
 	[loginTextField setStringValue: flak.user.login];
 	[bodyTextField setStringValue: flak.body];
-	[self updateDate];
-	[self resizeToFitBody];
 	[avatarDownloadIndicator startAnimation: self];
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
@@ -81,6 +85,9 @@
 		recivedAvatarData = [[NSMutableData alloc] init];
 		avatarDownloadConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 	}
+	
+	[self updateDate];
+	[self resizeToFitBody];
 }
 
 - (void)connection:(NSURLConnection *)con didReceiveData:(NSData *)data {

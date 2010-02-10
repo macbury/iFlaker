@@ -27,9 +27,8 @@
 @end
 
 @interface Flaker : NSObject {
-	NSString * login;
 	NSNumber * limit;
-	NSNumber * last_flak_id;
+	int last_flak_id;
 	
 	SBJSON * parser;
 	
@@ -47,13 +46,12 @@
 
 @property (assign) id<FlakerDelegate> delegate;
 
-@property (copy) NSString * login;
 @property (retain) NSNumber * limit;
 @property (retain) OAToken * requestToken;
 @property (retain) OAToken * accessToken;
 @property (retain) OAConsumer * consumer;
 
-- (id) initWithLogin:(NSString *)login;
+- (id) init;
 - (void)refreshFriends;
 
 - (id)delegate;

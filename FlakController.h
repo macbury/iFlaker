@@ -31,6 +31,7 @@
 
 - (id) initWithFlak:(Flak*)flak;
 - (NSView *) view;
+- (NSRect) frame;
 
 - (void) resizeToFitBody;
 - (void) updateDate;

@@ -10,9 +10,9 @@
 
 @implementation Flaker
 
-@synthesize login, limit, requestToken, accessToken, consumer;
+@synthesize limit, requestToken, accessToken, consumer;
 
-- (id) initWithLogin:(NSString *)newLogin {
+- (id) init {
 	self = [super init];
 	if (self != nil) {
 		parser = [[SBJSON alloc] init];
@@ -21,7 +21,6 @@
 		consumer = [[OAConsumer alloc] initWithKey: @"a8a3c249ac2151321e544c592258174b04b7174e5"
 											secret: @"89468e4a05f5c8a13186611edb9c433c"];
 		
-		[self setLogin:newLogin];
 		[self setLimit: [[NSNumber alloc] initWithInt:10]];
 	}
 	return self;
@@ -95,21 +94,21 @@
 	}  
 }
 
-// List flakow
+// Lista flakow
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"friends"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"tags"]; }
 }
 
 - (void)fetchEntriesType: (NSString *) newType {
 	
 	NSString * urlString;
 	
-	if(last_flak_id == nil) {
+	if(last_flak_id == 0) {
 		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/",
 								newType, self.limit];
 	}else{
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/start:%@",
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/start:%i",
 								newType, self.limit, last_flak_id];
 	}
 	
@@ -148,9 +147,8 @@
 	
 	for (int i = 0; i < [entries count]; i++) {
 		NSDictionary * entry = [entries objectAtIndex: i];
-		if (i == 0) {
-			last_flak_id = [[NSNumber alloc] initWithInt:[[entry objectForKey: @"id"] integerValue]];
-		}
+		
+		last_flak_id = MAX(last_flak_id, [[entry objectForKey: @"id"] intValue]);
 		
 		NSDictionary * userTempDict = [entry objectForKey:@"user"];
 		
