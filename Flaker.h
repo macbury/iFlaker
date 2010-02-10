@@ -32,6 +32,7 @@
 	NSNumber * last_flak_id;
 	
 	SBJSON * parser;
+	
 	NSURLConnection * updateConnection;
 	NSMutableData * receivedData;
 	

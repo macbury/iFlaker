@@ -28,6 +28,7 @@
 }
 
 - (void) dealloc {
+	[receivedData release];
 	[accessToken release];
 	[consumer release];
 	[requestToken release];
@@ -97,7 +98,7 @@
 // List flakow
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"flakosfera"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"friends"]; }
 }
 
 - (void)fetchEntriesType: (NSString *) newType {
@@ -105,20 +106,24 @@
 	NSString * urlString;
 	
 	if(last_flak_id == nil) {
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:true/",
-								newType, self.login, self.limit];
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/",
+								newType, self.limit];
 	}else{
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/login:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:true/start:%@",
-								newType, self.login, self.limit, last_flak_id];
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/start:%@",
+								newType, self.limit, last_flak_id];
 	}
 	
-	NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString:urlString]
-												cachePolicy: NSURLRequestReturnCacheDataElseLoad
-											timeoutInterval: 30];
-	NSLog(@"GET: %@", urlString);
+	OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL: [NSURL URLWithString: urlString]
+                                                                   consumer: consumer
+                                                                      token: accessToken
+                                                                      realm: nil
+                                                          signatureProvider: nil];
 	
+	[request prepare];
+	NSLog(@"GET: %@", urlString);
+
 	receivedData = [[NSMutableData alloc] init];
-	updateConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+	updateConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 	
 	if ([delegate respondsToSelector:@selector(startFetchingFromFlaker)]) {
 		[delegate startFetchingFromFlaker];
@@ -161,7 +166,6 @@
 		[flaki addObject: flak];
 		[flak autorelease];
 	}
-
 	
 	[receivedData release];
 	[updateConnection release];
@@ -173,8 +177,8 @@
 }
 
 - (void)connection:(NSURLConnection *)con didFailWithError:(NSError *)error {
-	[receivedData release];
-    [updateConnection release];
+    [receivedData release];
+	[updateConnection release];
 	updateConnection = nil;
 	
     NSLog(@"Connection failed! Error - %@ %@",

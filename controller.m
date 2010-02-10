@@ -98,13 +98,19 @@
 }
 
 - (void)didAuthorizeFlaker:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	[sheet orderOut:self];
+	[sheet orderOut: self];
 	[authContoller release];
-	[flaker refreshFriends];
+	[self refresh: self];
 }
 
 - (void) cannotFetchOAuthTokenFromFlaker {
-
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	[alert addButtonWithTitle:@"OK"];
+	[alert setMessageText:@"iFlaker"];
+	[alert setInformativeText:@"Nie można pobrać kodu oAuth z flaker.pl"];
+	[alert setAlertStyle:NSWarningAlertStyle];
+	
+	[alert runModal];
 }
 
 - (void)startFetchingFromFlaker {
@@ -118,16 +124,15 @@
 }
 
 - (void)afterCompleteFetch {
-	[refreshButton setEnabled: YES];
-	[typePopUpButton setEnabled: YES];
-	[flakiTableViewController reloadTableView];
-	//[flakiCollectionView scrollPageUp: self];
-	
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval: [self.refreshRate doubleValue]
 																								 target: self 
 																							 selector: @selector(refresh:) 
 																							 userInfo: nil 
 																								repeats: NO];
+
+	[flakiTableViewController reloadTableView];
+	[refreshButton setEnabled: YES];
+	[typePopUpButton setEnabled: YES];
 }
 
 - (void)completeFetchingFromFlaker:(NSArray *) flaki {
