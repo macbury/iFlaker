@@ -105,10 +105,10 @@
 	NSString * urlString;
 	
 	if(last_flak_id == 0) {
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/",
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/avatars:medium/comments:false/",
 								newType, self.limit];
 	}else{
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/sort:desc/avatars:medium/comments:false/start:%i",
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/avatars:medium/comments:false/start:%i",
 								newType, self.limit, last_flak_id];
 	}
 	

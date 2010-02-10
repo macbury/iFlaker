@@ -14,6 +14,7 @@
 #import "SubviewTableViewController.h"
 #import "FileStore.h"
 #import "AuthController.h"
+#import "NewFlakController.h"
 
 @interface Controller : NSObject <FlakerDelegate, GrowlApplicationBridgeDelegate, SubviewTableViewControllerDataSourceProtocol> {
 	IBOutlet NSWindow * mainWindow;
@@ -34,6 +35,7 @@
 	NSTimer * updateTimer;
 	
 	AuthController * authContoller;
+	NewFlakController * newFlakController;
 }
 
 @property (retain) NSNumber * refreshRate;
@@ -42,6 +44,7 @@
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;
+- (IBAction) addNewFlak:(id)sender;
 
 - (void) afterCompleteFetch;
 - (void)growlAboutFlak:(Flak *)flak;

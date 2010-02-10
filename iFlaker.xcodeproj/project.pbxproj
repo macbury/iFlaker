@@ -23,6 +23,14 @@
 		E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */; };
 		E14F31CC112208520073E704 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14F31CB112208520073E704 /* OAuthConsumer.framework */; };
 		E14F31DF1122085C0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E14F31CB112208520073E704 /* OAuthConsumer.framework */; };
+		E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06B6011234BFA008B6CA1 /* NewFlakController.m */; };
+		E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */; };
+		E1A06BE211236378008B6CA1 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E1A06BDE11236378008B6CA1 /* README.rtf */; };
+		E1A06BE311236378008B6CA1 /* Source Code License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E1A06BE011236378008B6CA1 /* Source Code License.rtf */; };
+		E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
+		E1A06C46112366D3008B6CA1 /* QuickLook.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
+		E1A06C7D1123685D008B6CA1 /* TransparentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06C791123685D008B6CA1 /* TransparentWindow.m */; };
+		E1A06C7E1123685D008B6CA1 /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06C7C1123685D008B6CA1 /* RoundedView.m */; };
 		E1C36E7A11230DE100619619 /* NewFlak.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C36E7911230DE100619619 /* NewFlak.xib */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
@@ -53,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E1A06C46112366D3008B6CA1 /* QuickLook.framework in Copy Frameworks (1) */,
 				E14F31DF1122085C0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */,
 				E1E23EB4111F10A9008347A5 /* Growl.framework in Copy Frameworks (1) */,
 			);
@@ -88,6 +97,17 @@
 		E14F2F751121E67A0073E704 /* FlakerOAuthPinVerificator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakerOAuthPinVerificator.h; sourceTree = "<group>"; };
 		E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerOAuthPinVerificator.m; sourceTree = "<group>"; };
 		E14F31CB112208520073E704 /* OAuthConsumer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthConsumer.framework; sourceTree = "<group>"; };
+		E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlakController.h; sourceTree = "<group>"; };
+		E1A06B6011234BFA008B6CA1 /* NewFlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlakController.m; sourceTree = "<group>"; };
+		E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
+		E1A06BDE11236378008B6CA1 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		E1A06BDF11236378008B6CA1 /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
+		E1A06BE011236378008B6CA1 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Source Code License.rtf"; sourceTree = "<group>"; };
+		E1A06C3D112366CE008B6CA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		E1A06C791123685D008B6CA1 /* TransparentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentWindow.m; sourceTree = "<group>"; };
+		E1A06C7A1123685D008B6CA1 /* TransparentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentWindow.h; sourceTree = "<group>"; };
+		E1A06C7B1123685D008B6CA1 /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		E1A06C7C1123685D008B6CA1 /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
 		E1C36E7911230DE100619619 /* NewFlak.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewFlak.xib; sourceTree = "<group>"; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
@@ -131,6 +151,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E1E23EB0111F1096008347A5 /* Growl.framework in Frameworks */,
 				E14F31CC112208520073E704 /* OAuthConsumer.framework in Frameworks */,
+				E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +173,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1A06C3D112366CE008B6CA1 /* QuickLook.framework */,
 				E14F31CB112208520073E704 /* OAuthConsumer.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -223,10 +245,10 @@
 		E11BE7B7111E01B200C28968 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1C36E7911230DE100619619 /* NewFlak.xib */,
-				E1E23CBA111EDE68008347A5 /* flakCell.xib */,
-				E145BA14111F758B00BE4E01 /* FlakController.h */,
-				E145BA15111F758B00BE4E01 /* FlakController.m */,
+				E1A06C791123685D008B6CA1 /* TransparentWindow.m */,
+				E1A06C7A1123685D008B6CA1 /* TransparentWindow.h */,
+				E1A06C7B1123685D008B6CA1 /* RoundedView.h */,
+				E1A06C7C1123685D008B6CA1 /* RoundedView.m */,
 				E1C8288A1120694C00BC22DE /* FlakBubbleView.h */,
 				E1C8288B1120694C00BC22DE /* FlakBubbleView.m */,
 			);
@@ -247,12 +269,18 @@
 		E14F2DC21121AFBE0073E704 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E1E23CBA111EDE68008347A5 /* flakCell.xib */,
+				E145BA14111F758B00BE4E01 /* FlakController.h */,
+				E145BA15111F758B00BE4E01 /* FlakController.m */,
 				E1CBFB0E111D8DCF00F09BC5 /* Controller.h */,
 				E1CBFB0F111D8DCF00F09BC5 /* Controller.m */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				E14F2EB41121CBBF0073E704 /* AuthController.h */,
 				E14F2EB51121CBBF0073E704 /* AuthController.m */,
 				E14F2EB71121CBE60073E704 /* AuthController.xib */,
+				E1C36E7911230DE100619619 /* NewFlak.xib */,
+				E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */,
+				E1A06B6011234BFA008B6CA1 /* NewFlakController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +296,17 @@
 				E14F2E451121BDF90073E704 /* heart_off.gif */,
 			);
 			name = Flak;
+			sourceTree = "<group>";
+		};
+		E1A06BDB1123635C008B6CA1 /* QuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */,
+				E1A06BDE11236378008B6CA1 /* README.rtf */,
+				E1A06BDF11236378008B6CA1 /* NSImage+QuickLook.h */,
+				E1A06BE011236378008B6CA1 /* Source Code License.rtf */,
+			);
+			name = QuickLook;
 			sourceTree = "<group>";
 		};
 		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
@@ -288,6 +327,7 @@
 		E1CBFBA6111D99F600F09BC5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E1A06BDB1123635C008B6CA1 /* QuickLook */,
 				E1C82A9F11209FDD00BC22DE /* FileStore.h */,
 				E1C82AA011209FDD00BC22DE /* FileStore.m */,
 				E1CBFBB0111D9A0400F09BC5 /* JSON */,
@@ -373,6 +413,8 @@
 				E14F2E511121BE810073E704 /* link_to_entry.gif in Resources */,
 				E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */,
 				E1C36E7A11230DE100619619 /* NewFlak.xib in Resources */,
+				E1A06BE211236378008B6CA1 /* README.rtf in Resources */,
+				E1A06BE311236378008B6CA1 /* Source Code License.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +443,10 @@
 				E1C82AA111209FDD00BC22DE /* FileStore.m in Sources */,
 				E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */,
 				E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */,
+				E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */,
+				E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */,
+				E1A06C7D1123685D008B6CA1 /* TransparentWindow.m in Sources */,
+				E1A06C7E1123685D008B6CA1 /* RoundedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
