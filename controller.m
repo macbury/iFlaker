@@ -19,7 +19,7 @@
 		
 		flaker = [[Flaker alloc] init];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
-		[self setFlakInListLimit: [NSNumber numberWithInt: 20]];
+		[self setFlakInListLimit: [NSNumber numberWithInt: 5]];
 		
 		[flaker setDelegate: self];
 		[GrowlApplicationBridge setGrowlDelegate:self];
@@ -38,6 +38,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[flaker authorizeUsingOAuth: @"iFlaker" serviveProviderName: @"flaker.pl"];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)aApplication 
+										hasVisibleWindows:(BOOL)aFlag
+{
+	[mainWindow makeKeyAndOrderFront:self];
+	return YES;
 }
 
 - (void) dealloc {

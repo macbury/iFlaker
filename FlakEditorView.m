@@ -27,13 +27,20 @@
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
 	NSPasteboard* pboard = [sender draggingPasteboard];
 	NSDragOperation sourceDragMask = [sender draggingSourceOperationMask];
+	NSArray *fileTypes = [NSArray arrayWithObjects:@"jpg", @"gif",
+						  @"png",@"jpeg", nil];
 	
 	if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
+		
 		NSArray* files = [pboard propertyListForType:NSFilenamesPboardType];
 		if([files count] == 1) {
 			if (sourceDragMask & NSDragOperationLink) {
-				[self setImagePath: (NSString *)[files objectAtIndex:0]];
-				[removeImageButton setEnabled: YES];
+				NSString * file = (NSString *)[files objectAtIndex:0];
+				if ([fileTypes containsObject: [file pathExtension]]) {
+					[self setImagePath: file];
+					[removeImageButton setEnabled: YES];
+					return YES;
+				}
 			} 
 		}
 		
