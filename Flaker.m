@@ -57,7 +57,7 @@
                                                                    consumer:consumer
                                                                       token:nil   
                                                                       realm:nil   
-                                                          signatureProvider:nil]; 
+                                                          signatureProvider:[[[OAPlaintextSignatureProvider alloc] init] autorelease]]; 
 	
     [request setHTTPMethod:@"POST"];
 	
@@ -97,7 +97,11 @@
 // Lista flakow
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"tags"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"friends"]; }
+}
+
+- (void) refresh {
+	[self refreshFriends];
 }
 
 - (void)fetchEntriesType: (NSString *) newType {

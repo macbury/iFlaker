@@ -53,6 +53,7 @@
 
 - (id) init;
 - (void)refreshFriends;
+- (void)refresh;
 
 - (id)delegate;
 - (void)setDelegate:(id)new_delegate;

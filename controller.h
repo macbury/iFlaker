@@ -35,7 +35,7 @@
 	NSTimer * updateTimer;
 	
 	AuthController * authContoller;
-	NewFlakController * newFlakController;
+	IBOutlet NewFlakController * newFlakController;
 }
 
 @property (retain) NSNumber * refreshRate;
@@ -44,9 +44,8 @@
 
 - (IBAction) refresh:(id)sender;
 - (IBAction) typeChange:(id)sender;
-- (IBAction) addNewFlak:(id)sender;
 
 - (void) afterCompleteFetch;
-- (void)growlAboutFlak:(Flak *)flak;
+- (void) growlAboutFlak:(Flak *)flak;
 
 @end

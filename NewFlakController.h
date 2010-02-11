@@ -7,16 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FlakerPost.h"
 
-@interface NewFlakController : NSObject {
-	IBOutlet NSWindow * window;
-	IBOutlet NSBox * contentView;
+@interface NewFlakController : NSObject <FlakerPostDelegate> {
 	IBOutlet NSTextView * contentTextView;
 	IBOutlet NSProgressIndicator * progressIndicator;
+	IBOutlet NSButton * flaknijButton;
+	IBOutlet NSButton * attachPhotoButton;
+	
+	FlakerPost * flakerPost;
 }
 
-@property (retain) NSWindow * window;
-
+- (void) setFlaker:(Flaker *) newFlaker;
 - (IBAction) postMessage:(id)sender;
 
 @end

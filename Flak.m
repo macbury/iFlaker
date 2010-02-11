@@ -19,7 +19,6 @@
 		[self setUser: flakUser];
 		[self setBody: [flakContent objectForKey: @"text"]];
 		[self setPermalink: [flakContent objectForKey: @"permalink"]];
-		NSLog(@"Date check: %@", [flakContent objectForKey:@"datetime"]);
 		[self setCreatedAt: [NSDate dateWithString: [[flakContent objectForKey:@"datetime"] stringByAppendingString: @" +0000"]]];
 	}
 	return self;

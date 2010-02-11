@@ -24,7 +24,7 @@
 		[flaker setDelegate: self];
 		[GrowlApplicationBridge setGrowlDelegate:self];
 		
-		NSString* soundFile = [[NSBundle mainBundle] pathForResource:@"otrzymanoFlaki" ofType:@"mp3"];
+		NSString* soundFile = [[NSBundle mainBundle] pathForResource:@"otrzymanoFlaki" ofType:@"m4a"];
 		otrzymaneFlakiSound = [[NSSound alloc] initWithContentsOfFile:soundFile byReference:YES];
 	}
 	return self;
@@ -33,6 +33,7 @@
 - (void) awakeFromNib {
 	flakiTableViewController = [[SubviewTableViewController controllerWithViewColumn: flakTableColumn] retain];
 	[flakiTableViewController setDelegate: self];
+	[newFlakController setFlaker: flaker];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -231,16 +232,5 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 	NSLog(@"Wybrano opcje:");
 }
 
-- (IBAction) addNewFlak:(id)sender {
-	if (newFlakController == nil){
-		newFlakController = [[NewFlakController alloc] init];
-	}
-	
-	[NSApp activateIgnoringOtherApps:YES];
-	[newFlakController.window center];
-	[newFlakController.window makeKeyAndOrderFront:self];
-	[newFlakController.window setIsVisible:YES];
-
-}
 
 @end
