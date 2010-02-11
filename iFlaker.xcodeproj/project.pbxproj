@@ -26,6 +26,7 @@
 		E16050AC1124661000306BE4 /* otrzymanoFlaki.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E16050AA1124661000306BE4 /* otrzymanoFlaki.m4a */; };
 		E16050AD1124661000306BE4 /* error.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E16050AB1124661000306BE4 /* error.m4a */; };
 		E16050B41124673300306BE4 /* FlakerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E16050B31124673300306BE4 /* FlakerPost.m */; };
+		E16052621124962F00306BE4 /* FlakEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16052611124962F00306BE4 /* FlakEditorView.m */; };
 		E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06B6011234BFA008B6CA1 /* NewFlakController.m */; };
 		E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */; };
 		E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
@@ -98,6 +99,8 @@
 		E16050AB1124661000306BE4 /* error.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.m4a; sourceTree = "<group>"; };
 		E16050B21124673300306BE4 /* FlakerPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakerPost.h; sourceTree = "<group>"; };
 		E16050B31124673300306BE4 /* FlakerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerPost.m; sourceTree = "<group>"; };
+		E16052601124962F00306BE4 /* FlakEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakEditorView.h; sourceTree = "<group>"; };
+		E16052611124962F00306BE4 /* FlakEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakEditorView.m; sourceTree = "<group>"; };
 		E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlakController.h; sourceTree = "<group>"; };
 		E1A06B6011234BFA008B6CA1 /* NewFlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlakController.m; sourceTree = "<group>"; };
 		E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 			children = (
 				E1C8288A1120694C00BC22DE /* FlakBubbleView.h */,
 				E1C8288B1120694C00BC22DE /* FlakBubbleView.m */,
+				E16052601124962F00306BE4 /* FlakEditorView.h */,
+				E16052611124962F00306BE4 /* FlakEditorView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */,
 				E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */,
 				E16050B41124673300306BE4 /* FlakerPost.m in Sources */,
+				E16052621124962F00306BE4 /* FlakEditorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

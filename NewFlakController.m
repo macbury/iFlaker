@@ -27,22 +27,21 @@
 - (void) setControlsEnabled:(BOOL)enabled {
 	[contentTextView setEditable: enabled];
 	[flaknijButton setEnabled: enabled];
-	[attachPhotoButton setEnabled: enabled];
 }
 
 - (void) awakeFromNib {
 	[contentTextView setString: @""];
 }
 
-
 - (void) flakHaveBeenPostedToFlaker {
-	[contentTextView setString: @""];
+	[contentTextView reset];
 	[self setControlsEnabled: YES];
 }
 
 - (void) flakHaventBeenPostedToFlaker:(NSError *)error {
 	[NSAlert alertWithError: error];
 	[self setControlsEnabled: YES];
+	[contentTextView reset];
 }
 
 - (IBAction) postMessage:(id)sender {
@@ -56,8 +55,22 @@
 		[alert runModal];
 	} else {
 		[self setControlsEnabled: NO];
-		[flakerPost postFlak: [contentTextView string] link:nil images: nil];
+		
+		NSData * image = nil;
+		
+		if (contentTextView.imagePath != @"") {
+			image = [[[NSData alloc] initWithContentsOfFile: [contentTextView imagePath]] autorelease];
+		}
+		
+		[flakerPost postFlak: [contentTextView string] link:nil image: image];
 	}
+}
+
+// NSTextViewDelegate 
+
+- (NSArray *)textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index {
+	//return [flakerPost.flaker usersLogins: [[textView string] substringWithRange:charRange]];
+	return nil;
 }
 
 @end

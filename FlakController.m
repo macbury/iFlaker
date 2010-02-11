@@ -98,10 +98,12 @@
 	[avatarDownloadIndicator stopAnimation: self];
 	[avatarDownloadIndicator setHidden: YES];
 	
-	flak.user.avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
-	[avatarView setImage: flak.user.avatarImage];
+	if (flak.user.avatarImage == nil){
+		flak.user.avatarImage = [[NSImage alloc] initWithData: recivedAvatarData];
+		[recivedAvatarData writeToFile: [FileStore pathForAvatar: [flak.user avatarName] ] atomically: YES];
+	}
 	
-	[recivedAvatarData writeToFile: [FileStore pathForAvatar: [flak.user avatarName] ] atomically: YES];
+	[avatarView setImage: flak.user.avatarImage];
 	
 	[recivedAvatarData release];
 	[avatarDownloadConnection release];

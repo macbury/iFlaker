@@ -188,8 +188,9 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 }
 
 - (void)errorOnFetchFromFlaker:(NSError *)error {
-	[NSAlert alertWithError: error];
 	[self afterCompleteFetch];
+	NSAlert * alert = [NSAlert alertWithError:error];
+	[alert runModal];
 }
 
 // NSTable Delegate Methods
@@ -225,7 +226,6 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 
 - (IBAction) refresh:(id)sender {
 	[flaker refreshFriends];
-	
 }
 
 - (IBAction) typeChange:(id)sender {

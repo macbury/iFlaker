@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "FlakerPost.h"
+#import "FlakEditorView.h"
 
 @interface NewFlakController : NSObject <FlakerPostDelegate> {
-	IBOutlet NSTextView * contentTextView;
+	IBOutlet FlakEditorView * contentTextView;
 	IBOutlet NSProgressIndicator * progressIndicator;
 	IBOutlet NSButton * flaknijButton;
-	IBOutlet NSButton * attachPhotoButton;
 	
 	FlakerPost * flakerPost;
 }

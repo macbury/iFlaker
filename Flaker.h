@@ -55,11 +55,12 @@
 - (void)refreshFriends;
 - (void)refresh;
 
-- (id)delegate;
-- (void)setDelegate:(id)new_delegate;
+- (id) delegate;
+- (void) setDelegate:(id)new_delegate;
 
 - (void) requestOAuthToken;
 - (void) authorizeUsingOAuth:(NSString *) appName serviveProviderName:(NSString *) serviceProvider;
 
-- (void)fetchEntriesType: (NSString *) newType;
+- (void) fetchEntriesType: (NSString *) newType;
+- (NSArray *) usersLogins:(NSString *) query;
 @end

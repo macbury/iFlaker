@@ -97,7 +97,7 @@
 // Lista flakow
 
 - (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"friends"]; }
+	if (updateConnection == nil) { [self fetchEntriesType: @"followed"]; }
 }
 
 - (void) refresh {
@@ -187,7 +187,7 @@
           [error localizedDescription],
           [[error userInfo] objectForKey:NSErrorFailingURLStringKey]);
 	
-	if ([delegate respondsToSelector:@selector(errorOnFetchFromFlaker)]) {
+	if ([delegate respondsToSelector:@selector(errorOnFetchFromFlaker:)]) {
 		[delegate errorOnFetchFromFlaker: error];
 	}  
 }
@@ -198,6 +198,19 @@
 
 - (void)setDelegate:(id)new_delegate {
     delegate = new_delegate;
+}
+
+- (NSArray *) usersLogins:(NSString *) query {
+	NSMutableArray * tempUsersLogins = [[[NSMutableArray alloc] init] autorelease];
+	
+	for (NSString * key in usersDictionary) {
+		NSString * login = [[usersDictionary objectForKey: key] login];
+		if (NSOrderedSame == [login compare:query options:NSCaseInsensitiveSearch]) {
+			[tempUsersLogins addObject: login];
+		}
+	}
+	
+	return tempUsersLogins;
 }
 
 @end

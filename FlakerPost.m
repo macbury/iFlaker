@@ -28,7 +28,7 @@
 	[super dealloc];
 }
 
-- (void) postFlak:(NSString *)contentText link:(NSString *)link images:(NSArray *) images {
+- (void) postFlak:(NSString *)contentText link:(NSString *)link image:(NSData *)image {
 	NSURL * url = [NSURL URLWithString: @"http://api.flaker.pl/api/type:submit"];
 	
 	OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL: url
@@ -36,14 +36,30 @@
                                                                       token: flaker.accessToken
                                                                       realm: nil
                                                           signatureProvider: [[[OAPlaintextSignatureProvider alloc] init] autorelease]];
+	[request prepare];
+	
+	NSString *stringBoundary = [NSString stringWithString:@"0xKhTmLbOuNdArY"];
+	NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",stringBoundary];
+	[request addValue:contentType forHTTPHeaderField: @"Content-Type"];
+	
+	NSMutableData *postBody = [NSMutableData data];
+	
+	[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+	[postBody appendData:[[NSString stringWithString:@"Content-Disposition: form-data; name=\"text\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+	[postBody appendData:[[NSString stringWithString: contentText] dataUsingEncoding:NSUTF8StringEncoding]];
+	[postBody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+	
+	if (image != nil) {
+		[postBody appendData:[[NSString stringWithString:@"Content-Disposition: form-data; name=\"uploadFile\"; filename=\"test.txt\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+		[postBody appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+		[postBody appendData: image];
+		[postBody appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+		
+	}
+	
+	[request setHTTPBody:postBody];
 	[request setHTTPMethod:@"POST"];
 	
-	OARequestParameter *textParam = [[OARequestParameter alloc] initWithName:@"text"
-                                                                       value:contentText];
-	
-    [request setParameters: [NSArray arrayWithObjects:textParam, nil]];
-	
-	[request prepare];
 	
 	NSLog(@"Wysyłanie flaka...");
 	

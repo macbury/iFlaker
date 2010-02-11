@@ -29,6 +29,6 @@
 @property (assign) id<FlakerPostDelegate> delegate;
 
 - (id) initWithFlaker:(Flaker *) newFlaker;
-- (void) postFlak:(NSString *)contentText link:(NSString *)link images:(NSArray *) images;
+- (void) postFlak:(NSString *)contentText link:(NSString *)link image:(NSData *)image;
 
 @end

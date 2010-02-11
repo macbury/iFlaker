@@ -1,0 +1,65 @@
+//
+//  FlakEditorView.m
+//  iFlaker
+//
+//  Created by MacBury on 10-02-11.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+
+#import "FlakEditorView.h"
+
+
+@implementation FlakEditorView
+
+@synthesize imagePath, linkUrl;
+
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		imagePath = [[NSString alloc] init];
+		linkUrl = [[NSString alloc] init];
+	}
+	return self;
+}
+
+
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
+	NSPasteboard* pboard = [sender draggingPasteboard];
+	NSDragOperation sourceDragMask = [sender draggingSourceOperationMask];
+	
+	if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
+		NSArray* files = [pboard propertyListForType:NSFilenamesPboardType];
+		if([files count] == 1) {
+			if (sourceDragMask & NSDragOperationLink) {
+				[self setImagePath: (NSString *)[files objectAtIndex:0]];
+				[removeImageButton setEnabled: YES];
+			} 
+		}
+		
+		return NO;
+	}else{
+		return [super performDragOperation:sender];
+	}
+}
+
+- (void) dealloc {
+	[imagePath release];
+	[linkUrl release];
+	[super dealloc];
+}
+
+
+- (IBAction) removeImage:(id)sender {
+	[removeImageButton setEnabled: NO];
+	imagePath = @"";
+}
+
+- (void) reset {
+	[removeImageButton setEnabled: NO];
+	imagePath = @"";
+	linkUrl = @"";
+	[self setString: @""];
+}
+
+@end
