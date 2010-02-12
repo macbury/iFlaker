@@ -62,7 +62,7 @@
 			image = [[[NSData alloc] initWithContentsOfFile: [contentTextView imagePath]] autorelease];
 		}
 		
-		[flakerPost postFlak: [contentTextView string] link:nil image: image];
+		[flakerPost postFlak: [contentTextView string] link:contentTextView.linkUrl image: image];
 	}
 }
 

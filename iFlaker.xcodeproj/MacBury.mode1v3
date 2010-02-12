@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,14 +279,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>13</integer>
 									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 22}, {225, 548}}</string>
+							<string>{{0, 157}, {225, 548}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,14 +316,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Controller.m</string>
+								<string>NewFlakController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Controller.m</string>
+										<string>NewFlakController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E17480E7112597CC000C8D86</string>
+										<string>E17481771125AB74000C8D86</string>
 										<key>history</key>
 										<array>
 											<string>E1CBFB1A111D918100F09BC5</string>
@@ -370,19 +370,19 @@
 											<string>E16050B81124694500306BE4</string>
 											<string>E16051A911247D2200306BE4</string>
 											<string>E16051D9112482B600306BE4</string>
-											<string>E16052F311249EAE00306BE4</string>
 											<string>E16053241124A39C00306BE4</string>
 											<string>E16053261124A39C00306BE4</string>
 											<string>E160533F1124A72A00306BE4</string>
-											<string>E16053411124A72A00306BE4</string>
-											<string>E16053491124A75A00306BE4</string>
-											<string>E160534A1124A75A00306BE4</string>
-											<string>E10D1B581124BACF00EBCB48</string>
-											<string>E1747FFA112581A7000C8D86</string>
 											<string>E174806811258936000C8D86</string>
 											<string>E174807611258AC9000C8D86</string>
 											<string>E17480C011259620000C8D86</string>
-											<string>E17480C111259620000C8D86</string>
+											<string>E17480EA112598A7000C8D86</string>
+											<string>E17480F511259E8E000C8D86</string>
+											<string>E17481001125A01B000C8D86</string>
+											<string>E17481011125A01B000C8D86</string>
+											<string>E17481651125AA06000C8D86</string>
+											<string>E174816E1125AB16000C8D86</string>
+											<string>E174816F1125AB16000C8D86</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -446,6 +446,20 @@
 											<string>E17480B711259487000C8D86</string>
 											<string>E17480B811259487000C8D86</string>
 											<string>E17480C211259620000C8D86</string>
+											<string>E17480EB112598A7000C8D86</string>
+											<string>E17480F711259E8E000C8D86</string>
+											<string>E17480F811259E8E000C8D86</string>
+											<string>E17480F911259E8E000C8D86</string>
+											<string>E17480FA11259E8E000C8D86</string>
+											<string>E17481051125A01B000C8D86</string>
+											<string>E17481061125A01B000C8D86</string>
+											<string>E17481071125A01B000C8D86</string>
+											<string>E17481081125A01B000C8D86</string>
+											<string>E17481091125A01B000C8D86</string>
+											<string>E174810A1125A01B000C8D86</string>
+											<string>E17481131125A04D000C8D86</string>
+											<string>E17481671125AA06000C8D86</string>
+											<string>E17481701125AB16000C8D86</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

@@ -14,12 +14,14 @@
 	NSString * linkUrl;
 	
 	IBOutlet NSButton * removeImageButton;
+	IBOutlet NSButton * removeLinkButton;
 }
 
 @property (retain) NSString * imagePath;
 @property (retain) NSString * linkUrl;
 
 - (IBAction) removeImage:(id)sender;
+- (IBAction) removeLink:(id)sender;
 - (void) reset;
 
 @end
