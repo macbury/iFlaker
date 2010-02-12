@@ -78,11 +78,10 @@
 		[avatarDownloadIndicator setHidden: YES];
 	}else{
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: flak.user.avatar]
-													cachePolicy: NSURLRequestReturnCacheDataElseLoad
+													cachePolicy: NSURLRequestUseProtocolCachePolicy
 												timeoutInterval: 30];
 		NSLog(@"Avatar GET: %@", flak.user.avatar);
 		
-		recivedAvatarData = [[NSMutableData alloc] init];
 		avatarDownloadConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 	}
 	
@@ -91,6 +90,9 @@
 }
 
 - (void)connection:(NSURLConnection *)con didReceiveData:(NSData *)data {
+	if (recivedAvatarData == nil){
+		recivedAvatarData = [[NSMutableData alloc] init];
+	}
 	[recivedAvatarData appendData:data];
 }
 
@@ -105,8 +107,9 @@
 	
 	[avatarView setImage: flak.user.avatarImage];
 	
-	[recivedAvatarData release];
 	[avatarDownloadConnection release];
+	[recivedAvatarData release];
+	
 }
 
 - (void)connection:(NSURLConnection *)con didFailWithError:(NSError *)error {
@@ -120,9 +123,8 @@
 
 
 - (void) dealloc {
-	[avatarDownloadConnection release];
-	[recivedAvatarData release];
-    [subview release];
+
+	[subview release];
     [flak release];
     [super dealloc];
 }

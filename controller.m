@@ -19,7 +19,7 @@
 		
 		flaker = [[Flaker alloc] init];
 		[self setRefreshRate: [[NSNumber alloc] initWithInt:10]];
-		[self setFlakInListLimit: [NSNumber numberWithInt: 5]];
+		[self setFlakInListLimit: [NSNumber numberWithInt: 20]];
 		
 		[flaker setDelegate: self];
 		[GrowlApplicationBridge setGrowlDelegate:self];

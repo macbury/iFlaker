@@ -45,6 +45,11 @@
 		}
 		
 		return NO;
+	} if ( [[pboard types] containsObject:NSURLPboardType] ) {
+		NSURL * url = [pboard propertyListForType:NSURLPboardType];
+		[self setLinkUrl: [NSString stringWithContentsOfURL: url]];
+		
+		return YES;
 	}else{
 		return [super performDragOperation:sender];
 	}
