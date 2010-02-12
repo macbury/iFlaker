@@ -82,7 +82,7 @@
 	NSLog(@"Succeeded! Received %d bytes of data", [receivedData length]);
 	//NSLog([[[NSString alloc] initWithData: receivedData encoding:NSUTF8StringEncoding] autorelease]);
 	
-	[flaker refreshFriends];
+	[flaker refresh];
 	[receivedData release];
 	[postConnection release];
 	postConnection = nil;

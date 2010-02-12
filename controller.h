@@ -29,6 +29,9 @@
 	Flaker * flaker;
 	NSMutableArray * flakiArray;
 	NSSound * otrzymaneFlakiSound;
+	NSSound * errorSound;
+	BOOL show_flaks_badgage;
+	int new_flaks_count;
 	
 	NSNumber * refreshRate;
 	NSNumber * flakInListLimit;

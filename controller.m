@@ -24,10 +24,25 @@
 		[flaker setDelegate: self];
 		[GrowlApplicationBridge setGrowlDelegate:self];
 		
-		NSString* soundFile = [[NSBundle mainBundle] pathForResource:@"otrzymanoFlaki" ofType:@"m4a"];
-		otrzymaneFlakiSound = [[NSSound alloc] initWithContentsOfFile:soundFile byReference:YES];
+		otrzymaneFlakiSound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"otrzymanoFlaki" ofType:@"m4a"] 
+																											byReference:YES];
+		errorSound = [[NSSound alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"error" ofType:@"m4a"] 
+																						 byReference:YES];
 	}
 	return self;
+}
+
+- (void) dealloc {
+	[errorSound release];
+	[newFlakController release];
+	[authContoller release];
+	[flakiTableViewController release];
+	[otrzymaneFlakiSound release];
+	[flakiArray release];
+	[refreshRate release];
+	[flaker release];
+	[updateTimer release];
+	[super dealloc];
 }
 
 - (void) awakeFromNib {
@@ -41,30 +56,30 @@
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)aApplication 
-										hasVisibleWindows:(BOOL)aFlag
-{
+										hasVisibleWindows:(BOOL)aFlag {
 	[mainWindow makeKeyAndOrderFront:self];
 	return YES;
 }
 
-- (void) dealloc {
-	[newFlakController release];
-	[authContoller release];
-	[flakiTableViewController release];
-	[otrzymaneFlakiSound release];
-	[flakiArray release];
-	[refreshRate release];
-	[flaker release];
-	[updateTimer release];
-	[super dealloc];
+- (void)applicationDidBecomeActive:(NSNotification *)aNotification {
+	show_flaks_badgage = NO;
+	new_flaks_count = 0;
+	//NSDockTile * icon = [NSApp dockTile];
+	[[NSApp dockTile] setBadgeLabel: @""];
+	//[icon setShowsApplicationBadge: NO];
+}
+
+- (void)applicationDidResignActive:(NSNotification *)aNotification {
+	show_flaks_badgage = YES;
+	new_flaks_count = 0;
+	//[[NSApp dockTile] setShowsApplicationBadge: YES];
 }
 
 // Growl Delegate
 
 - (void) growlNotificationWasClicked:(id)clickContext {
-	//[self activateIgnoringOtherApps:YES];
+	[NSApp activateIgnoringOtherApps: YES];
 	//[mainWindow 
-	NSLog(@"Kliknięto na dymek!");
 }
 
 - (NSDictionary *) registrationDictionaryForGrowl {
@@ -91,7 +106,7 @@
 																 iconData: avatarImage 
 																 priority:1
 																 isSticky:NO
-														 clickContext:@"test"];
+														 clickContext: 0];
 }
 
 // Flaker Api delegate 
@@ -156,6 +171,11 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 	
 	if ([flaki count] > 0) {
 		[otrzymaneFlakiSound play];
+		new_flaks_count += [flaki count];
+	}
+	
+	if (new_flaks_count > 0 && show_flaks_badgage){
+		[[NSApp dockTile] setBadgeLabel: [NSString stringWithFormat:@"%i", new_flaks_count]];
 	}
 	
 	for(int i = 0; i < [flaki count]; i++) {
@@ -172,12 +192,12 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 	if ([flaki count] > 5) {
 	
 		[GrowlApplicationBridge notifyWithTitle: @"iFlaker"
-																description: [NSString stringWithFormat: @"Zostało jeszcze %@ flaków", [NSNumber numberWithInt:[flaki count] - 5]]
+																description: [NSString stringWithFormat: @"Zostało jeszcze %i flaków", [flaki count] - 5]
 													 notificationName:@"NoweFlaki"
 																	 iconData: nil //[NSBundle bundleWithIdentifier: "avatarDefault"]
 																	 priority:1
 																	 isSticky:NO
-															 clickContext:@"test"];
+															 clickContext:0];
 	}
 	
 
@@ -196,8 +216,9 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 
 - (void)errorOnFetchFromFlaker:(NSError *)error {
 	[self afterCompleteFetch];
-	NSAlert * alert = [NSAlert alertWithError:error];
-	[alert runModal];
+	[errorSound play];
+	//NSAlert * alert = [NSAlert alertWithError:error];
+	//[alert runModal];
 }
 
 // NSTable Delegate Methods
@@ -232,11 +253,14 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 // Actions
 
 - (IBAction) refresh:(id)sender {
-	[flaker refreshFriends];
+	[flaker refresh];
 }
 
 - (IBAction) typeChange:(id)sender {
-	NSLog(@"Wybrano opcje:");
+	NSLog(@"Wybrano opcje: %i", [sender tag]);
+	[flaker setType: [[Flaker types] objectAtIndex: [sender tag]]];
+	[flakiArray removeAllObjects];
+	[flaker refresh];
 }
 
 

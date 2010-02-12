@@ -10,7 +10,11 @@
 
 @implementation Flaker
 
-@synthesize limit, requestToken, accessToken, consumer;
+@synthesize limit, requestToken, accessToken, consumer, type;
+
++ (NSArray *) types {
+	return [NSArray arrayWithObjects: @"followed", @"niuchacz", @"user", @"tags", nil];
+}
 
 - (id) init {
 	self = [super init];
@@ -21,9 +25,15 @@
 		consumer = [[OAConsumer alloc] initWithKey: @"a8a3c249ac2151321e544c592258174b04b7174e5"
 											secret: @"89468e4a05f5c8a13186611edb9c433c"];
 		
-		[self setLimit: [[NSNumber alloc] initWithInt:10]];
+		limit = 20;
+		[self setType: @"followed"];
 	}
 	return self;
+}
+
+- (void) setType:(NSString*)newType {
+	last_flak_timestamp = 0;
+	type = newType;
 }
 
 - (void) dealloc {
@@ -32,7 +42,6 @@
 	[consumer release];
 	[requestToken release];
 	[usersDictionary release];
-	[limit release];
 	[parser release];
 	[updateConnection release];
 	[super dealloc];
@@ -46,7 +55,7 @@
 	if (accessToken == nil) {
 		[self requestOAuthToken];
 	} else {
-		[self refreshFriends];
+		[self refresh];
 	}
 }
 
@@ -96,24 +105,20 @@
 
 // Lista flakow
 
-- (void)refreshFriends {
-	if (updateConnection == nil) { [self fetchEntriesType: @"followed"]; }
-}
-
 - (void) refresh {
-	[self refreshFriends];
+	if (updateConnection == nil) { [self fetchEntriesType: self.type]; }
 }
 
 - (void)fetchEntriesType: (NSString *) newType {
 	
 	NSString * urlString;
 	
-	if(last_flak_id == 0) {
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/avatars:medium/comments:false/",
+	if(last_flak_timestamp == 0) {
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%i/html:false/avatars:medium/comments:false/",
 								newType, self.limit];
 	}else{
-		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%@/html:false/avatars:medium/comments:false/start:%i",
-								newType, self.limit, last_flak_id];
+		urlString = [[NSString alloc] initWithFormat: @"http://api.flaker.pl/api/type:%@/limit:%i/html:false/avatars:medium/comments:false/since:%i",
+								newType, self.limit, last_flak_timestamp];
 	}
 	
 	OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL: [NSURL URLWithString: urlString]
@@ -152,7 +157,7 @@
 	for (int i = 0; i < [entries count]; i++) {
 		NSDictionary * entry = [entries objectAtIndex: i];
 		
-		last_flak_id = MAX(last_flak_id, [[entry objectForKey: @"id"] intValue]);
+		last_flak_timestamp = MAX(last_flak_timestamp, [[entry objectForKey: @"timestamp"] intValue]);
 		
 		NSDictionary * userTempDict = [entry objectForKey:@"user"];
 		
