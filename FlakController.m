@@ -99,6 +99,8 @@
 
 - (void) awakeFromNib {
 	[loginTextField setStringValue: flak.user.login];
+	
+	[loginTextField setUrl: [NSURL URLWithString: [NSString stringWithFormat: @"http://flaker.pl/%@", flak.user.login]]];
 	[bodyTextField setAlignment: NSLeftTextAlignment];
 	[bodyTextField setString: flak.body];
 	
@@ -178,5 +180,6 @@
 - (NSView *) view {
     return subview;
 }
+
 
 @end

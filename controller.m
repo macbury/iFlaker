@@ -176,7 +176,7 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 	
 	if (new_flaks_count > 0 && show_flaks_badgage){
 		[[NSApp dockTile] setBadgeLabel: [NSString stringWithFormat:@"%i", new_flaks_count]];
-	}
+	} 
 	
 	for(int i = 0; i < [flaki count]; i++) {
 		Flak * flak = [flaki objectAtIndex: i];
@@ -193,13 +193,12 @@ NSComparisonResult flakSort(FlakController * fc1, FlakController * fc2, void *co
 	
 		[GrowlApplicationBridge notifyWithTitle: @"iFlaker"
 																description: [NSString stringWithFormat: @"Zostało jeszcze %i flaków", [flaki count] - 5]
-													 notificationName:@"NoweFlaki"
+													 notificationName: @"NoweFlaki"
 																	 iconData: nil //[NSBundle bundleWithIdentifier: "avatarDefault"]
-																	 priority:1
-																	 isSticky:NO
-															 clickContext:0];
+																	 priority: 1
+																	 isSticky: NO
+															 clickContext: 0];
 	}
-	
 
 	if ([flakiArray count] > [flakInListLimit integerValue]) {
 		NSLog(@"Jest ponad %@ flaków... Usuwam zbyteczne...", flakInListLimit);

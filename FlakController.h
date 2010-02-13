@@ -12,10 +12,11 @@
 #import "FlakBubbleView.h"
 #import "FileStore.h"
 #import "RegexKitLite.h"
+#import "UrlTextField.h"
 
 @interface FlakController : NSObject {
 	IBOutlet NSView *subview;
-	IBOutlet NSTextField * loginTextField;
+	IBOutlet UrlTextField * loginTextField;
 	IBOutlet NSTextView * bodyTextField;
 	IBOutlet NSTextField * timeTextField;
 	IBOutlet FlakBubbleView * contentBox;
