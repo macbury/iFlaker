@@ -26,19 +26,9 @@
 }
 
 -(void) resizeToFitBody {
-	NSSize size = [bodyTextField frame].size;
-	NSTextStorage *textStorage = [[[NSTextStorage alloc] initWithAttributedString:[bodyTextField attributedStringValue]]autorelease];
-	NSTextContainer *textContainer = [[[NSTextContainer alloc] initWithContainerSize:NSMakeSize(size.width, FLT_MAX)] autorelease];
-	NSLayoutManager *layoutManager = [[[NSLayoutManager alloc]init] autorelease];
-	
-	[layoutManager addTextContainer:textContainer];
-	[textStorage addLayoutManager:layoutManager];
-
-	[textContainer setLineFragmentPadding:2.0];
-	[layoutManager glyphRangeForTextContainer:textContainer];
-	
 	// Body Text
-	CGFloat textHeight = [layoutManager usedRectForTextContainer:textContainer].size.height;
+	NSRect rect = [[bodyTextField layoutManager] usedRectForTextContainer: [bodyTextField textContainer]];
+	CGFloat textHeight = rect.size.height;
 	
 	// Bubble Height 
 	float bubbleVerticalPadding = 13.0;
@@ -63,69 +53,65 @@
 	[timeTextField setStringValue: [flak distanceOfTimeInWords]];
 }
 
-- (void)hiliteAndActivateURLs:(NSTextField*)textView {
-	[textView setAllowsEditingTextAttributes: YES];
-	[textView setSelectable: YES];
+
+- (void)hiliteAndActivateURLs:(NSTextView*)textView regexp:(NSString *) regexp format:(NSString *) format {
 	
-	NSString * string = [textView stringValue];
-	NSMutableAttributedString* attrString = [[[NSMutableAttributedString alloc] initWithString: string] autorelease];
-	NSRange searchRange = NSMakeRange(0, [attrString length]);
+	NSTextStorage* textStorage=[textView textStorage];
+	NSString* string=[textStorage string];
+	NSRange searchRange=NSMakeRange(0, [string length]);
 	NSRange foundRange;
 	
-	[attrString beginEditing];
+	NSError * error = NULL;
+	
+	[textStorage beginEditing];
 	do {
-		foundRange=[string rangeOfString:@"http://" options:0 range:searchRange];
+		
+		foundRange = [string rangeOfRegex: regexp 
+								  options: RKLNoOptions 
+								  inRange: searchRange 
+								  capture: 1
+									error: &error];
 		
 		if (foundRange.length > 0) {
 			NSURL* theURL;
-			NSRange endOfURLRange;
+			NSDictionary* linkAttributes;
 			
-			//Restrict the searchRange so that it won't find the same string again
-			searchRange.location=foundRange.location+foundRange.length;
+			searchRange.location = foundRange.location+foundRange.length;
 			searchRange.length = [string length]-searchRange.location;
 			
-			//We assume the URL ends with whitespace
-			endOfURLRange=[string rangeOfCharacterFromSet:
-						   [NSCharacterSet whitespaceAndNewlineCharacterSet]
-												  options:0 range:searchRange];
+			theURL = [NSURL URLWithString: [NSString stringWithFormat: format, [string substringWithRange:foundRange]]];
 			
-			//The URL could also end at the end of the text.  The next line fixes it in case it does
-			if (endOfURLRange.length==0)  // BUGFIX - was location == 0
-				endOfURLRange.location=[string length]-1;
+			linkAttributes= [NSDictionary dictionaryWithObjectsAndKeys: theURL, NSLinkAttributeName,
+							 [NSNumber numberWithInt:NSSingleUnderlineStyle], NSUnderlineStyleAttributeName,
+							 [NSColor blueColor], NSForegroundColorAttributeName,
+							 NULL];
 			
-			//Set foundRange's length to the length of the URL
-			foundRange.length = endOfURLRange.location-foundRange.location+1;
-			
-			//grab the URL from the text
-			theURL=[NSURL URLWithString:[string substringWithRange:foundRange]];
-			
-			//Make the link attributes
-			[attrString addAttribute: NSForegroundColorAttributeName 
-							   value: [NSColor blueColor] 
-							   range: foundRange];
-			
-			// next make the text appear with an underline
-			[attrString addAttribute: NSUnderlineStyleAttributeName 
-							   value: [NSNumber numberWithInt:NSSingleUnderlineStyle] 
-							   range: foundRange];
-			
-			// add cursor
-			[attrString addAttribute: NSCursorAttributeName 
-							   value: [NSCursor pointingHandCursor] 
-							   range: foundRange];
+			[textStorage addAttributes:linkAttributes range:foundRange];
+			[textStorage addAttribute: NSCursorAttributeName 
+								value: [NSCursor pointingHandCursor] 
+								range: foundRange];
 		}
-		
-	} while (foundRange.length!=0); //repeat the do block until it no longer finds anything
+	} while (foundRange.length!=0); 
 	
-	[attrString endEditing];
-	[textView setAttributedStringValue: attrString];
-	[textView display];
+	[textStorage endEditing];
 }
+
 
 - (void) awakeFromNib {
 	[loginTextField setStringValue: flak.user.login];
-	[bodyTextField setStringValue: flak.body];
-	[self hiliteAndActivateURLs: bodyTextField];
+	[bodyTextField setAlignment: NSLeftTextAlignment];
+	[bodyTextField setString: flak.body];
+	
+	[self hiliteAndActivateURLs: bodyTextField 
+						 regexp: @"\\b(https?://[a-zA-Z0-9\\-.]+(?:(?:/[a-zA-Z0-9\\-._?,'+\\&%$=~*!():@\\\\]*)+)?)"
+						 format: @"%@"];
+	[self hiliteAndActivateURLs: bodyTextField 
+						 regexp: @"#([a-zA-Z0-9]+)"
+						 format: @"http://flaker.pl/t/%@"];
+	[self hiliteAndActivateURLs: bodyTextField 
+						 regexp: @"@([a-zA-Z0-9]+)"
+						 format: @"http://flaker.pl/%@"];
+	
 	[avatarDownloadIndicator startAnimation: self];
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
