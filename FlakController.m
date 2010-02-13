@@ -63,9 +63,69 @@
 	[timeTextField setStringValue: [flak distanceOfTimeInWords]];
 }
 
+- (void)hiliteAndActivateURLs:(NSTextField*)textView {
+	[textView setAllowsEditingTextAttributes: YES];
+	[textView setSelectable: YES];
+	
+	NSString * string = [textView stringValue];
+	NSMutableAttributedString* attrString = [[[NSMutableAttributedString alloc] initWithString: string] autorelease];
+	NSRange searchRange = NSMakeRange(0, [attrString length]);
+	NSRange foundRange;
+	
+	[attrString beginEditing];
+	do {
+		foundRange=[string rangeOfString:@"http://" options:0 range:searchRange];
+		
+		if (foundRange.length > 0) {
+			NSURL* theURL;
+			NSRange endOfURLRange;
+			
+			//Restrict the searchRange so that it won't find the same string again
+			searchRange.location=foundRange.location+foundRange.length;
+			searchRange.length = [string length]-searchRange.location;
+			
+			//We assume the URL ends with whitespace
+			endOfURLRange=[string rangeOfCharacterFromSet:
+						   [NSCharacterSet whitespaceAndNewlineCharacterSet]
+												  options:0 range:searchRange];
+			
+			//The URL could also end at the end of the text.  The next line fixes it in case it does
+			if (endOfURLRange.length==0)  // BUGFIX - was location == 0
+				endOfURLRange.location=[string length]-1;
+			
+			//Set foundRange's length to the length of the URL
+			foundRange.length = endOfURLRange.location-foundRange.location+1;
+			
+			//grab the URL from the text
+			theURL=[NSURL URLWithString:[string substringWithRange:foundRange]];
+			
+			//Make the link attributes
+			[attrString addAttribute: NSForegroundColorAttributeName 
+							   value: [NSColor blueColor] 
+							   range: foundRange];
+			
+			// next make the text appear with an underline
+			[attrString addAttribute: NSUnderlineStyleAttributeName 
+							   value: [NSNumber numberWithInt:NSSingleUnderlineStyle] 
+							   range: foundRange];
+			
+			// add cursor
+			[attrString addAttribute: NSCursorAttributeName 
+							   value: [NSCursor pointingHandCursor] 
+							   range: foundRange];
+		}
+		
+	} while (foundRange.length!=0); //repeat the do block until it no longer finds anything
+	
+	[attrString endEditing];
+	[textView setAttributedStringValue: attrString];
+	[textView display];
+}
+
 - (void) awakeFromNib {
 	[loginTextField setStringValue: flak.user.login];
 	[bodyTextField setStringValue: flak.body];
+	[self hiliteAndActivateURLs: bodyTextField];
 	[avatarDownloadIndicator startAnimation: self];
 	
 	if ([FileStore avatarExist: [flak.user avatarName]]){
