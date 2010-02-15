@@ -15,5 +15,7 @@
 
 + (NSString *) pathForFileStore:(NSString *) path;
 + (NSString *) pathForAvatar:(NSString *) avatar;
++ (NSString *) pathForImage:(NSString *) image;
 + (BOOL) avatarExist:(NSString *) avatarName;
++ (BOOL) imageExist:(NSString *) image;
 @end

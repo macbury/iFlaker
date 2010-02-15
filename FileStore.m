@@ -35,8 +35,16 @@
 	return [[FileStore pathForFileStore: @"/avatary/"] stringByAppendingPathComponent: avatar];
 }
 
++ (NSString *) pathForImage:(NSString *) image {
+	return [[FileStore pathForFileStore: @"/pictures/"] stringByAppendingPathComponent: image];
+}
+
 + (BOOL) avatarExist:(NSString *) avatarName {
 	return [[NSFileManager defaultManager] fileExistsAtPath: [FileStore pathForAvatar: avatarName ]];
+}
+
++ (BOOL) imageExist:(NSString *) image {
+	return [[NSFileManager defaultManager] fileExistsAtPath: [FileStore pathForImage: image ]];
 }
 
 @end

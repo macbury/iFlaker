@@ -39,10 +39,6 @@
                                                                       realm:nil   
                                                           signatureProvider:nil]; 
 	
-   // OARequestParameter *verifierParam = [[OARequestParameter alloc] initWithName: @"oauth_verifier"
-	//																	   value: oauth_verifier];
-   // [request setParameters:[NSArray arrayWithObjects:verifierParam, nil]];
-
     [request setHTTPMethod:@"GET"];
 	
 	OADataFetcher *fetcher = [[OADataFetcher alloc] init];

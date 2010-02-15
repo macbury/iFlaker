@@ -17,6 +17,4 @@
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
-
-
 @end

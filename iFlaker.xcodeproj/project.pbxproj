@@ -11,11 +11,13 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E12736611129F2430087A8F0 /* FlakImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E12736601129F2430087A8F0 /* FlakImageCell.m */; };
 		E13981B71126F21E00D1E5A0 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E13981B51126F21E00D1E5A0 /* RegexKitLite.m */; };
 		E13982571127273B00D1E5A0 /* UrlTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E13982561127273B00D1E5A0 /* UrlTextField.m */; };
 		E145B939111F61E500BE4E01 /* SubviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B935111F61E500BE4E01 /* SubviewTableViewController.m */; };
 		E145B93A111F61E500BE4E01 /* SubviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */; };
 		E145BA16111F758B00BE4E01 /* FlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E145BA15111F758B00BE4E01 /* FlakController.m */; };
+		E14EA82C1128185F00D933A3 /* FlakImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E14EA82B1128185F00D933A3 /* FlakImage.m */; };
 		E14F2E461121BDF90073E704 /* heart_off.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E451121BDF90073E704 /* heart_off.gif */; };
 		E14F2E4F1121BE810073E704 /* comment.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4C1121BE810073E704 /* comment.gif */; };
 		E14F2E501121BE810073E704 /* newspaper_add.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F2E4D1121BE810073E704 /* newspaper_add.gif */; };
@@ -28,6 +30,7 @@
 		E16050AC1124661000306BE4 /* otrzymanoFlaki.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E16050AA1124661000306BE4 /* otrzymanoFlaki.m4a */; };
 		E16050B41124673300306BE4 /* FlakerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E16050B31124673300306BE4 /* FlakerPost.m */; };
 		E16052621124962F00306BE4 /* FlakEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16052611124962F00306BE4 /* FlakEditorView.m */; };
+		E19B6F681129CACA00FA8212 /* ajax-loader-green.gif in Resources */ = {isa = PBXBuildFile; fileRef = E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */; };
 		E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06B6011234BFA008B6CA1 /* NewFlakController.m */; };
 		E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */; };
 		E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
@@ -79,6 +82,8 @@
 		32CA4F630368D1EE00C91783 /* iFlaker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFlaker_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iFlaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFlaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E127365F1129F2430087A8F0 /* FlakImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakImageCell.h; sourceTree = "<group>"; };
+		E12736601129F2430087A8F0 /* FlakImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakImageCell.m; sourceTree = "<group>"; };
 		E13981B51126F21E00D1E5A0 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		E13981B61126F21E00D1E5A0 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		E13982551127273B00D1E5A0 /* UrlTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlTextField.h; sourceTree = "<group>"; };
@@ -89,6 +94,8 @@
 		E145B937111F61E500BE4E01 /* SubviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubviewTableViewCell.m; sourceTree = "<group>"; };
 		E145BA14111F758B00BE4E01 /* FlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakController.h; sourceTree = "<group>"; };
 		E145BA15111F758B00BE4E01 /* FlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakController.m; sourceTree = "<group>"; };
+		E14EA82A1128185F00D933A3 /* FlakImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakImage.h; sourceTree = "<group>"; };
+		E14EA82B1128185F00D933A3 /* FlakImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakImage.m; sourceTree = "<group>"; };
 		E14F2E451121BDF90073E704 /* heart_off.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart_off.gif; sourceTree = "<group>"; };
 		E14F2E4C1121BE810073E704 /* comment.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = comment.gif; sourceTree = "<group>"; };
 		E14F2E4D1121BE810073E704 /* newspaper_add.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newspaper_add.gif; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		E16050B31124673300306BE4 /* FlakerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerPost.m; sourceTree = "<group>"; };
 		E16052601124962F00306BE4 /* FlakEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakEditorView.h; sourceTree = "<group>"; };
 		E16052611124962F00306BE4 /* FlakEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakEditorView.m; sourceTree = "<group>"; };
+		E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader-green.gif"; sourceTree = "<group>"; };
 		E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlakController.h; sourceTree = "<group>"; };
 		E1A06B6011234BFA008B6CA1 /* NewFlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlakController.m; sourceTree = "<group>"; };
 		E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
@@ -251,6 +259,8 @@
 				E16052611124962F00306BE4 /* FlakEditorView.m */,
 				E13982551127273B00D1E5A0 /* UrlTextField.h */,
 				E13982561127273B00D1E5A0 /* UrlTextField.m */,
+				E127365F1129F2430087A8F0 /* FlakImageCell.h */,
+				E12736601129F2430087A8F0 /* FlakImageCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -287,6 +297,7 @@
 		E14F2E471121BE450073E704 /* Flak */ = {
 			isa = PBXGroup;
 			children = (
+				E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */,
 				E14F2E4C1121BE810073E704 /* comment.gif */,
 				E14F2E4D1121BE810073E704 /* newspaper_add.gif */,
 				E14F2E4E1121BE810073E704 /* link_to_entry.gif */,
@@ -328,6 +339,8 @@
 				E14F2F761121E67A0073E704 /* FlakerOAuthPinVerificator.m */,
 				E16050B21124673300306BE4 /* FlakerPost.h */,
 				E16050B31124673300306BE4 /* FlakerPost.m */,
+				E14EA82A1128185F00D933A3 /* FlakImage.h */,
+				E14EA82B1128185F00D933A3 /* FlakImage.m */,
 			);
 			name = FlakerAPI;
 			sourceTree = "<group>";
@@ -423,6 +436,7 @@
 				E14F2EB81121CBE60073E704 /* AuthController.xib in Resources */,
 				E16050AC1124661000306BE4 /* otrzymanoFlaki.m4a in Resources */,
 				E1E7FFAC1125B8BF0076D8A3 /* error.m4a in Resources */,
+				E19B6F681129CACA00FA8212 /* ajax-loader-green.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +471,8 @@
 				E16052621124962F00306BE4 /* FlakEditorView.m in Sources */,
 				E13981B71126F21E00D1E5A0 /* RegexKitLite.m in Sources */,
 				E13982571127273B00D1E5A0 /* UrlTextField.m in Sources */,
+				E14EA82C1128185F00D933A3 /* FlakImage.m in Sources */,
+				E12736611129F2430087A8F0 /* FlakImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

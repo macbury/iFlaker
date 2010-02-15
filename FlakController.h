@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Flak.h"
+#import "FlakImage.h"
 #import "FlakerUser.h"
 #import "FlakBubbleView.h"
 #import "FileStore.h"
 #import "RegexKitLite.h"
 #import "UrlTextField.h"
+#import "FlakImageCell.h"
 
 @interface FlakController : NSObject {
 	IBOutlet NSView *subview;

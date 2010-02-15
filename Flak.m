@@ -11,15 +11,24 @@
 
 @implementation Flak
 
-@synthesize body, user, permalink, createdAt;
+@synthesize body, user, permalink, createdAt, link, images;
 
 - (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent; {
 	self = [super init];
 	if (self != nil) {
 		[self setUser: flakUser];
 		[self setBody: [flakContent objectForKey: @"text"]];
+		[self setLink: [flakContent objectForKey: @"link"]];
 		[self setPermalink: [flakContent objectForKey: @"permalink"]];
 		[self setCreatedAt: [NSDate dateWithString: [[flakContent objectForKey:@"datetime"] stringByAppendingString: @" +0000"]]];
+		
+		NSMutableArray * tempImages = [[NSMutableArray alloc] init];
+		
+		for (NSDictionary * imageDict in [[flakContent objectForKey:@"data"] objectForKey: @"images"]) {
+			FlakImage * image = [[FlakImage alloc] initWithDict: imageDict];
+			[tempImages addObject: image];
+		}
+		[self setImages: tempImages];
 	}
 	return self;
 }
@@ -46,6 +55,8 @@
 }
 
 - (void) dealloc {
+	[images release];
+	[link release];
 	[createdAt release];
 	[permalink release];
 	[body release];
