@@ -55,6 +55,13 @@
 	[flaker authorizeUsingOAuth: @"iFlaker" serviveProviderName: @"flaker.pl"];
 }
 
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
+	NSFileManager * fm = [NSFileManager defaultManager];
+	[fm removeItemAtPath: [FileStore pathForImage: @"" ] error:nil];
+	
+	return NSTerminateNow;
+}
+
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)aApplication 
 										hasVisibleWindows:(BOOL)aFlag {
 	[mainWindow makeKeyAndOrderFront:self];
