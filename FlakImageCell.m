@@ -93,15 +93,41 @@
 }
 
 - (NSImage *) thumbImage {
+
 	if (thumbImage == nil){
-		NSSize originalSize = [image.image size];
-		thumbImage = [[NSImage alloc] initWithSize: NSMakeSize(64,64)];
-		[thumbImage lockFocus];
-		[image.image drawInRect: NSMakeRect(0, 0, 64, 64) fromRect: NSMakeRect(0, 0, originalSize.width, originalSize.height) operation: NSCompositeSourceOver fraction: 1.0];
-		[thumbImage unlockFocus];
+		//NSSize originalSize = [image.image size];
+		NSImage * temp = [[NSImage alloc] initWithSize: NSMakeSize(64,64)];
+		[temp lockFocus];
+		[temp setFlipped: YES];
+		[image.image drawInRect: NSMakeRect(0, 0, 64, 64) 
+					   fromRect: NSZeroRect
+					  operation: NSCompositeSourceOver
+					   fraction: 1.0];
+		[temp unlockFocus];
+		thumbImage = [[NSImage alloc] initWithData: [temp TIFFRepresentation]];
+		[thumbImage setFlipped: YES];
+		[temp release];
 	}
     
 	return thumbImage;
 }
+
+- (BOOL)wantsToTrackMouse {
+	return YES;
+}
+
+- (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)aTextView untilMouseUp:(BOOL)flag {
+	NSLog(@"QuickLoog: %@", [FileStore pathForImage: [image name]]);
+	
+	[[QLPreviewPanel sharedPreviewPanel] setURLs:[NSArray arrayWithObject:[NSURL fileURLWithPath:[FileStore pathForImage: [image name]]]] 
+									currentIndex:0 
+						  preservingDisplayState:YES];
+	
+	[[QLPreviewPanel sharedPreviewPanel] makeKeyAndOrderFrontWithEffect:1];
+	
+	return YES;
+}
+
+
 
 @end

@@ -9,6 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "FlakImage.h"
 #import "FileStore.h"
+#import "QuickLook.h"
+
+#define QLPreviewPanel NSClassFromString(@"QLPreviewPanel")
 
 @interface FlakImageCell : NSTextAttachmentCell {
 	FlakImage * image;

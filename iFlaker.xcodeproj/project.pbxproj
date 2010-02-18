@@ -30,9 +30,9 @@
 		E16050AC1124661000306BE4 /* otrzymanoFlaki.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E16050AA1124661000306BE4 /* otrzymanoFlaki.m4a */; };
 		E16050B41124673300306BE4 /* FlakerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E16050B31124673300306BE4 /* FlakerPost.m */; };
 		E16052621124962F00306BE4 /* FlakEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16052611124962F00306BE4 /* FlakEditorView.m */; };
+		E16820B8112D6E29009E71D7 /* QuickLookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16820B7112D6E29009E71D7 /* QuickLookUI.framework */; };
 		E19B6F681129CACA00FA8212 /* ajax-loader-green.gif in Resources */ = {isa = PBXBuildFile; fileRef = E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */; };
 		E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06B6011234BFA008B6CA1 /* NewFlakController.m */; };
-		E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */; };
 		E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
 		E1C8288C1120694C00BC22DE /* FlakBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C8288B1120694C00BC22DE /* FlakBubbleView.m */; };
 		E1C828C7112073D200BC22DE /* flakEntryBubble.png in Resources */ = {isa = PBXBuildFile; fileRef = E1C828C6112073D200BC22DE /* flakEntryBubble.png */; };
@@ -111,11 +111,11 @@
 		E16050B31124673300306BE4 /* FlakerPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakerPost.m; sourceTree = "<group>"; };
 		E16052601124962F00306BE4 /* FlakEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakEditorView.h; sourceTree = "<group>"; };
 		E16052611124962F00306BE4 /* FlakEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakEditorView.m; sourceTree = "<group>"; };
+		E16820B7112D6E29009E71D7 /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = /System/Library/PrivateFrameworks/QuickLookUI.framework; sourceTree = "<absolute>"; };
+		E16820BA112D6E4F009E71D7 /* QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLook.h; sourceTree = "<group>"; };
 		E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader-green.gif"; sourceTree = "<group>"; };
 		E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlakController.h; sourceTree = "<group>"; };
 		E1A06B6011234BFA008B6CA1 /* NewFlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlakController.m; sourceTree = "<group>"; };
-		E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QuickLook.m"; sourceTree = "<group>"; };
-		E1A06BDF11236378008B6CA1 /* NSImage+QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QuickLook.h"; sourceTree = "<group>"; };
 		E1A06C3D112366CE008B6CA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		E1C8288A1120694C00BC22DE /* FlakBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlakBubbleView.h; sourceTree = "<group>"; };
 		E1C8288B1120694C00BC22DE /* FlakBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakBubbleView.m; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 				E14F31CC112208520073E704 /* OAuthConsumer.framework in Frameworks */,
 				E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */,
 				E1E7001A1125BD360076D8A3 /* Growl.framework in Frameworks */,
+				E16820B8112D6E29009E71D7 /* QuickLookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +182,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E16820B7112D6E29009E71D7 /* QuickLookUI.framework */,
 				E1A06C3D112366CE008B6CA1 /* QuickLook.framework */,
 				E14F31CB112208520073E704 /* OAuthConsumer.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -317,15 +319,6 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
-		E1A06BDB1123635C008B6CA1 /* QuickLook */ = {
-			isa = PBXGroup;
-			children = (
-				E1A06BDD11236378008B6CA1 /* NSImage+QuickLook.m */,
-				E1A06BDF11236378008B6CA1 /* NSImage+QuickLook.h */,
-			);
-			name = QuickLook;
-			sourceTree = "<group>";
-		};
 		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,12 +341,12 @@
 		E1CBFBA6111D99F600F09BC5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				E1A06BDB1123635C008B6CA1 /* QuickLook */,
 				E1C82A9F11209FDD00BC22DE /* FileStore.h */,
 				E1C82AA011209FDD00BC22DE /* FileStore.m */,
 				E13981B51126F21E00D1E5A0 /* RegexKitLite.m */,
 				E13981B61126F21E00D1E5A0 /* RegexKitLite.h */,
 				E1CBFBB0111D9A0400F09BC5 /* JSON */,
+				E16820BA112D6E4F009E71D7 /* QuickLook.h */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -466,7 +459,6 @@
 				E14F2EB61121CBBF0073E704 /* AuthController.m in Sources */,
 				E14F2F771121E67A0073E704 /* FlakerOAuthPinVerificator.m in Sources */,
 				E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */,
-				E1A06BE111236378008B6CA1 /* NSImage+QuickLook.m in Sources */,
 				E16050B41124673300306BE4 /* FlakerPost.m in Sources */,
 				E16052621124962F00306BE4 /* FlakEditorView.m in Sources */,
 				E13981B71126F21E00D1E5A0 /* RegexKitLite.m in Sources */,
@@ -507,6 +499,7 @@
 					"$(inherited)",
 					"\"/Volumes/BackUp/Download/Growl-1.2.1-Framework\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -530,6 +523,7 @@
 					"$(inherited)",
 					"\"/Volumes/BackUp/Download/Growl-1.2.1-Framework\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
