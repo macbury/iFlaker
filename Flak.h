@@ -16,7 +16,7 @@
 	NSString * body;
 	NSDate * createdAt;
 	NSArray * images;
-	
+	NSInteger flakId;
 	FlakerUser * user;
 }
 
@@ -26,7 +26,7 @@
 @property (retain) FlakerUser * user;
 @property (retain) NSArray * images;
 @property (retain) NSDate * createdAt;
-//@property (assign, nonatomic) NSInteger flak_id;
+@property (assign, nonatomic) NSInteger flakId;
 
 - (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent;
 - (NSString *) distanceOfTimeInWords;

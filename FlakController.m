@@ -25,7 +25,12 @@
 	return self;
 }
 
-
+- (IBAction) openFlak:(id)sender {
+	NSURL *url = [NSURL URLWithString: flak.permalink];
+	
+    [[NSWorkspace sharedWorkspace] openURL:url];
+	
+}
 
 - (void) resizeToFitBody {
 	// Body Text
@@ -42,7 +47,7 @@
 	// View Height
 	NSSize viewBoxSize = [subview frame].size;
 	
-	viewBoxSize.height = bubbleHeight + 20.0;
+	viewBoxSize.height = bubbleHeight + 30.0;
 	[subview setFrameSize: viewBoxSize];
 	
 }

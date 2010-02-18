@@ -11,7 +11,7 @@
 
 @implementation Flak
 
-@synthesize body, user, permalink, createdAt, link, images;
+@synthesize body, user, permalink, createdAt, link, images, flakId;
 
 - (id) initWithUser:(FlakerUser *)flakUser flakContent:(NSDictionary *) flakContent; {
 	self = [super init];
@@ -21,7 +21,7 @@
 		[self setLink: [flakContent objectForKey: @"link"]];
 		[self setPermalink: [flakContent objectForKey: @"permalink"]];
 		[self setCreatedAt: [NSDate dateWithString: [[flakContent objectForKey:@"datetime"] stringByAppendingString: @" +0000"]]];
-		
+		[self setFlakId: [[flakContent objectForKey: @"id"] integerValue]];
 		NSMutableArray * tempImages = [[NSMutableArray alloc] init];
 		
 		for (NSDictionary * imageDict in [[flakContent objectForKey:@"data"] objectForKey: @"images"]) {

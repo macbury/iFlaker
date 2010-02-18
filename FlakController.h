@@ -40,4 +40,6 @@
 - (void) resizeToFitBody;
 - (void) updateDate;
 
+- (IBAction) openFlak:(id)sender;
+
 @end

@@ -1,4 +1,5 @@
 .DS_Store
 build/
+appcast/build/
 Signing\ Tools/dsa_priv.pem
 Signing\ Tools/dsa_pub.pem

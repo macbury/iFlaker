@@ -6,6 +6,20 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E1682193112D8807009E71D7 /* Release */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E168219D112D8847009E71D7 /* Build configuration list for PBXAggregateTarget "Release" */;
+			buildPhases = (
+				E1682192112D8807009E71D7 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Release;
+			productName = Release;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -31,6 +45,15 @@
 		E16050B41124673300306BE4 /* FlakerPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E16050B31124673300306BE4 /* FlakerPost.m */; };
 		E16052621124962F00306BE4 /* FlakEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16052611124962F00306BE4 /* FlakEditorView.m */; };
 		E16820B8112D6E29009E71D7 /* QuickLookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16820B7112D6E29009E71D7 /* QuickLookUI.framework */; };
+		E168213B112D8133009E71D7 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E168213A112D8133009E71D7 /* Sparkle.framework */; };
+		E1682146112D814E009E71D7 /* Sparkle.framework in Copy Frameworks (1) */ = {isa = PBXBuildFile; fileRef = E168213A112D8133009E71D7 /* Sparkle.framework */; };
+		E1682152112D82B9009E71D7 /* appcast.xml in Resources */ = {isa = PBXBuildFile; fileRef = E1682151112D82B9009E71D7 /* appcast.xml */; };
+		E1682157112D83E4009E71D7 /* Signing Tools in Resources */ = {isa = PBXBuildFile; fileRef = E1682153112D83E4009E71D7 /* Signing Tools */; };
+		E1682159112D8488009E71D7 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E1682158112D8488009E71D7 /* dsa_pub.pem */; };
+		E16821AD112D8A03009E71D7 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = E16821AA112D8A03009E71D7 /* release_notes.txt */; };
+		E16821AE112D8A03009E71D7 /* release_notes_template.html.erb in Resources */ = {isa = PBXBuildFile; fileRef = E16821AB112D8A03009E71D7 /* release_notes_template.html.erb */; };
+		E16821AF112D8A03009E71D7 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = E16821AC112D8A03009E71D7 /* Rakefile */; };
+		E16821B4112D8A18009E71D7 /* appcast in Resources */ = {isa = PBXBuildFile; fileRef = E16821B0112D8A18009E71D7 /* appcast */; };
 		E19B6F681129CACA00FA8212 /* ajax-loader-green.gif in Resources */ = {isa = PBXBuildFile; fileRef = E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */; };
 		E1A06B6111234BFA008B6CA1 /* NewFlakController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A06B6011234BFA008B6CA1 /* NewFlakController.m */; };
 		E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A06C3D112366CE008B6CA1 /* QuickLook.framework */; };
@@ -63,6 +86,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E1682146112D814E009E71D7 /* Sparkle.framework in Copy Frameworks (1) */,
 				E1E700221125BD520076D8A3 /* Growl.framework in Copy Frameworks (1) */,
 				E14F31DF1122085C0073E704 /* OAuthConsumer.framework in Copy Frameworks (1) */,
 			);
@@ -113,6 +137,15 @@
 		E16052611124962F00306BE4 /* FlakEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlakEditorView.m; sourceTree = "<group>"; };
 		E16820B7112D6E29009E71D7 /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = /System/Library/PrivateFrameworks/QuickLookUI.framework; sourceTree = "<absolute>"; };
 		E16820BA112D6E4F009E71D7 /* QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLook.h; sourceTree = "<group>"; };
+		E168213A112D8133009E71D7 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		E1682151112D82B9009E71D7 /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
+		E1682153112D83E4009E71D7 /* Signing Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Signing Tools"; sourceTree = "<group>"; };
+		E1682158112D8488009E71D7 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = "Signing Tools/dsa_pub.pem"; sourceTree = "<group>"; };
+		E168217C112D874E009E71D7 /* iFlaker Release-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iFlaker Release-Info.plist"; sourceTree = "<group>"; };
+		E16821AA112D8A03009E71D7 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		E16821AB112D8A03009E71D7 /* release_notes_template.html.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes_template.html.erb; sourceTree = "<group>"; };
+		E16821AC112D8A03009E71D7 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		E16821B0112D8A18009E71D7 /* appcast */ = {isa = PBXFileReference; lastKnownFileType = folder; path = appcast; sourceTree = "<group>"; };
 		E19B6F671129CACA00FA8212 /* ajax-loader-green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader-green.gif"; sourceTree = "<group>"; };
 		E1A06B5F11234BF9008B6CA1 /* NewFlakController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlakController.h; sourceTree = "<group>"; };
 		E1A06B6011234BFA008B6CA1 /* NewFlakController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlakController.m; sourceTree = "<group>"; };
@@ -161,6 +194,7 @@
 				E1A06C3E112366CE008B6CA1 /* QuickLook.framework in Frameworks */,
 				E1E7001A1125BD360076D8A3 /* Growl.framework in Frameworks */,
 				E16820B8112D6E29009E71D7 /* QuickLookUI.framework in Frameworks */,
+				E168213B112D8133009E71D7 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +216,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E168213A112D8133009E71D7 /* Sparkle.framework */,
 				E16820B7112D6E29009E71D7 /* QuickLookUI.framework */,
 				E1A06C3D112366CE008B6CA1 /* QuickLook.framework */,
 				E14F31CB112208520073E704 /* OAuthConsumer.framework */,
@@ -211,12 +246,14 @@
 		29B97314FDCFA39411CA2CEA /* iFlaker */ = {
 			isa = PBXGroup;
 			children = (
+				E16821A9112D89DB009E71D7 /* Distribution */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E1CBFBA1111D991700F09BC5 /* .gitignore */,
+				E168217C112D874E009E71D7 /* iFlaker Release-Info.plist */,
 			);
 			name = iFlaker;
 			sourceTree = "<group>";
@@ -233,10 +270,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1682158112D8488009E71D7 /* dsa_pub.pem */,
 				E1605099112465FE00306BE4 /* Sounds */,
 				E14F2E471121BE450073E704 /* Flak */,
 				E1CBFD90111DADCF00F09BC5 /* flaker.icns */,
-				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -317,6 +354,20 @@
 				E1E7FFAB1125B8BF0076D8A3 /* error.m4a */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		E16821A9112D89DB009E71D7 /* Distribution */ = {
+			isa = PBXGroup;
+			children = (
+				E16821B0112D8A18009E71D7 /* appcast */,
+				E16821AA112D8A03009E71D7 /* release_notes.txt */,
+				E16821AB112D8A03009E71D7 /* release_notes_template.html.erb */,
+				E16821AC112D8A03009E71D7 /* Rakefile */,
+				E1682153112D83E4009E71D7 /* Signing Tools */,
+				E1682151112D82B9009E71D7 /* appcast.xml */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Distribution;
 			sourceTree = "<group>";
 		};
 		E1CBFB38111D925B00F09BC5 /* FlakerAPI */ = {
@@ -406,6 +457,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* iFlaker */,
+				E1682193112D8807009E71D7 /* Release */,
 			);
 		};
 /* End PBXProject section */
@@ -430,10 +482,33 @@
 				E16050AC1124661000306BE4 /* otrzymanoFlaki.m4a in Resources */,
 				E1E7FFAC1125B8BF0076D8A3 /* error.m4a in Resources */,
 				E19B6F681129CACA00FA8212 /* ajax-loader-green.gif in Resources */,
+				E1682152112D82B9009E71D7 /* appcast.xml in Resources */,
+				E1682157112D83E4009E71D7 /* Signing Tools in Resources */,
+				E1682159112D8488009E71D7 /* dsa_pub.pem in Resources */,
+				E16821AD112D8A03009E71D7 /* release_notes.txt in Resources */,
+				E16821AE112D8A03009E71D7 /* release_notes_template.html.erb in Resources */,
+				E16821AF112D8A03009E71D7 /* Rakefile in Resources */,
+				E16821B4112D8A18009E71D7 /* appcast in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1682192112D8807009E71D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o errexit\n\n[ $BUILD_STYLE = Release ] || { echo Distribution target requires \"'Release'\" build style; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://www.example.com/download/\"\nRELEASENOTES_URL=\"http://www.example.com/software/my-cool-app/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"iFlaker Sparkle priv\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nditto -ck --keepParent \"$PROJECT_NAME.app\" \"$ARCHIVE_FILENAME\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\n\topenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n\t| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n\t| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\ncat <<EOF\n\t\t<item>\n\t\t\t<title>Version $VERSION</title>\n\t\t\t<sparkle:releaseNotesLink>$RELEASENOTES_URL</sparkle:releaseNotesLink>\n\t\t\t<pubDate>$PUBDATE</pubDate>\n\t\t\t<enclosure\n\t\t\t\turl=\"$DOWNLOAD_URL\"\n\t\t\t\tsparkle:version=\"$VERSION\"\n\t\t\t\ttype=\"application/octet-stream\"\n\t\t\t\tlength=\"$SIZE\"\n\t\t\t\tsparkle:dsaSignature=\"$SIGNATURE\"\n\t\t\t/>\n\t\t</item>\nEOF";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -562,6 +637,27 @@
 			};
 			name = Release;
 		};
+		E1682194112D8808009E71D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Release;
+			};
+			name = Debug;
+		};
+		E1682195112D8808009E71D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Release;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +675,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E168219D112D8847009E71D7 /* Build configuration list for PBXAggregateTarget "Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1682194112D8808009E71D7 /* Debug */,
+				E1682195112D8808009E71D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
